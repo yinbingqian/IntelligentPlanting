@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@null"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:paddingBottom="20dp"
+        android:orientation="horizontal" >
+
+
+        <RelativeLayout
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="2" >
+
+            <TextView
+                android:id="@+id/expert_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="1号棚"
+                android:textColor="@color/deep_yellow"
+                android:textSize="16dp" />
+           <TextView
+            android:id="@+id/zbj_text"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_toRightOf="@+id/expert_name"
+            android:layout_alignBottom="@+id/expert_name"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:text="6.9亩"
+            android:textColor="@color/black"
+            android:textSize="16dp"/>
+           
+  <TextView
+            android:id="@+id/state_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:text="闲置中"
+            android:textColor="@color/deep_yellow"
+            android:textSize="13dp"/>
+  <ImageView 
+      android:layout_width="20dp"
+      android:layout_height="20dp"
+      android:background="@drawable/tab_icon_4_u"
+      android:layout_toLeftOf="@+id/state_tv"
+      android:layout_alignBottom="@+id/state_tv"
+      android:layout_marginRight="3dp"/>
+            <TextView
+                android:id="@+id/monitor_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/expert_name"
+                android:layout_marginTop="10dp"
+                android:text="监测设备：0"
+                android:textColor="@color/black"
+                android:textSize="14dp" />
+<TextView
+                android:id="@+id/control_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/monitor_tv"
+                android:layout_alignBottom="@+id/monitor_tv"
+                android:layout_marginLeft="50dp"
+                android:text="控制设施：0"
+                android:textColor="@color/black"
+                android:textSize="14dp" />
+            </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

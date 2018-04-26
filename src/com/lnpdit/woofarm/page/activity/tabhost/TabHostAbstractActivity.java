@@ -14,7 +14,7 @@ import android.widget.TabHost.TabSpec;
 import android.widget.TabWidget;
 import android.widget.TextView;
 
-import com.lnpdit.woofarm.R;
+import com.lnpdit.IntelligentPlanting.R;
 
 @SuppressWarnings("deprecation")
 public abstract class TabHostAbstractActivity extends TabActivity {

@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 
 import com.eroad.widget.calendar.CalanderActivity;
-import com.lnpdit.woofarm.R;
+import com.lnpdit.IntelligentPlanting.R;
 import com.lnpdit.woofarm.db.DBHelper;
 import com.lnpdit.woofarm.entity.ADInfo;
 import com.lnpdit.woofarm.entity.DataInfoUn;

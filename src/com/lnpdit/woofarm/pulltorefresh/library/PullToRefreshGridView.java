@@ -15,7 +15,7 @@
  *******************************************************************************/
 package com.lnpdit.woofarm.pulltorefresh.library;
 
-import com.lnpdit.woofarm.R;
+import com.lnpdit.IntelligentPlanting.R;
 import com.lnpdit.woofarm.pulltorefresh.library.internal.EmptyViewMethodAccessor;
 
 import android.annotation.TargetApi;

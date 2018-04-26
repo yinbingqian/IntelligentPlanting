@@ -10,7 +10,7 @@ import android.graphics.BitmapFactory;
 
 import com.chechezhi.ui.guide.AbsGuideActivity;
 import com.chechezhi.ui.guide.SinglePage;
-import com.lnpdit.woofarm.R;
+import com.lnpdit.IntelligentPlanting.R;
 import com.lnpdit.woofarm.page.activity.tabhost.MainTabHostActivity;
 
 public class GuideActivity extends AbsGuideActivity {

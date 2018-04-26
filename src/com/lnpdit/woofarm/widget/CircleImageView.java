@@ -1,6 +1,6 @@
 package com.lnpdit.woofarm.widget;
 
-import com.lnpdit.woofarm.R;
+import com.lnpdit.IntelligentPlanting.R;
 
 import android.content.Context;
 import android.content.res.TypedArray;

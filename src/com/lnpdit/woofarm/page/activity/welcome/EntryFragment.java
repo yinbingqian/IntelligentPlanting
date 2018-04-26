@@ -1,6 +1,6 @@
 package com.lnpdit.woofarm.page.activity.welcome;
 
-import com.lnpdit.woofarm.R;
+import com.lnpdit.IntelligentPlanting.R;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;

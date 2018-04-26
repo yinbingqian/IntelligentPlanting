@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-import com.lnpdit.woofarm.R;
+import com.lnpdit.IntelligentPlanting.R;
 import com.lnpdit.woofarm.entity.DataInfoUn;
 import com.lnpdit.woofarm.entity.Product;
 import com.lnpdit.woofarm.entity.ProductRow;

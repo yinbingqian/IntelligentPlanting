@@ -4,7 +4,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import com.hp.hpl.sparta.Text;
-import com.lnpdit.woofarm.R;
+import com.lnpdit.IntelligentPlanting.R;
 import com.lnpdit.woofarm.base.component.BaseActivity;
 import com.lnpdit.woofarm.entity.LoginUser;
 import com.lnpdit.woofarm.http.SoapRes;

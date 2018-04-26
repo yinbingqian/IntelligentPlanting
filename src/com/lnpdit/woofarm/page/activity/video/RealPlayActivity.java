@@ -14,7 +14,7 @@ import com.dh.DpsdkCore.Ptz_Operation_Info_t;
 import com.dh.DpsdkCore.Return_Value_Info_t;
 import com.dh.DpsdkCore.fDPSDKStatusCallback;
 import com.dh.DpsdkCore.fMediaDataCallback;
-import com.lnpdit.woofarm.R;
+import com.lnpdit.IntelligentPlanting.R;
 import com.lnpdit.woofarm.page.activity.product.ProductInfoActivity;
 
 import android.app.Activity;

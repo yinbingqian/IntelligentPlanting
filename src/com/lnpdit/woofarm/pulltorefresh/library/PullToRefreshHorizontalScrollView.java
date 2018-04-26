@@ -23,7 +23,7 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.widget.HorizontalScrollView;
 
-import com.lnpdit.woofarm.R;
+import com.lnpdit.IntelligentPlanting.R;
 
 public class PullToRefreshHorizontalScrollView extends PullToRefreshBase<HorizontalScrollView> {
 

@@ -25,7 +25,7 @@ import android.util.FloatMath;
 import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 
-import com.lnpdit.woofarm.R;
+import com.lnpdit.IntelligentPlanting.R;
 
 public class PullToRefreshWebView extends PullToRefreshBase<WebView> {
 

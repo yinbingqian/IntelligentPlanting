@@ -2,7 +2,7 @@ package com.lnpdit.woofarm.page.activity.product;
 
 import java.util.List;
 
-import com.lnpdit.woofarm.R;
+import com.lnpdit.IntelligentPlanting.R;
 import com.lnpdit.woofarm.base.component.BaseActivity;
 import com.lnpdit.woofarm.db.DBHelper;
 import com.lnpdit.woofarm.entity.Order;

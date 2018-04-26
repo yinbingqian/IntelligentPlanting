@@ -33,7 +33,7 @@ import com.eroad.widget.calendar.manager.ResizeManager;
 import com.eroad.widget.calendar.manager.Week;
 import com.eroad.widget.calendar.widget.DayView;
 import com.eroad.widget.calendar.widget.WeekView;
-import com.lnpdit.woofarm.R;
+import com.lnpdit.IntelligentPlanting.R;
 
 /**
  * 日历View

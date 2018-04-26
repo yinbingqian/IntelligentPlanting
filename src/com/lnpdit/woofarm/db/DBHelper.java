@@ -8,10 +8,11 @@ import com.lnpdit.woofarm.entity.Area;
 import com.lnpdit.woofarm.entity.Camera;
 import com.lnpdit.woofarm.entity.Cart;
 import com.lnpdit.woofarm.entity.ChatMessage;
+import com.lnpdit.woofarm.entity.Classify;
 import com.lnpdit.woofarm.entity.LoginUser;
 import com.lnpdit.woofarm.entity.Order;
 import com.lnpdit.woofarm.entity.Product;
-import com.lnpdit.woofarm.entity.Classify;
+import com.lnpdit.woofarm.entity.ProductByClass;
 import com.lnpdit.woofarm.entity.UserInfo;
 import com.lnpdit.woofarm.utils.Utils;
 
@@ -43,6 +44,8 @@ public class DBHelper extends SQLiteOpenHelper {
      * 
      */
     private static final String CREATE_TABLE_PRODUCT = "CREATE TABLE PRODUCT (_ID INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,PROID TEXT, NAME TEXT,  PRICE TEXT,UPTIME TEXT, PLACE TEXT,NUMBER TEXT,THUMB TEXT,PIC TEXT,IP TEXT,PORT TEXT,USERNAME TEXT,PASSWORD TEXT, CHNO TEXT)";
+
+    private static final String CREATE_TABLE_PRODUCTBYCLASS = "CREATE TABLE PRODUCTBYCLASS (_ID INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,IMAGE TEXT,PROID TEXT, NAME TEXT,  PRICE TEXT)";
 
     private static final String CREATE_TABLE_MYORDER = "CREATE TABLE MYORDER (_ID INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, USERID TEXT, ORDERID TEXT, PROID TEXT,  TYPE TEXT,NAME TEXT, PRICE TEXT,THUMB TEXT,HJ TEXT,RESULT TEXT)";
 
@@ -78,6 +81,7 @@ public class DBHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         System.out.println("wofarm.db ========== onCreate");
         db.execSQL(CREATE_TABLE_PRODUCT);
+        db.execSQL(CREATE_TABLE_PRODUCTBYCLASS);
         db.execSQL(CREATE_TABLE_MYORDER);
         db.execSQL(CREATE_TABLE_CART);
         db.execSQL(CREATE_TABLE_CLASSIFY);
@@ -356,6 +360,32 @@ public class DBHelper extends SQLiteOpenHelper {
         close();
     }
 
+
+    public void insProductList(List<Product> data) {
+        System.out.println("#SU DB# insProductList");
+        SQLiteDatabase db = getWritableDatabase();
+        for (int i = 0; i < data.size(); i++) {
+            ContentValues values = new ContentValues();
+            values.put("PROID", data.get(i).getProid());
+            values.put("NAME", data.get(i).getName());
+            values.put("PRICE", data.get(i).getPrice());
+            values.put("UPTIME", data.get(i).getUptime());
+            values.put("PLACE", data.get(i).getPlace());
+            values.put("NUMBER", data.get(i).getNumber());
+            values.put("THUMB", data.get(i).getThumb());
+            values.put("PIC", data.get(i).getPic());
+            values.put("IP", data.get(i).getIp());
+            values.put("PORT", data.get(i).getPort());
+            values.put("USERNAME", data.get(i).getUsername());
+            values.put("PASSWORD", data.get(i).getPassword());
+            values.put("CHNO", data.get(i).getChno());
+            db.insert("PRODUCT", "", values);
+
+        }
+        close();
+    }
+
+    
     public Product queryProductById(String productId) {
         System.out.println("#SU DB# queryProductById");
         Product product = new Product();
@@ -410,16 +440,6 @@ public class DBHelper extends SQLiteOpenHelper {
         close();
         return list;
     }
-    //
-    // public void updateProduct(String ProductName, String StartDate) {
-    // ContentValues cv = new ContentValues();
-    // cv.put("STATUS", "1");
-    // SQLiteDatabase db = getWritableDatabase();
-    // db.update("PRODUCT", cv, "ProductName=? AND StartDate=?", new String[] {
-    // ProductName, StartDate });
-    // close();
-    // }
-
     public int deleteProductById(String productId) {
         System.out.println("#SU DB# deleteProductById");
         String[] param = { productId };
@@ -433,6 +453,72 @@ public class DBHelper extends SQLiteOpenHelper {
         return db.delete("PRODUCT", null, null);
     }
 
+
+    /**
+     * 产品列表
+     * 
+     * @param order
+     */
+
+    public void insProductByClass(List<ProductByClass> data) {
+        System.out.println("#SU DB# insProductByClass");
+        SQLiteDatabase db = getWritableDatabase();
+        for (int i = 0; i < data.size(); i++) {
+            ContentValues values = new ContentValues();
+            values.put("IMAGE", data.get(i).getImage());
+            values.put("PROID", data.get(i).getId());
+            values.put("NAME", data.get(i).getName());
+            values.put("PRICE", data.get(i).getPrice());
+            db.insert("PRODUCTBYCLASS", "", values);
+        }
+        close();
+    }
+    
+    public void insProductByClassList(List<ProductByClass> data) {
+        System.out.println("#SU DB# insProductByClassList");
+        SQLiteDatabase db = getWritableDatabase();
+        for (int i = 0; i < data.size(); i++) {
+            ContentValues values = new ContentValues();
+            values.put("IMAGE", data.get(i).getImage());
+            values.put("PROID", data.get(i).getId());
+            values.put("NAME", data.get(i).getName());
+            values.put("PRICE", data.get(i).getPrice());
+            db.insert("PRODUCTBYCLASS", "", values);
+
+        }
+        close();
+    }
+
+    
+    public ArrayList<ProductByClass> queryProductByClass() {
+        System.out.println("#SU DB# queryProductByClass");
+        ArrayList<ProductByClass> list = new ArrayList<ProductByClass>();
+        ProductByClass adi = new ProductByClass();
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor c = db.rawQuery("SELECT * FROM PRODUCTBYCLASS", null);
+        while (c.moveToNext()) {
+            adi = new ProductByClass();
+            adi.setImage(c.getString(c.getColumnIndex("IMAGE")));
+            adi.setId(c.getString(c.getColumnIndex("PROID")));
+            adi.setName(c.getString(c.getColumnIndex("NAME")));
+            adi.setPrice(c.getString(c.getColumnIndex("PRICE")));
+            list.add(adi);
+            
+        }
+
+        close();
+        return list;
+    }
+    
+    
+    public void clearProductByClass() {
+        System.out.println("#SU DB# cheanProductByClass");
+        SQLiteDatabase db = getWritableDatabase();
+        db.delete("PRODUCTBYCLASS", null, null);
+    }
+    
+    
+    
     /**
      * 订单
      * 

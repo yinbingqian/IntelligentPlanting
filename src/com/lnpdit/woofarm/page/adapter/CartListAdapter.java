@@ -2,7 +2,7 @@ package com.lnpdit.woofarm.page.adapter;
 
 import java.util.List;
 
-import com.lnpdit.woofarm.R;
+import com.lnpdit.IntelligentPlanting.R;
 import com.lnpdit.woofarm.entity.Cart;
 import com.lnpdit.woofarm.entity.DataInfoUn;
 import com.lnpdit.woofarm.entity.ProductRow;

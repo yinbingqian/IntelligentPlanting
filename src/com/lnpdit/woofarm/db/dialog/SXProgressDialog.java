@@ -1,7 +1,7 @@
 package com.lnpdit.woofarm.db.dialog;
 
 
-import com.lnpdit.woofarm.R;
+import com.lnpdit.IntelligentPlanting.R;
 
 import android.app.Dialog;
 import android.content.Context;

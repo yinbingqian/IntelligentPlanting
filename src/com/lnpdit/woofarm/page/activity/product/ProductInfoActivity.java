@@ -12,7 +12,7 @@ import com.dh.DpsdkCore.Return_Value_Info_t;
 import com.dh.DpsdkCore.fDPSDKStatusCallback;
 import com.dh.DpsdkCore.fMediaDataCallback;
 import com.eroad.widget.calendar.CalanderActivity;
-import com.lnpdit.woofarm.R;
+import com.lnpdit.IntelligentPlanting.R;
 import com.lnpdit.woofarm.base.component.BaseActivity;
 import com.lnpdit.woofarm.page.activity.video.RealPlayActivity;
 import com.lnpdit.woofarm.widget.BuyNowPopWin;

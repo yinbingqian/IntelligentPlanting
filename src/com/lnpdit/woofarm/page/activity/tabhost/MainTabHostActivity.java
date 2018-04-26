@@ -3,7 +3,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-import com.lnpdit.woofarm.R;
+import com.lnpdit.IntelligentPlanting.R;
 import com.lnpdit.woofarm.base.application.DemoApplication;
 import com.lnpdit.woofarm.page.activity.tabhost.item.FrontActivity;
 import com.lnpdit.woofarm.page.activity.tabhost.item.PersonalActivity;

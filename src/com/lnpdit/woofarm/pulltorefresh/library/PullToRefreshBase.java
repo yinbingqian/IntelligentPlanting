@@ -15,7 +15,7 @@
  *******************************************************************************/
 package com.lnpdit.woofarm.pulltorefresh.library;
 
-import com.lnpdit.woofarm.R;
+import com.lnpdit.IntelligentPlanting.R;
 import com.lnpdit.woofarm.pulltorefresh.library.internal.FlipLoadingLayout;
 import com.lnpdit.woofarm.pulltorefresh.library.internal.LoadingLayout;
 import com.lnpdit.woofarm.pulltorefresh.library.internal.RotateLoadingLayout;

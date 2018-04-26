@@ -1,6 +1,6 @@
 package com.lnpdit.woofarm.customview;
 
-import com.lnpdit.woofarm.R;
+import com.lnpdit.IntelligentPlanting.R;
 
 import android.content.Context;
 import android.graphics.drawable.AnimationDrawable;

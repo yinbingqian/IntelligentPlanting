@@ -1,6 +1,6 @@
 package com.lnpdit.woofarm.utils;
 
-import com.lnpdit.woofarm.R;
+import com.lnpdit.IntelligentPlanting.R;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;

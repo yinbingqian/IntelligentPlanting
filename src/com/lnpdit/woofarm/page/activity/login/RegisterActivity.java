@@ -1,7 +1,7 @@
 package com.lnpdit.woofarm.page.activity.login;
 
 import com.hp.hpl.sparta.Text;
-import com.lnpdit.woofarm.R;
+import com.lnpdit.IntelligentPlanting.R;
 import com.lnpdit.woofarm.base.component.BaseActivity;
 import com.lnpdit.woofarm.entity.LoginUser;
 import com.lnpdit.woofarm.http.SoapRes;
@@ -34,7 +34,6 @@ public class RegisterActivity extends BaseActivity implements OnClickListener {
     Button code_btn;
     EditText phone_edit;
     EditText code_edit;
-    EditText username_edit;
     EditText password_edit;
     private ImageView imgBack;
     private TextView tvBack;
@@ -60,7 +59,6 @@ public class RegisterActivity extends BaseActivity implements OnClickListener {
         code_btn.setOnClickListener(this);
         phone_edit = (EditText) findViewById(R.id.phone_edit);
         code_edit = (EditText) findViewById(R.id.code_edit);
-        username_edit = (EditText) findViewById(R.id.username_edit);
         password_edit = (EditText) findViewById(R.id.password_edit);
 
     }
@@ -95,14 +93,9 @@ public class RegisterActivity extends BaseActivity implements OnClickListener {
                 break;
             }
 
-            // 昵称校验
-            if (username_edit.getText().toString().trim().equals("")) {
-                Toast.makeText(context, "昵称不能为空！", Toast.LENGTH_SHORT).show();
-                break;
-            }
             
             Object[] property_va2 = { phone_edit.getText().toString(),code_edit.getText().toString(),
-                    username_edit.getText().toString(),password_edit.getText().toString() };
+                    password_edit.getText().toString() };
             soapService.memberReg(property_va2);
             break;
         case R.id.code_btn:

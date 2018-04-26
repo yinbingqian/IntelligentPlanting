@@ -15,7 +15,7 @@ import com.lnpdit.woofarm.page.activity.tabhost.MainTabHostActivity;
 
 import java.util.List;
 
-import com.lnpdit.woofarm.R;
+import com.lnpdit.IntelligentPlanting.R;
 
 import android.content.Context;
 import android.content.Intent;

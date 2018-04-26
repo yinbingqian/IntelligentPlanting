@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.eroad.widget.calendar.CalanderActivity;
-import com.lnpdit.woofarm.R;
+import com.lnpdit.IntelligentPlanting.R;
 import com.lnpdit.woofarm.db.DBHelper;
 import com.lnpdit.woofarm.entity.ADInfo;
 import com.lnpdit.woofarm.entity.Product;
@@ -272,6 +272,7 @@ public class FrontActivity extends Activity implements OnClickListener {
         case R.id.morexp_tv:
             intent = new Intent();
             intent.setClass(this, ProductListActivity.class);
+            intent.putExtra("selltype", "sell");
             intent.putExtra("title", "新品推荐");
             startActivity(intent);
             break;
@@ -279,6 +280,7 @@ public class FrontActivity extends Activity implements OnClickListener {
             intent = new Intent();
             intent.setClass(this, ProductListActivity.class);
             intent.putExtra("title", "预订商品");
+            intent.putExtra("selltype", "presell");
             startActivity(intent);
             break;
         case R.id.cm1:

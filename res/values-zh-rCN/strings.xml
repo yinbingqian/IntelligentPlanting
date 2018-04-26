@@ -294,10 +294,11 @@
     <string name="snapsucess">抓拍成功</string>
     <string name="snapfail">抓拍失败</string>
    
-    <string name="tabHost_frist">首页</string>
-    <string name="tabHost_second">生态种植</string>
-    <string name="tabHost_thrid">购物车</string>
-    <string name="tabHost_fourth">我的</string>
+    <string name="tabHost_frist">农情资讯</string>
+    <string name="tabHost_second">农技服务</string>
+    <string name="tabHost_thrid">我的农场</string>
+    <string name="tabHost_fourth">农事管理</string>
+    <string name="tabHost_five">用户中心</string>
     
     <string name="is_phone">[1][3578]\\d{9}</string>
 

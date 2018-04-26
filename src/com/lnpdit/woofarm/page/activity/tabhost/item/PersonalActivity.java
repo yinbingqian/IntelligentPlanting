@@ -1,6 +1,6 @@
 package com.lnpdit.woofarm.page.activity.tabhost.item;
 
-import com.lnpdit.woofarm.R;
+import com.lnpdit.IntelligentPlanting.R;
 import com.lnpdit.woofarm.base.component.BaseActivity;
 import com.lnpdit.woofarm.customview.FocusedtrueTV;
 import com.lnpdit.woofarm.md5.MD5Plus;

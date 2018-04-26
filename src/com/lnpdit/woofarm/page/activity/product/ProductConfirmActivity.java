@@ -1,6 +1,6 @@
 package com.lnpdit.woofarm.page.activity.product;
 
-import com.lnpdit.woofarm.R;
+import com.lnpdit.IntelligentPlanting.R;
 import com.lnpdit.woofarm.base.component.BaseActivity;
 import com.lnpdit.woofarm.page.activity.setting.AddressListActivity;
 import com.lnpdit.woofarm.page.activity.video.RealPlayActivity;

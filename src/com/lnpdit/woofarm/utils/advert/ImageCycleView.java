@@ -2,7 +2,7 @@ package com.lnpdit.woofarm.utils.advert;
 
 import java.util.ArrayList;
 
-import com.lnpdit.woofarm.R;
+import com.lnpdit.IntelligentPlanting.R;
 import com.lnpdit.woofarm.entity.ADInfo;
 import com.lnpdit.woofarm.http.SoapRes;
 import com.lnpdit.woofarm.utils.EventCache;
