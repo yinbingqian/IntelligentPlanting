@@ -3,24 +3,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/register_bg"
+    android:background="@color/gray_bg2"
     android:orientation="vertical" >
 
     <RelativeLayout
         android:id="@+id/mime_layout_01"
         android:layout_width="fill_parent"
-        android:layout_height="193dip"
-        android:background="@color/green_login_btn"
+        android:layout_height="200dp"
+        android:background="@drawable/bg2"
         android:clickable="true" >
 
         <com.lnpdit.woofarm.widget.CircleImageView
             xmlns:app="http://schemas.android.com/apk/res-auto"
             android:id="@+id/img_user_avatar"
-            android:layout_width="78dp"
-            android:layout_height="78dp"
-            android:layout_centerInParent="true"
+            android:layout_width="68dp"
+            android:layout_height="68dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="49dp"
             android:layout_gravity="center_horizontal"
-            android:src="@drawable/wwj_748"
+            android:src="@drawable/personalicon"
             app:border_color="#FFffffff"
             app:border_width="1dp" />
 
@@ -35,180 +36,247 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="8dp"
-                android:text="Alice"
+                android:layout_marginTop="10dp"
+                android:text="陈翔"
                 android:textColor="@color/white"
-                android:textSize="17dp" />
+                android:textSize="16dp" />
         </RelativeLayout>
     </RelativeLayout>
 
     <LinearLayout
-        android:id="@+id/myorder_layout"
+        android:id="@+id/basicinfo_layout"
         android:layout_width="fill_parent"
-        android:layout_height="47dp"
-        android:layout_gravity="bottom"
+        android:layout_height="wrap_content"
         android:background="@color/white"
         android:orientation="vertical" >
 
         <RelativeLayout
             android:layout_width="fill_parent"
-            android:layout_height="45dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="10dp"
             android:background="@color/white" >
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="45dp"
                 android:layout_gravity="center"
-                android:layout_marginLeft="10dp"
-                android:layout_toRightOf="@+id/articel_img"
+                android:layout_marginLeft="34dp"
                 android:gravity="center"
-                android:text="我的订单"
-                android:textColor="@color/gray_text"
-                android:textSize="17dp" />
+                android:text="基本信息"
+                android:textColor="@color/item_graytext"
+                android:textSize="16dp" />
 
             <ImageView
-                android:layout_width="15dp"
-                android:layout_height="21dp"
-                android:layout_alignParentRight="true"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
                 android:layout_centerVertical="true"
-                android:background="@drawable/mm_submenu" />
+                android:background="@drawable/imformation" />
+            
+            <ImageView
+                android:layout_width="12dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/more" />
         </RelativeLayout>
 
-        <TextView
+        <View
             android:layout_width="fill_parent"
             android:layout_height="1px"
-            android:background="@color/gray_listline_s" />
+            android:background="@color/gray_line" />
     </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/myaddress_layout"
+<LinearLayout
+        android:id="@+id/eqiupment_layout"
         android:layout_width="fill_parent"
-        android:layout_height="47dp"
-        android:layout_gravity="bottom"
+        android:layout_height="wrap_content"
         android:background="@color/white"
         android:orientation="vertical" >
 
         <RelativeLayout
             android:layout_width="fill_parent"
-            android:layout_height="45dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp" >
+            android:layout_height="48dp"
+            android:layout_marginLeft="10dp" >
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="45dp"
                 android:layout_gravity="center"
-                android:layout_marginLeft="10dp"
-                android:layout_toRightOf="@+id/question_img"
+                android:layout_marginLeft="34dp"
                 android:gravity="center"
-                android:text="地址管理"
-                android:textColor="@color/gray_text"
-                android:textSize="17dp" />
+                android:text="设备管理"
+                android:textColor="@color/item_graytext"
+                android:textSize="16dp" />
 
             <ImageView
-                android:layout_width="15dp"
-                android:layout_height="21dp"
-                android:layout_alignParentRight="true"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
                 android:layout_centerVertical="true"
-                android:background="@drawable/mm_submenu" />
+                android:background="@drawable/eqiupment" />
+            <ImageView
+                android:layout_width="12dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/more" />
         </RelativeLayout>
-
-        <TextView
+         <View
             android:layout_width="fill_parent"
             android:layout_height="1px"
-            android:background="@color/gray_listline_s" />
+            android:background="@color/gray_line" />
     </LinearLayout>
-
     <LinearLayout
-        android:id="@+id/password_layout"
+        android:id="@+id/aboutus_layout"
         android:layout_width="fill_parent"
-        android:layout_height="46dp"
-        android:layout_gravity="bottom"
+        android:layout_height="wrap_content"
         android:background="@color/white"
         android:orientation="vertical" >
 
         <RelativeLayout
             android:layout_width="fill_parent"
-            android:layout_height="45dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp" >
+            android:layout_height="48dp"
+            android:layout_marginLeft="10dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="45dp"
                 android:layout_gravity="center"
-                android:layout_marginLeft="10dp"
-                android:layout_toRightOf="@+id/answer_img"
+                android:layout_marginLeft="34dp"
                 android:gravity="center"
-                android:text="修改密码"
-                android:textColor="@color/gray_text"
-                android:textSize="17dp" />
+                android:text="联系我们"
+                android:textColor="@color/item_graytext"
+                android:textSize="16dp" />
 
             <ImageView
-                android:layout_width="15dp"
-                android:layout_height="21dp"
-                android:layout_alignParentRight="true"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
                 android:layout_centerVertical="true"
-                android:background="@drawable/mm_submenu" />
+                android:background="@drawable/contactus" />
+            <ImageView
+                android:layout_width="12dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/more" />
         </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="@color/gray_line" />
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/version_layout"
+        android:id="@+id/function_layout"
         android:layout_width="fill_parent"
-        android:layout_height="46dp"
-        android:layout_gravity="bottom"
-        android:layout_marginTop="13dp"
+        android:layout_height="wrap_content"
         android:background="@color/white"
         android:orientation="vertical" >
 
         <RelativeLayout
             android:layout_width="fill_parent"
-            android:layout_height="45dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp" >
+            android:layout_height="48dp"
+            android:layout_marginLeft="10dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="45dp"
                 android:layout_gravity="center"
-                android:layout_marginLeft="10dp"
+                android:layout_marginLeft="34dp"
                 android:gravity="center"
-                android:text="版本号"
-                android:textColor="@color/gray_text"
-                android:textSize="17dp" />
+                android:text="功能"
+                android:textColor="@color/item_graytext"
+                android:textSize="16dp" />
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/function" />
+            <ImageView
+                android:layout_width="12dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/more" />
+        </RelativeLayout>
+         <View
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="@color/gray_line" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/veision_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="48dp"
+            android:layout_marginLeft="10dp">
 
             <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="21dp"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:text="1.02.3"
-                android:textColor="@color/gray_texts"
-                android:textSize="17dp" />
-        </RelativeLayout>
-    </LinearLayout>
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="34dp"
+                android:gravity="center"
+                android:text="版本更新"
+                android:textColor="@color/item_graytext"
+                android:textSize="16dp" />
 
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/versions" />
+            <ImageView
+                android:id="@+id/next_img"
+                android:layout_width="12dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/more" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_toLeftOf="@+id/next_img"
+                android:layout_marginRight="14dp"
+                android:gravity="center"
+                android:text="1.01"
+                android:textColor="@color/item_graytext"
+                android:textSize="16dp" />
+        </RelativeLayout>
+         <View
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="@color/gray_line" />
+    </LinearLayout>
     <LinearLayout
         android:id="@+id/logout_layout"
         android:layout_width="fill_parent"
-        android:layout_height="44dp"
+        android:layout_height="48dp"
         android:layout_gravity="bottom"
-        android:layout_marginTop="78dp"
+        android:layout_marginTop="47dp"
         android:background="@color/white"
         android:orientation="vertical" >
 
         <TextView
             android:id="@+id/tv_logout"
             android:layout_width="wrap_content"
-            android:layout_height="45dp"
+            android:layout_height="48dp"
             android:layout_gravity="center"
             android:gravity="center"
             android:text="退出"
-            android:textColor="@color/gray_text"
-            android:textSize="17dp" />
+            android:textColor="@color/item_graytext"
+            android:textSize="16dp" />
     </LinearLayout>
 
 </LinearLayout>

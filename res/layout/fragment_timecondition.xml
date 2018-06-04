@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_bg2"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:orientation="vertical">
+
+<TextView 
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="12dp"
+    android:text="有效时间"
+    android:textColor="@color/item_graytext"
+    android:textSize="14dp"/>
+
+<RelativeLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="40dp"
+    android:layout_marginTop="8dp">
+   <View 
+       android:id="@+id/center_line"
+       android:layout_width="16dp"
+       android:layout_height="2dp"
+       android:layout_centerInParent="true"
+       android:background="@color/gray_line3"/>
+    
+   <EditText
+            android:id="@+id/timestart_edit"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_toLeftOf="@+id/center_line"
+            android:layout_marginRight="11dp"
+            android:background="@color/white"
+            android:hint="07:00"
+            android:paddingLeft="11dp"
+            android:inputType="textNoSuggestions"
+            android:singleLine="true"
+            android:textColor="@color/item_graytext"
+            android:textColorHint="@color/item_graytext"
+            android:textSize="14dp" />
+   <EditText
+            android:id="@+id/timeend_edit"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_toRightOf="@+id/center_line"
+            android:layout_marginLeft="11dp"
+            android:background="@color/white"
+            android:hint="18:59"
+            android:paddingLeft="15dp"
+            android:inputType="textNoSuggestions"
+            android:singleLine="true"
+            android:textColor="@color/item_graytext"
+            android:textColorHint="@color/item_graytext"
+            android:textSize="14dp" />
+</RelativeLayout>
+
+</LinearLayout>

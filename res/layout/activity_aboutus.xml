@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@color/white">
+    
+    <RelativeLayout
+        android:id="@+id/top_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="49dp"
+        android:background="@color/green_top"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:ellipsize="marquee"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="关于我们"
+            android:textColor="@color/white"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/tv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="26dp"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="返回"
+            android:textColor="@color/white"
+            android:textSize="18dp" />
+    </RelativeLayout>
+ 
+
+       <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="11dp"
+        android:paddingRight="9dp"
+        android:background="@color/white" >
+        <ImageView
+            android:id="@+id/next_img"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/company"/>
+ 		<TextView 
+ 		    android:layout_width="wrap_content"
+ 		    android:layout_height="wrap_content"
+ 		    android:layout_marginLeft="12dp"
+ 		    android:layout_toRightOf="@+id/next_img"
+ 		    android:text="公司名称：辽宁邮电规划设计院有限公司"
+ 		    android:textColor="@color/item_graytext"
+ 		    android:textSize="16dp"
+ 		    android:gravity="center_vertical"/>
+        	
+    </RelativeLayout>
+
+       <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+            android:layout_marginTop="16dp"
+        android:paddingLeft="11dp"
+        android:paddingRight="9dp"
+        android:background="@color/white" >
+        <ImageView
+            android:id="@+id/next_img2"
+            android:layout_width="19dp"
+            android:layout_height="19dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/phone2"/>
+ 		<TextView 
+ 		    android:id="@+id/text_tv"
+ 		    android:layout_width="wrap_content"
+ 		    android:layout_height="wrap_content"
+ 		    android:layout_marginLeft="13dp"
+ 		    android:layout_toRightOf="@+id/next_img2"
+ 		    android:text="服务热线："
+ 		    android:textColor="@color/item_graytext"
+ 		    android:textSize="16dp"
+ 		    android:gravity="center_vertical"/>
+        	<TextView 
+ 		    android:layout_width="wrap_content"
+ 		    android:layout_height="wrap_content"
+ 		    android:layout_marginLeft="13dp"
+ 		    android:layout_toRightOf="@+id/text_tv"
+ 		    android:text="024-24858690"
+ 		    android:textColor="@color/item_greentext"
+ 		    android:textSize="16dp"
+ 		    android:gravity="center_vertical"/>
+    </RelativeLayout>
+  <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+            android:layout_marginTop="16dp"
+        android:paddingLeft="11dp"
+        android:paddingRight="9dp"
+        android:background="@color/white" >
+        <ImageView
+            android:id="@+id/next_img3"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/email"/>
+ 		<TextView 
+ 		    android:layout_width="wrap_content"
+ 		    android:layout_height="wrap_content"
+ 		    android:layout_marginLeft="13dp"
+ 		    android:layout_toRightOf="@+id/next_img3"
+ 		    android:text="邮编：110179"
+ 		    android:textColor="@color/item_graytext"
+ 		    android:textSize="16dp"
+ 		    android:gravity="center_vertical"/>
+        	
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+            android:layout_marginTop="16dp"
+        android:paddingLeft="11dp"
+        android:paddingRight="9dp"
+        android:background="@color/white" >
+        <ImageView
+            android:id="@+id/next_img4"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/location2"/>
+ 		<TextView 
+ 		    android:layout_width="wrap_content"
+ 		    android:layout_height="wrap_content"
+ 		    android:layout_marginLeft="13dp"
+ 		    android:layout_toRightOf="@+id/next_img4"
+ 		    android:text="辽宁省沈阳市浑南区金科街7号"
+ 		    android:textColor="@color/item_graytext"
+ 		    android:textSize="16dp"
+ 		    android:gravity="center_vertical"/>
+        	
+    </RelativeLayout>
+    <ImageView 
+        android:layout_width="fill_parent"
+        android:layout_height="266dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/mapimage"/>
+</LinearLayout>

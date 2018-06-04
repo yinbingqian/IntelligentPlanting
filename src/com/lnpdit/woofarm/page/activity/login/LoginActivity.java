@@ -3,18 +3,17 @@ package com.lnpdit.woofarm.page.activity.login;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import com.hp.hpl.sparta.Text;
 import com.lnpdit.IntelligentPlanting.R;
 import com.lnpdit.woofarm.base.component.BaseActivity;
-import com.lnpdit.woofarm.entity.LoginUser;
+import com.lnpdit.woofarm.db.DBHelper;
 import com.lnpdit.woofarm.http.SoapRes;
 import com.lnpdit.woofarm.md5.MD5Plus;
-import com.lnpdit.woofarm.page.activity.tabhost.MainTabHostActivity;
 import com.lnpdit.woofarm.utils.SOAP_UTILS;
 
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
 import android.location.LocationManager;
 import android.os.Bundle;
 import android.text.InputType;
@@ -34,6 +33,8 @@ public class LoginActivity extends BaseActivity implements OnClickListener {
     private TextView tvRigister;
     private TextView tvForget;
 
+    private String type;
+    private DBHelper dbh;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         // TODO Auto-generated method stub
@@ -41,6 +42,15 @@ public class LoginActivity extends BaseActivity implements OnClickListener {
         setContentView(R.layout.activity_login);
 
         context = this;
+        
+        type = this.getIntent().getStringExtra("type");
+        if (type.equals("in")) {
+            isParentActivity = false;
+        } else {
+            isParentActivity = true;
+        }
+
+        dbh = new DBHelper(this);
         initView();
 
     }
@@ -111,8 +121,7 @@ public class LoginActivity extends BaseActivity implements OnClickListener {
     public void onClick(View v) {
         switch (v.getId()) {
         case R.id.login_bt:
-            login_validate(username_edit.getText().toString().trim(), MD5Plus
-                    .stringToMD5(password_edit.getText().toString().trim())); // 加密
+            login_validate(username_edit.getText().toString().trim(), password_edit.getText().toString().trim());
             break;
         case R.id.tv_register:
 
@@ -148,16 +157,15 @@ public class LoginActivity extends BaseActivity implements OnClickListener {
             Toast.makeText(this, "密码为空", Toast.LENGTH_SHORT).show();
             return;
         }
-        // Object[] property_va = { username_edit.getText().toString(),
-        // password_edit.getText().toString() };
-        // soapService.userLogin(property_va);
-        String[] property_va = new String[] { "13940226591", "2" };
-        soapService.userLogin(property_va);
+         Object[] property_va = {"true","json", username_edit.getText().toString(),
+         password_edit.getText().toString() };
+         soapService.userLogin(property_va);
         
-        Intent intent_login = new Intent();
-        intent_login.setClass(context, MainTabHostActivity.class);
-        startActivity(intent_login);
-        finish();
+//        String[] property_va = new String[] {"true","json","admin","admin" };
+//        soapService.userLogin(property_va);
+
+//        String[] property_va = new String[] {"true","json","13704016776","123456" };
+//        soapService.userLogin(property_va);
     }
 
     /**
@@ -191,60 +199,37 @@ public class LoginActivity extends BaseActivity implements OnClickListener {
                 try {
                 JSONObject json_obj = new JSONObject(res.getObj().toString());
                
-                if (json_obj.get("status").toString().equals("true")) {
+                if (json_obj.get("result").toString().equals("true")) {
 
                   Toast.makeText(this, "登录成功！", Toast.LENGTH_SHORT).show(); 
-                  String userid= json_obj.get("id").toString();
-                  String nickname= json_obj.get("nicheng").toString();
-                  String memberlogo= json_obj.get("memberlogo").toString();
-//                    {"status":"true","msg":"登录成功","id":"13","nicheng":"1","memberlogo":"1"}
-                    
-                // LoginUser loginUser = (LoginUser) res.getObj();
-                // if (loginUser.getId().equals("0")) {
-                // Toast.makeText(this, "您的账号与密码不符", Toast.LENGTH_SHORT).show();
-                // } else {
-                // loginUser.setPassWd(
-                // password_edit.getText().toString().trim());
-                // SharedPreferences sp = context
-                // .getSharedPreferences("userinfo", MODE_PRIVATE);
-                // Editor editor = sp.edit();
-                // editor.putString("Id", loginUser.getId());
-                // editor.putString("serialNum", loginUser.getSerialNum());
-                // editor.putString("passWd", loginUser.getPassWd());
-                // editor.putString("sex", loginUser.getSex());
-                // editor.putString("zone", loginUser.getZone());
-                // editor.putString("crTime", loginUser.getCrTime());
-                // editor.commit();
-                // //
-                //
-                // SharedPreferences sharedPreferences=
-                // getSharedPreferences("userinfo", MODE_PRIVATE);
-                // // 使用getString方法获得value，注意第2个参数是value的默认值
-                // String Id =sharedPreferences.getString("Id", "");
-                // String serialNum =sharedPreferences.getString("serialNum",
-                // "");
-                // String passWd =sharedPreferences.getString("passWd", "");
-                // String sex =sharedPreferences.getString("sex", "");
-                // String zone =sharedPreferences.getString("zone", "");
-                // String crTime =sharedPreferences.getString("crTime", "");
-                // //使用toast信息提示框显示信息
-                //
-                //// Toast.makeText(this, "读取数据如下："+"\n"+"serialNum：" +
-                // serialNum + "\n" + "sex：" + sex,
-                //// Toast.LENGTH_LONG).show();
-                // username_edit.setText(serialNum);
-                // password_edit.setText(passWd);
-                ////
-                //// Toast.makeText(context,
-                //// username_edit.getText().toString().trim(),
-                //// Toast.LENGTH_LONG).show();
-                // Intent intent_login = new Intent();
-                // intent_login.setClass(context, MainActivity.class);
-                // startActivity(intent_login);
-                // finish();
+                  JSONObject json_user = json_obj.getJSONObject("user");
+                  String id= json_user.get("id").toString();
+                  String userCode= json_user.get("userCode").toString();
+                  String loginCode= json_user.get("loginCode").toString();
+                  String userlogo= json_user.get("avatarUrl").toString();
+                  
+                  String sessionid= json_obj.get("sessionid").toString();
+//                  UserInfo loginUser = (UserInfo) json_user.;
+//                          userId = loginUser.getid();
+//                          dbh.clearUserInfoData();
+//                          dbh.insUserInfo(loginUser);
+                 SharedPreferences sp = context
+                 .getSharedPreferences("userinfo", MODE_PRIVATE);
+                 Editor editor = sp.edit();
+                 editor.putString("id",id);
+                 editor.putString("userCode",userCode);
+                 editor.putString("loginCode", loginCode);
+                 editor.putString("userlogo", userlogo);
+                 editor.putString("sessionid", sessionid);
+                 editor.commit();
+                 
+                 Intent in=new Intent();
+                 setResult(2,in);
+                 
+                 finish();
                  }else{
 
-                   Toast.makeText(this, "登录失败！", Toast.LENGTH_SHORT).show();
+                   Toast.makeText(this, "用户名或密码错误！", Toast.LENGTH_SHORT).show();
                  }
                 } catch (JSONException e) {
                     // TODO Auto-generated catch block

@@ -82,7 +82,7 @@
     <color name="blue_light">#48a5cc</color>
     <color name="blue_dark">#00aeef</color>
     <color name="stroke">#77d4f6</color>
-    <color name="green_login_btn">#2cc17b</color>
+    <color name="green_login_btn">#00dc71</color>
     <color name="gray_top">#e5e9e7</color>
     <color name="gray_deep">#e5e9e7</color>
     <color name="gray_simple">#f2f2f2</color>
@@ -104,5 +104,38 @@
     <color name="graysearchs_bg">#fafafa</color>
     <color name="graycar_bg">#f8f6f0</color>
     <color name="blackal_bg">#3c000000</color>
+    <color name="item_graytext">#3a3a3a</color>
+    <color name="item_orangetext">#ff9200</color>
+    <color name="item_greentext">#00d368</color>
+    <color name="greenbg_btn">#0bda75</color>
+    <color name="gray_appname">#313131</color>
+    <color name="gray_text2">#999999</color>
+    <color name="gray_line">#d8d8d8</color>
+    <color name="green_text">#0cd473</color>
+    <color name="gray_text3">#bbbbbb</color>
+    <color name="green_text2">#00c263</color>
+    <color name="gray_text4">#202020</color>
+    <color name="green_top">#0cdb76</color>
+    <color name="gray_text5">#a1a1a1</color>
+    <color name="gray_bg">#d2d2d2</color>
+    <color name="orange_line">#ffbd00</color>
+    <color name="gran_line2">#e0e0e0</color>
+    <color name="gran_line3">#eeeeef</color>
+    <color name="gray_line4">#d9d9d9</color>
+    <color name="gray_line5">#dedede</color>
+    <color name="gray_bg2">#eeeef0</color>
+    <color name="gray_text6">#7f7f7f</color>
+    <color name="green_bg2">#0bd070</color>
+    <color name="red_graph">#db0c0c</color>
+    <color name="paintcolor">#abb3b9</color>
+    <color name="gray_text7">#e1e5e9</color>
+    <color name="gray_text8">#59678b</color>
+    <color name="red_bgsmall">#ec1c1c</color>
+    <color name="blue_bgsmall">#31b1ec</color>
+    <color name="green_text3">#1dc637</color>
+    <color name="gray_line3">#bdbec0</color>
+    <color name="item_graytext2">#959595</color>
+    
+    
 
 </resources>

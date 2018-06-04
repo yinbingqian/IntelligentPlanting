@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_bg2">
+
+    <RelativeLayout
+        android:id="@+id/location_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="249dp"
+        android:background="@drawable/homebg">"
+
+        <ImageView
+            android:id="@+id/location_img"
+            android:layout_width="17dp"
+            android:layout_height="18dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="39dp"
+            android:background="@drawable/location"/>
+        <TextView
+            android:id="@+id/location_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_toRightOf="@+id/location_img"
+            android:text="未知"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:layout_alignBottom="@+id/location_img" />
+    <TextView 
+        android:id="@+id/farm_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:layout_below="@+id/location_img"
+        android:layout_alignLeft="@+id/location_img"
+        android:text="未登录"
+        android:textColor="@color/white"
+        android:textSize="22dp"
+        android:layout_gravity="center_horizontal"/>
+    <ImageView 
+        android:id="@+id/changefarm_img"
+        android:layout_width="24dp"
+        android:layout_height="21dp"
+        android:background="@drawable/switchicon"
+        android:layout_alignBottom="@+id/farm_tv"
+        android:layout_toRightOf="@+id/farm_tv"
+        android:layout_marginLeft="11dp"
+        />"
+    <TextView 
+        android:id="@+id/wind_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="21dp"
+        android:layout_marginRight="10dp"
+        android:layout_alignBottom="@+id/farm_tv"
+        android:layout_alignParentRight="true"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:text="西南风4-6级"
+        android:textColor="@color/white"
+        android:textSize="14dp"
+        android:background="@color/green_bg2"
+        android:gravity="center"/>
+        <TextView 
+        android:id="@+id/temperature_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_above="@+id/wind_tv"
+        android:layout_marginBottom="8dp"
+        android:layout_alignParentRight="true"
+        android:text="20℃"
+        android:textColor="@color/white"
+        android:textSize="18dp"/>
+        <TextView 
+            android:id="@+id/temperature_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/wind_tv"
+        android:layout_marginBottom="8dp"
+        android:layout_toLeftOf="@+id/temperature_tv"
+        android:layout_marginRight="8dp"
+        android:text="晴"
+        android:textColor="@color/white"
+        android:textSize="18dp"/>
+    </RelativeLayout>
+
+<LinearLayout 
+    android:id="@+id/unlogin_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/location_layout"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/line2"
+        android:layout_width="58dp"
+        android:layout_height="84dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/reminder" />
+
+    
+<TextView
+        android:id="@+id/line3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="您还未登录，登录后使用更多功能"
+        android:textSize="14dp"
+        android:textColor="@color/gray_text5" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="40dp"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/login_bt"
+            android:layout_width="fill_parent"
+            android:layout_height="44dp"
+            android:background="@drawable/broder_green"
+            android:gravity="center"
+            android:onClick="login"
+            android:text="登录"
+            android:textColor="#ffffff"
+            android:textSize="16dp" />
+
+        <ProgressBar
+            android:id="@+id/login_progressbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/login_layout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:indeterminateDrawable="@anim/progressbar"
+            android:visibility="gone" />
+    </LinearLayout>
+    
+</LinearLayout>
+
+<ListView
+        android:id="@+id/listview_farmlist"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="172dp" 
+        android:background="@null"
+        android:cacheColorHint="#00000000"
+        android:divider="#eeeeee"
+        android:fadingEdge="none"
+        android:fastScrollEnabled="false"
+        android:footerDividersEnabled="false"
+        android:headerDividersEnabled="false"
+        android:listSelector="#00000000"
+        android:smoothScrollbar="true" />
+
+</RelativeLayout>

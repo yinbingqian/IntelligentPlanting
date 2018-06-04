@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_bg2"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/mime_layout_01"
+        android:layout_width="fill_parent"
+        android:layout_height="220dp"
+        android:background="@drawable/nongshibg"
+        android:clickable="true" >
+      <TextView 
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_marginTop="23dp"
+         android:layout_centerHorizontal="true"
+         android:text="农事管理"
+         android:textColor="@color/white"
+         android:textSize="18dp"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/zuowuku_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="80dp"
+            android:background="@color/white" >
+
+            <TextView
+                android:id="@+id/textview_tv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="76dp"
+                android:gravity="center"
+                android:layout_marginTop="20dp"
+                android:text="作物库"
+                android:textColor="@color/item_graytext"
+                android:textSize="16dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="1dp"
+                android:layout_below="@+id/textview_tv1"
+                android:layout_alignLeft="@+id/textview_tv1"
+                android:text="在这里添加新的作物模型"
+                android:textColor="@color/gray_text5"
+                android:textSize="12dp" />
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="16dp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/zuowuku" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/planting_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="80dp">
+
+            <TextView
+                android:id="@+id/textview_tv2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="76dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="种植管理"
+                android:textColor="@color/item_graytext"
+                android:textSize="16dp" />
+<TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="1dp"
+                android:layout_below="@+id/textview_tv2"
+                android:layout_alignLeft="@+id/textview_tv2"
+                android:text="每个区域进行作物模型分配"
+                android:textColor="@color/gray_text5"
+                android:textSize="12dp" />
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:background="@drawable/zhongzhiguanl" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/plan_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="80dp">
+
+            <TextView
+                android:id="@+id/textview_tv3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="76dp"
+                android:gravity="center"
+                android:text="农事计划"
+                android:textColor="@color/item_graytext"
+                android:textSize="16dp" />
+<TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="1dp"
+                android:layout_below="@+id/textview_tv3"
+                android:layout_alignLeft="@+id/textview_tv3"
+                android:text="对每个区域的种植进行管理"
+                android:textColor="@color/gray_text5"
+                android:textSize="12dp" />
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:background="@drawable/zhongzhiguanlcopy" />
+        </RelativeLayout>
+    
+    </LinearLayout>
+<LinearLayout
+        android:id="@+id/devicemanage_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical" >
+         <View
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="@color/gray_line" />
+    </LinearLayout>
+
+</LinearLayout>

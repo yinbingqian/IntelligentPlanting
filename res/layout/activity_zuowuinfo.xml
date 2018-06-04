@@ -1,0 +1,733 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+<RelativeLayout
+        android:id="@+id/top_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="49dp"
+        android:background="@color/green_top"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:ellipsize="marquee"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="百合"
+            android:textColor="@color/white"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/tv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="26dp"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="返回"
+            android:textColor="@color/white"
+            android:textSize="18dp" />
+         <TextView
+            android:id="@+id/submit_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="16dp"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="@color/white"
+            android:textSize="18dp" />
+         
+    </RelativeLayout>
+    <ScrollView 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+<TextView 
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="作物名称"
+    android:textSize="14dp"
+    android:layout_marginLeft="16dp"
+    android:layout_marginTop="16dp"
+    android:textColor="@color/item_graytext"/>
+<TextView 
+    android:id="@+id/cropname_tv"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="百合"
+    android:textSize="14dp"
+    android:layout_marginLeft="16dp"
+    android:layout_marginTop="8dp"
+    android:textColor="@color/item_graytext"/>
+<View 
+    android:layout_width="fill_parent"
+    android:layout_height="1dp"
+    android:layout_marginLeft="17dp"
+    android:layout_marginTop="8dp"
+    android:background="@color/gray_line"/>
+<TextView 
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="种植标准"
+    android:textSize="14dp"
+    android:layout_marginLeft="16dp"
+    android:layout_marginTop="14dp"
+    android:textColor="@color/item_graytext"/>
+<RelativeLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+    <TextView 
+        android:id="@+id/cropstandard_tv"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="有机"
+    android:textSize="14dp"
+    android:layout_marginLeft="16dp"
+    android:layout_marginTop="8dp"
+    android:textColor="@color/item_graytext"/>
+    <ImageView 
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:background="@drawable/next_btn"
+        android:layout_alignParentRight="true"
+        android:layout_alignBottom="@+id/cropstandard_tv"
+        android:layout_marginRight="24dp"
+        android:visibility="gone"/>
+</RelativeLayout>
+<View 
+    android:layout_width="fill_parent"
+    android:layout_height="1dp"
+    android:layout_marginLeft="17dp"
+    android:layout_marginTop="8dp"
+    android:background="@color/gray_line"/>
+<TextView 
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="种植环境"
+    android:textSize="14dp"
+    android:layout_marginLeft="16dp"
+    android:layout_marginTop="14dp"
+    android:textColor="@color/item_graytext"/>
+<RelativeLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+    <TextView 
+        android:id="@+id/cropenvironment_tv"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="日光温室"
+    android:textSize="14dp"
+    android:layout_marginLeft="16dp"
+    android:layout_marginTop="8dp"
+    android:textColor="@color/item_graytext"/>
+    <ImageView 
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:background="@drawable/next_btn"
+        android:layout_alignParentRight="true"
+        android:layout_alignBottom="@+id/cropenvironment_tv"
+        android:layout_marginRight="24dp"
+        android:visibility="gone"/>
+</RelativeLayout>
+<View 
+    android:layout_width="fill_parent"
+    android:layout_height="1dp"
+    android:layout_marginLeft="17dp"
+    android:layout_marginTop="8dp"
+    android:background="@color/gray_line"/>
+<TextView 
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="白天光照度"
+    android:textSize="14dp"
+    android:layout_marginLeft="16dp"
+    android:layout_marginTop="16dp"
+    android:textColor="@color/item_graytext"/>
+<LinearLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:orientation="horizontal">
+    <TextView 
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="上限："
+    android:textSize="14dp"
+    android:layout_marginLeft="16dp"
+    android:textColor="@color/item_graytext"/>
+    <TextView 
+    android:id="@+id/dayBrightnessMax_tv"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="100"
+    android:textSize="14dp"
+    android:layout_marginLeft="10dp"
+    android:textColor="@color/item_graytext"/>
+    <TextView 
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="下限："
+    android:textSize="14dp"
+    android:layout_marginLeft="56dp"
+    android:textColor="@color/item_graytext"/>
+    <TextView 
+    android:id="@+id/dayBrightnessMini_tv"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="100"
+    android:textSize="14dp"
+    android:layout_marginLeft="10dp"
+    android:textColor="@color/item_graytext"/>
+    
+</LinearLayout>
+
+<View 
+    android:layout_width="fill_parent"
+    android:layout_height="1dp"
+    android:layout_marginLeft="17dp"
+    android:layout_marginTop="8dp"
+    android:background="@color/gray_line"/>
+<TextView 
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="白天空气温度"
+    android:textSize="14dp"
+    android:layout_marginLeft="16dp"
+    android:layout_marginTop="16dp"
+    android:textColor="@color/item_graytext"/>
+<LinearLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:orientation="horizontal">
+    <TextView 
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="上限："
+    android:textSize="14dp"
+    android:layout_marginLeft="16dp"
+    android:textColor="@color/item_graytext"/>
+    <TextView 
+    android:id="@+id/dayAirTemperatureMax_tv"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="100"
+    android:textSize="14dp"
+    android:layout_marginLeft="10dp"
+    android:textColor="@color/item_graytext"/>
+    <TextView 
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="下限："
+    android:textSize="14dp"
+    android:layout_marginLeft="56dp"
+    android:textColor="@color/item_graytext"/>
+    <TextView 
+    android:id="@+id/dayAirTemperatureMini_tv"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="100"
+    android:textSize="14dp"
+    android:layout_marginLeft="10dp"
+    android:textColor="@color/item_graytext"/>
+    
+</LinearLayout>
+
+<View 
+    android:layout_width="fill_parent"
+    android:layout_height="1dp"
+    android:layout_marginLeft="17dp"
+    android:layout_marginTop="8dp"
+    android:background="@color/gray_line"/>
+<TextView 
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="白天空气湿度"
+    android:textSize="14dp"
+    android:layout_marginLeft="16dp"
+    android:layout_marginTop="16dp"
+    android:textColor="@color/item_graytext"/>
+<LinearLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:orientation="horizontal">
+    <TextView 
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="上限："
+    android:textSize="14dp"
+    android:layout_marginLeft="16dp"
+    android:textColor="@color/item_graytext"/>
+    <TextView 
+    android:id="@+id/dayAirHumidityMax_tv"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="100"
+    android:textSize="14dp"
+    android:layout_marginLeft="10dp"
+    android:textColor="@color/item_graytext"/>
+    <TextView 
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="下限："
+    android:textSize="14dp"
+    android:layout_marginLeft="56dp"
+    android:textColor="@color/item_graytext"/>
+    <TextView 
+    android:id="@+id/dayAirHumidityMini_tv"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="100"
+    android:textSize="14dp"
+    android:layout_marginLeft="10dp"
+    android:textColor="@color/item_graytext"/>
+    
+</LinearLayout>
+
+<View 
+    android:layout_width="fill_parent"
+    android:layout_height="1dp"
+    android:layout_marginLeft="17dp"
+    android:layout_marginTop="8dp"
+    android:background="@color/gray_line"/>
+<TextView 
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="白天CO2浓度"
+    android:textSize="14dp"
+    android:layout_marginLeft="16dp"
+    android:layout_marginTop="16dp"
+    android:textColor="@color/item_graytext"/>
+<LinearLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:orientation="horizontal">
+   <TextView 
+    android:id="@+id/dayCo2Concentrations_tv"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="16dp"
+    android:text="100"
+    android:textSize="14dp"
+    android:textColor="@color/item_graytext"/>
+    
+</LinearLayout>
+
+<View 
+    android:layout_width="fill_parent"
+    android:layout_height="1dp"
+    android:layout_marginLeft="17dp"
+    android:layout_marginTop="8dp"
+    android:background="@color/gray_line"/>
+<TextView 
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="白天土壤温度"
+    android:textSize="14dp"
+    android:layout_marginLeft="16dp"
+    android:layout_marginTop="16dp"
+    android:textColor="@color/item_graytext"/>
+<LinearLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:orientation="horizontal">
+    <TextView 
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="上限："
+    android:textSize="14dp"
+    android:layout_marginLeft="16dp"
+    android:textColor="@color/item_graytext"/>
+    <TextView 
+    android:id="@+id/daySoilTemperatureMax_tv"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="100"
+    android:textSize="14dp"
+    android:layout_marginLeft="10dp"
+    android:textColor="@color/item_graytext"/>
+    <TextView 
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="下限："
+    android:textSize="14dp"
+    android:layout_marginLeft="56dp"
+    android:textColor="@color/item_graytext"/>
+    <TextView 
+    android:id="@+id/daySoilTemperatureMini_tv"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="100"
+    android:textSize="14dp"
+    android:layout_marginLeft="10dp"
+    android:textColor="@color/item_graytext"/>
+    
+</LinearLayout>
+
+<View 
+    android:layout_width="fill_parent"
+    android:layout_height="1dp"
+    android:layout_marginLeft="17dp"
+    android:layout_marginTop="8dp"
+    android:background="@color/gray_line"/>
+<TextView 
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="白天土壤湿度"
+    android:textSize="14dp"
+    android:layout_marginLeft="16dp"
+    android:layout_marginTop="16dp"
+    android:textColor="@color/item_graytext"/>
+<LinearLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:orientation="horizontal">
+    <TextView 
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="上限："
+    android:textSize="14dp"
+    android:layout_marginLeft="16dp"
+    android:textColor="@color/item_graytext"/>
+    <TextView 
+    android:id="@+id/daySoilHumidityMax_tv"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="100"
+    android:textSize="14dp"
+    android:layout_marginLeft="10dp"
+    android:textColor="@color/item_graytext"/>
+    <TextView 
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="下限："
+    android:textSize="14dp"
+    android:layout_marginLeft="56dp"
+    android:textColor="@color/item_graytext"/>
+    <TextView 
+    android:id="@+id/daySoilHumidityMini_tv"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="100"
+    android:textSize="14dp"
+    android:layout_marginLeft="10dp"
+    android:textColor="@color/item_graytext"/>
+    
+</LinearLayout>
+
+<View 
+    android:layout_width="fill_parent"
+    android:layout_height="1dp"
+    android:layout_marginLeft="17dp"
+    android:layout_marginTop="8dp"
+    android:background="@color/gray_line"/>
+<TextView 
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="夜间光照度"
+    android:textSize="14dp"
+    android:layout_marginLeft="16dp"
+    android:layout_marginTop="16dp"
+    android:textColor="@color/item_graytext"/>
+<LinearLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:orientation="horizontal">
+    <TextView 
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="上限："
+    android:textSize="14dp"
+    android:layout_marginLeft="16dp"
+    android:textColor="@color/item_graytext"/>
+    <TextView 
+    android:id="@+id/nightBrightnessMax_tv"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="100"
+    android:textSize="14dp"
+    android:layout_marginLeft="10dp"
+    android:textColor="@color/item_graytext"/>
+    <TextView 
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="下限："
+    android:textSize="14dp"
+    android:layout_marginLeft="56dp"
+    android:textColor="@color/item_graytext"/>
+    <TextView 
+    android:id="@+id/nightBrightnessMini_tv"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="100"
+    android:textSize="14dp"
+    android:layout_marginLeft="10dp"
+    android:textColor="@color/item_graytext"/>
+    
+</LinearLayout>
+
+<View 
+    android:layout_width="fill_parent"
+    android:layout_height="1dp"
+    android:layout_marginLeft="17dp"
+    android:layout_marginTop="8dp"
+    android:background="@color/gray_line"/>
+<TextView 
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="夜间空气温度"
+    android:textSize="14dp"
+    android:layout_marginLeft="16dp"
+    android:layout_marginTop="16dp"
+    android:textColor="@color/item_graytext"/>
+<LinearLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:orientation="horizontal">
+    <TextView 
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="上限："
+    android:textSize="14dp"
+    android:layout_marginLeft="16dp"
+    android:textColor="@color/item_graytext"/>
+    <TextView 
+    android:id="@+id/nightAirTemperatureMax_tv"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="100"
+    android:textSize="14dp"
+    android:layout_marginLeft="10dp"
+    android:textColor="@color/item_graytext"/>
+    <TextView 
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="下限："
+    android:textSize="14dp"
+    android:layout_marginLeft="56dp"
+    android:textColor="@color/item_graytext"/>
+    <TextView 
+    android:id="@+id/nightAirTemperatureMini_tv"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="100"
+    android:textSize="14dp"
+    android:layout_marginLeft="10dp"
+    android:textColor="@color/item_graytext"/>
+    
+</LinearLayout>
+
+<View 
+    android:layout_width="fill_parent"
+    android:layout_height="1dp"
+    android:layout_marginLeft="17dp"
+    android:layout_marginTop="8dp"
+    android:background="@color/gray_line"/>
+<TextView 
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="夜间空气湿度"
+    android:textSize="14dp"
+    android:layout_marginLeft="16dp"
+    android:layout_marginTop="16dp"
+    android:textColor="@color/item_graytext"/>
+<LinearLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:orientation="horizontal">
+    <TextView 
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="上限："
+    android:textSize="14dp"
+    android:layout_marginLeft="16dp"
+    android:textColor="@color/item_graytext"/>
+    <TextView 
+    android:id="@+id/nightAirHumidityMax_tv"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="100"
+    android:textSize="14dp"
+    android:layout_marginLeft="10dp"
+    android:textColor="@color/item_graytext"/>
+    <TextView 
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="下限："
+    android:textSize="14dp"
+    android:layout_marginLeft="56dp"
+    android:textColor="@color/item_graytext"/>
+    <TextView 
+    android:id="@+id/nightAirHumidityMini_tv"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="100"
+    android:textSize="14dp"
+    android:layout_marginLeft="10dp"
+    android:textColor="@color/item_graytext"/>
+    
+</LinearLayout>
+
+<View 
+    android:layout_width="fill_parent"
+    android:layout_height="1dp"
+    android:layout_marginLeft="17dp"
+    android:layout_marginTop="8dp"
+    android:background="@color/gray_line"/>
+<TextView 
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="夜间CO2浓度"
+    android:textSize="14dp"
+    android:layout_marginLeft="16dp"
+    android:layout_marginTop="16dp"
+    android:textColor="@color/item_graytext"/>
+<LinearLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:orientation="horizontal">
+    
+    <TextView 
+    android:id="@+id/nightCo2Concentrations_tv"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="16dp"
+    android:text="100"
+    android:textSize="14dp"
+    android:textColor="@color/item_graytext"/>
+    
+</LinearLayout>
+
+<View 
+    android:layout_width="fill_parent"
+    android:layout_height="1dp"
+    android:layout_marginLeft="17dp"
+    android:layout_marginTop="8dp"
+    android:background="@color/gray_line"/>
+<TextView 
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="夜间土壤温度"
+    android:textSize="14dp"
+    android:layout_marginLeft="16dp"
+    android:layout_marginTop="16dp"
+    android:textColor="@color/item_graytext"/>
+<LinearLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:orientation="horizontal">
+    <TextView 
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="上限："
+    android:textSize="14dp"
+    android:layout_marginLeft="16dp"
+    android:textColor="@color/item_graytext"/>
+    <TextView 
+    android:id="@+id/nightSoilTemperatureMax_tv"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="100"
+    android:textSize="14dp"
+    android:layout_marginLeft="10dp"
+    android:textColor="@color/item_graytext"/>
+    <TextView 
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="下限："
+    android:textSize="14dp"
+    android:layout_marginLeft="56dp"
+    android:textColor="@color/item_graytext"/>
+    <TextView 
+    android:id="@+id/nightSoilTemperatureMini_tv"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="100"
+    android:textSize="14dp"
+    android:layout_marginLeft="10dp"
+    android:textColor="@color/item_graytext"/>
+    
+</LinearLayout>
+
+<View 
+    android:layout_width="fill_parent"
+    android:layout_height="1dp"
+    android:layout_marginLeft="17dp"
+    android:layout_marginTop="8dp"
+    android:background="@color/gray_line"/>
+<TextView 
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="夜间土壤湿度"
+    android:textSize="14dp"
+    android:layout_marginLeft="16dp"
+    android:layout_marginTop="16dp"
+    android:textColor="@color/item_graytext"/>
+<LinearLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:orientation="horizontal">
+    <TextView 
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="上限："
+    android:textSize="14dp"
+    android:layout_marginLeft="16dp"
+    android:textColor="@color/item_graytext"/>
+    <TextView 
+    android:id="@+id/nightSoilHumidityMax_tv"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="100"
+    android:textSize="14dp"
+    android:layout_marginLeft="10dp"
+    android:textColor="@color/item_graytext"/>
+    <TextView 
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="下限："
+    android:textSize="14dp"
+    android:layout_marginLeft="56dp"
+    android:textColor="@color/item_graytext"/>
+    <TextView 
+    android:id="@+id/nightSoilHumidityMini_tv"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="100"
+    android:textSize="14dp"
+    android:layout_marginLeft="10dp"
+    android:textColor="@color/item_graytext"/>
+    
+</LinearLayout>
+
+<View 
+    android:layout_width="fill_parent"
+    android:layout_height="1dp"
+    android:layout_marginLeft="17dp"
+    android:layout_marginTop="8dp"
+    android:background="@color/gray_line"/>
+</LinearLayout>
+</ScrollView>
+</LinearLayout>

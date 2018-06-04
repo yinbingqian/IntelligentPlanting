@@ -1,0 +1,504 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_bg2">
+
+    <RelativeLayout
+        android:id="@+id/top_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:background="@color/green_top"
+        android:orientation="vertical" >
+       
+
+      <TextView
+          android:id="@+id/tv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:singleLine="true"
+            android:layout_marginLeft="26dp"
+            android:text="返回"
+            android:textColor="@color/white"
+            android:textSize="18dp"/>
+        <TextView
+            android:id="@+id/title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:ellipsize="marquee"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="一号棚"
+            android:textColor="@color/white"
+            android:textSize="18dp"/>
+        <TextView
+          android:id="@+id/add_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:layout_marginRight="10dp"
+            android:text="添加设备"
+            android:textColor="@color/white"
+            android:textSize="18dp"/>
+    </RelativeLayout>
+    
+    <ScrollView 
+        android:id="@+id/greenhouse_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/top_layout"
+        >
+        <LinearLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <RelativeLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/broder"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="9dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="18dp">
+        
+        <RelativeLayout 
+            android:id="@+id/layout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp">
+            <TextView 
+                android:id="@+id/nowplant_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:text="当前种植"
+        android:textColor="@color/item_graytext"
+        android:textSize="16dp"/>
+            
+            <TextView 
+                android:id="@+id/endplant_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:layout_alignParentRight="true"
+        android:text="结束种植"
+        android:textColor="@color/green_text2"
+        android:textSize="16dp"/>
+            <View
+        android:id="@+id/line2"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="9dp"
+        android:background="@color/gran_line2"
+        android:layout_below="@+id/nowplant_tv" />
+        </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/layout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" 
+        android:layout_below="@+id/layout1">
+
+        <RelativeLayout
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5" >
+
+            <com.lnpdit.woofarm.widget.CircleImageView
+                android:id="@+id/crop_headpic"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="21dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+            android:layout_weight="2" >
+
+            <TextView
+                android:id="@+id/crop_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:maxLines="1"
+                android:text="白兰豆"
+                android:textColor="@color/item_graytext"
+                android:textSize="18dp" />
+  
+            <TextView
+                android:id="@+id/begintime_tv"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/crop_name"
+                android:layout_marginTop="2dp"
+                android:text="定植时间:2018/04/24"
+                android:textColor="@color/gray_text5"
+                android:textSize="14dp" />
+            
+            <TextView
+                android:id="@+id/endtime_tv"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/begintime_tv"
+                android:layout_marginTop="2dp"
+                android:text="结束时间:2018/04/24"
+                android:textColor="@color/gray_text5"
+                android:textSize="14dp" />
+            
+            <TextView
+                android:id="@+id/plantdate_tv"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/endtime_tv"
+                android:layout_marginTop="2dp"
+                android:text="已定植2天"
+                android:textColor="@color/gray_text5"
+                android:textSize="14dp" />
+            </RelativeLayout>
+
+    </LinearLayout>
+            
+            <TextView
+                android:id="@+id/grey_line_view"
+                android:layout_width="fill_parent"
+                android:layout_height="4dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/broder_gray"
+                android:layout_below="@+id/layout2"/>
+            <TextView
+                android:id="@+id/orange_line_view"
+                android:layout_width="fill_parent"
+                android:layout_height="4dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/layout2"
+                android:background="@drawable/broder_orange"/>
+            </RelativeLayout>
+            
+      <LinearLayout 
+        android:id="@+id/linechart_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/broder"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:paddingTop="16dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="11dp"
+        android:orientation="vertical">
+            <RelativeLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+                >
+                <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:text="近24小时报警"
+        android:textColor="@color/item_graytext"
+        android:textSize="16dp"/>
+         <ImageView 
+             android:id="@+id/alarmupdown_img"
+        android:layout_width="9dp"
+        android:layout_height="11dp" 
+        android:layout_marginRight="6dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/down" />
+                <TextView 
+                    android:id="@+id/alarmpercent_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:layout_toLeftOf="@+id/alarmupdown_img"
+        android:layout_marginRight="6dp"
+        android:text="98%"
+        android:textColor="@color/gray_text6"
+        android:textSize="16dp"/>
+           <TextView 
+        android:id="@+id/alarmcount_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:layout_toLeftOf="@+id/alarmpercent_tv"
+        android:layout_marginRight="20dp"
+        android:text="9次"
+        android:textColor="@color/gray_text6"
+        android:textSize="16dp"/>
+            </RelativeLayout>
+            
+            
+        <lecho.lib.hellocharts.view.LineChartView
+            android:id="@+id/line_chart"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="19dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"/>
+ <View
+        android:id="@+id/line3"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="3dp"
+        android:background="@color/gran_line2"/>
+ 
+ <TextView
+        android:id="@+id/set_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="6dp"
+        android:text="报警阈值设定"
+        android:textColor="@color/green_text2"/>
+            </LinearLayout>
+            
+      <LinearLayout 
+        android:id="@+id/linechart_layout2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/broder"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:paddingTop="16dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="11dp"
+        android:orientation="vertical">
+                
+                <TextView 
+         android:id="@+id/environment_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:text="24小时环境走势"
+        android:textColor="@color/item_graytext"
+        android:textSize="16dp"/>
+                <LinearLayout 
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                <TextView 
+                    android:id="@+id/label_tv1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+	                android:layout_marginTop="12dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="空气温度"
+                    android:textColor="@color/item_graytext"
+                    android:background="@drawable/broder_orange"/>
+                 <TextView 
+                    android:id="@+id/label_tv2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+	                android:layout_marginTop="12dp"
+	                android:layout_marginLeft="10dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="空气湿度"
+                    android:textColor="@color/item_graytext"
+                    android:background="@drawable/label_focus"/>
+                  <TextView 
+                    android:id="@+id/label_tv3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+	                android:layout_marginTop="12dp"
+	                android:layout_marginLeft="10dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="光照度"
+                    android:textColor="@color/item_graytext"
+                    android:background="@drawable/label_focus"/>
+                   <TextView 
+                    android:id="@+id/label_tv4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+	                android:layout_marginTop="12dp"
+	                android:layout_marginLeft="10dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:text="CO2浓度"
+                    android:textColor="@color/item_graytext"
+                    android:background="@drawable/label_focus"/>
+                </LinearLayout>
+           <lecho.lib.hellocharts.view.LineChartView
+            android:id="@+id/line_chart_ev"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="19dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"/>
+
+            </LinearLayout>
+                  <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/broder"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical">
+        
+                <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="16dp"
+        android:text="控制面板"
+        android:textColor="@color/item_graytext"
+        android:textSize="16dp"/>
+
+                          <ListView
+        android:id="@+id/listview_equipmentlist"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:cacheColorHint="#00000000"
+        android:divider="#eeeeee"
+        android:fadingEdge="none"
+        android:fastScrollEnabled="false"
+        android:footerDividersEnabled="false"
+        android:headerDividersEnabled="false"
+        android:listSelector="#00000000"
+        android:smoothScrollbar="true" />
+          </LinearLayout>
+          
+      <LinearLayout 
+    android:id="@+id/none_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:visibility="gone">
+         <ImageView
+        android:layout_width="58dp"
+        android:layout_height="84dp"
+        android:layout_marginTop="24dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/reminder" />
+          <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="7dp"
+        android:text="还没有设备数据"
+        android:textColor="@color/gray_text6"
+        android:textSize="14dp"/>
+          </LinearLayout>
+           
+            
+          <LinearLayout 
+        android:id="@+id/scenes_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/broder"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical">
+          <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="15dp"
+        android:text="场景模式"
+        android:textColor="@color/item_graytext"
+        android:textSize="16dp"/>
+<ListView
+        android:id="@+id/listview_sceneslist"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:cacheColorHint="#00000000"
+        android:divider="#eeeeee"
+        android:fadingEdge="none"
+        android:fastScrollEnabled="false"
+        android:footerDividersEnabled="false"
+        android:headerDividersEnabled="false"
+        android:listSelector="#00000000"
+        android:smoothScrollbar="true" />
+                  
+            </LinearLayout>
+     <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/broder"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:paddingTop="10dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="18dp"
+        android:paddingBottom="16dp"
+        android:orientation="vertical">
+
+                <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:text="视频监控"
+        android:textColor="@color/item_graytext"
+        android:textSize="16dp"/>
+        <ImageView 
+            android:layout_width="fill_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/videoimage"/>
+
+            </LinearLayout>
+            
+            </LinearLayout>
+            </ScrollView>
+            
+    <LinearLayout 
+    android:id="@+id/unlogin_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/top_layout"
+    android:orientation="vertical"
+    android:visibility="gone">
+
+    <ImageView
+        android:id="@+id/line4"
+        android:layout_width="58dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="200dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/reminder" />
+
+    
+<TextView
+        android:id="@+id/line5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="7dp"
+        android:text="暂无设备"
+        android:textSize="16dp"
+        android:textColor="@color/gray_text5" />
+
+    
+</LinearLayout>
+</RelativeLayout>

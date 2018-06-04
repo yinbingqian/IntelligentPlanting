@@ -50,18 +50,18 @@ public class WelcomeActivity extends BaseActivity {
 
                 boolean mFirst = isFirstEnter(WelcomeActivity.this,
                         WelcomeActivity.this.getClass().getName());
-                if (mFirst) {
-
-                    Intent intent = new Intent();
-                    intent.setClass(getBaseContext(), GuideActivity.class);
-                    startActivity(intent);
-                    writeEnter(WelcomeActivity.this);
-                } else {
+//                if (mFirst) {
+//
+//                    Intent intent = new Intent();
+//                    intent.setClass(getBaseContext(), GuideActivity.class);
+//                    startActivity(intent);
+//                    writeEnter(WelcomeActivity.this);
+//                } else {
                     Intent intent = new Intent();
                     intent.setClass(getBaseContext(),
                             MainTabHostActivity.class);
                     startActivity(intent);
-                }
+//                }
 
                 finish();
             }
@@ -71,28 +71,28 @@ public class WelcomeActivity extends BaseActivity {
 
     private void initData() {
         dbh = new DBHelper(this);
-        product = new Product();
-        order = new Order();
-        cart = new Cart();
-        classify = new Classify();
-        address = new Address();
-        area = new Area();
-        camera = new Camera();
-
-        dbh.clearAllProduct();
-        dbh.clearAllOrder();
-        dbh.clearAllCart();
-        dbh.clearAllClassify();
-        dbh.clearAllAddress();
-        dbh.clearAllArea();
-        dbh.clearAllCamera();
-
-        initProduct();
-        initOrder();
-        initCart();
-        initAddress();
-        initArea();
-        initCamera();
+//        product = new Product();
+//        order = new Order();
+//        cart = new Cart();
+//        classify = new Classify();
+//        address = new Address();
+//        area = new Area();
+//        camera = new Camera();
+//
+//        dbh.clearAllProduct();
+//        dbh.clearAllOrder();
+//        dbh.clearAllCart();
+//        dbh.clearAllClassify();
+//        dbh.clearAllAddress();
+//        dbh.clearAllArea();
+//        dbh.clearAllCamera();
+//
+//        initProduct();
+//        initOrder();
+//        initCart();
+//        initAddress();
+//        initArea();
+//        initCamera();
 
     }
 

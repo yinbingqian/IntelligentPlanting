@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+        android:background="@drawable/broder"
+        android:paddingTop="8dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="11dp"
+        android:orientation="vertical" >
+
+        <TextView 
+            android:id="@+id/scenesname_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:layout_marginLeft="14dp"
+        android:text="场景1"
+        android:textColor="@color/item_graytext"
+        android:textSize="14dp"/>
+        <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"  
+        android:layout_marginLeft="14dp"
+        android:text="生效条件"
+        android:textColor="@color/item_graytext"
+        android:layout_marginTop="8dp"
+        android:textSize="14dp"/>
+                <TextView 
+            android:id="@+id/scenesvalues_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"  
+        android:layout_marginLeft="14dp"
+        android:text="当设备01的光照度（内置）大于1000Lux时"
+        android:textColor="@color/item_graytext"
+        android:layout_marginTop="8dp"
+        android:textSize="14dp"/>
+                <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"  
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/gray_line4"
+                    />
+                 <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"  
+        android:layout_marginLeft="14dp"
+        android:text="执行动作"
+        android:textColor="@color/item_graytext"
+        android:layout_marginTop="12dp"
+        android:textSize="14dp"/>
+                  <TextView 
+            android:id="@+id/scenesaction_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"  
+        android:layout_marginLeft="14dp"
+        android:text="设备1开"
+        android:textColor="@color/item_graytext"
+        android:layout_marginTop="9dp"
+        android:textSize="14dp"/>
+                  
+
+                <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp" 
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="14dp"
+        android:background="@color/gray_line4"
+                    />
+</LinearLayout>

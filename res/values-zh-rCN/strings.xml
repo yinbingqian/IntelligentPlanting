@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">沃视农场</string>
+    <string name="app_name">联科优农</string>
     <string name="text_ack_msg">已读</string>
     <string name="text_delivered_msg">送达</string>
     <string name="back">返回</string>
@@ -311,4 +311,5 @@
         <item>六</item>
         <item>日</item>
     </string-array>
+    <string name="input_password">请输入6-15位密码!</string>
 </resources>

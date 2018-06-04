@@ -1,0 +1,595 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_bg2"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:orientation="vertical">
+    <ScrollView 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        >
+        <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+<TextView 
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="12dp"
+    android:text="时间"
+    android:textColor="@color/item_graytext"
+    android:textSize="14dp"/>
+
+<RelativeLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="40dp"
+    android:layout_marginTop="8dp">
+   <View 
+       android:id="@+id/center_line"
+       android:layout_width="16dp"
+       android:layout_height="2dp"
+       android:layout_centerInParent="true"
+       android:background="@color/gray_line3"/>
+    
+   <EditText
+            android:id="@+id/timestart_edit"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_toLeftOf="@+id/center_line"
+            android:layout_marginRight="11dp"
+            android:background="@color/white"
+            android:hint="07:00"
+            android:paddingLeft="11dp"
+            android:inputType="textNoSuggestions"
+            android:singleLine="true"
+            android:textColor="@color/item_graytext"
+            android:textColorHint="@color/item_graytext"
+            android:textSize="14dp" />
+   <EditText
+            android:id="@+id/timeend_edit"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_toRightOf="@+id/center_line"
+            android:layout_marginLeft="11dp"
+            android:background="@color/white"
+            android:hint="18:59"
+            android:paddingLeft="15dp"
+            android:inputType="textNoSuggestions"
+            android:singleLine="true"
+            android:textColor="@color/item_graytext"
+            android:textColorHint="@color/item_graytext"
+            android:textSize="14dp" />
+</RelativeLayout>
+<TextView 
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="12dp"
+    android:text="空气温度"
+    android:textColor="@color/item_graytext"
+    android:textSize="14dp"/>
+
+<RelativeLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="40dp"
+    android:layout_marginTop="8dp">
+   <View 
+       android:id="@+id/center_line2"
+       android:layout_width="16dp"
+       android:layout_height="2dp"
+       android:layout_centerInParent="true"
+       android:background="@color/gray_line3"/>
+    
+   <EditText
+            android:id="@+id/airtemmin_edit"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_toLeftOf="@+id/center_line2"
+            android:layout_marginRight="11dp"
+            android:background="@color/white"
+            android:hint="07:00"
+            android:paddingLeft="11dp"
+            android:inputType="textNoSuggestions"
+            android:singleLine="true"
+            android:textColor="@color/item_graytext"
+            android:textColorHint="@color/item_graytext"
+            android:textSize="14dp" />
+   <EditText
+            android:id="@+id/airtemmax_edit"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_toRightOf="@+id/center_line2"
+            android:layout_marginLeft="11dp"
+            android:background="@color/white"
+            android:hint="18:59"
+            android:paddingLeft="15dp"
+            android:inputType="textNoSuggestions"
+            android:singleLine="true"
+            android:textColor="@color/item_graytext"
+            android:textColorHint="@color/item_graytext"
+            android:textSize="14dp" />
+</RelativeLayout>
+<TextView 
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="12dp"
+    android:text="空气湿度"
+    android:textColor="@color/item_graytext"
+    android:textSize="14dp"/>
+
+<RelativeLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="40dp"
+    android:layout_marginTop="8dp">
+   <View 
+       android:id="@+id/center_line3"
+       android:layout_width="16dp"
+       android:layout_height="2dp"
+       android:layout_centerInParent="true"
+       android:background="@color/gray_line3"/>
+    
+   <EditText
+            android:id="@+id/airhumiditymin_edit"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_toLeftOf="@+id/center_line3"
+            android:layout_marginRight="11dp"
+            android:background="@color/white"
+            android:hint="07:00"
+            android:paddingLeft="11dp"
+            android:inputType="textNoSuggestions"
+            android:singleLine="true"
+            android:textColor="@color/item_graytext"
+            android:textColorHint="@color/item_graytext"
+            android:textSize="14dp" />
+   <EditText
+            android:id="@+id/airhumiditymmax_edit"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_toRightOf="@+id/center_line3"
+            android:layout_marginLeft="11dp"
+            android:background="@color/white"
+            android:hint="18:59"
+            android:paddingLeft="15dp"
+            android:inputType="textNoSuggestions"
+            android:singleLine="true"
+            android:textColor="@color/item_graytext"
+            android:textColorHint="@color/item_graytext"
+            android:textSize="14dp" />
+</RelativeLayout>
+<TextView 
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="12dp"
+    android:text="土壤温度"
+    android:textColor="@color/item_graytext"
+    android:textSize="14dp"/>
+
+<RelativeLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="40dp"
+    android:layout_marginTop="8dp">
+   <View 
+       android:id="@+id/center_line4"
+       android:layout_width="16dp"
+       android:layout_height="2dp"
+       android:layout_centerInParent="true"
+       android:background="@color/gray_line3"/>
+    
+   <EditText
+            android:id="@+id/soiltemmin_edit"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_toLeftOf="@+id/center_line4"
+            android:layout_marginRight="11dp"
+            android:background="@color/white"
+            android:hint="07:00"
+            android:paddingLeft="11dp"
+            android:inputType="textNoSuggestions"
+            android:singleLine="true"
+            android:textColor="@color/item_graytext"
+            android:textColorHint="@color/item_graytext"
+            android:textSize="14dp" />
+   <EditText
+            android:id="@+id/soiltemmax_edit"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_toRightOf="@+id/center_line4"
+            android:layout_marginLeft="11dp"
+            android:background="@color/white"
+            android:hint="18:59"
+            android:paddingLeft="15dp"
+            android:inputType="textNoSuggestions"
+            android:singleLine="true"
+            android:textColor="@color/item_graytext"
+            android:textColorHint="@color/item_graytext"
+            android:textSize="14dp" />
+</RelativeLayout>
+<TextView 
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="12dp"
+    android:text="土壤湿度"
+    android:textColor="@color/item_graytext"
+    android:textSize="14dp"/>
+
+<RelativeLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="40dp"
+    android:layout_marginTop="8dp">
+   <View 
+       android:id="@+id/center_line5"
+       android:layout_width="16dp"
+       android:layout_height="2dp"
+       android:layout_centerInParent="true"
+       android:background="@color/gray_line3"/>
+    
+   <EditText
+            android:id="@+id/soilhumiditymin_edit"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_toLeftOf="@+id/center_line5"
+            android:layout_marginRight="11dp"
+            android:background="@color/white"
+            android:hint="07:00"
+            android:paddingLeft="11dp"
+            android:inputType="textNoSuggestions"
+            android:singleLine="true"
+            android:textColor="@color/item_graytext"
+            android:textColorHint="@color/item_graytext"
+            android:textSize="14dp" />
+   <EditText
+            android:id="@+id/soilhumiditymmax_edit"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_toRightOf="@+id/center_line5"
+            android:layout_marginLeft="11dp"
+            android:background="@color/white"
+            android:hint="18:59"
+            android:paddingLeft="15dp"
+            android:inputType="textNoSuggestions"
+            android:singleLine="true"
+            android:textColor="@color/item_graytext"
+            android:textColorHint="@color/item_graytext"
+            android:textSize="14dp" />
+</RelativeLayout>
+<TextView 
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="12dp"
+    android:text="叶面温度"
+    android:textColor="@color/item_graytext"
+    android:textSize="14dp"/>
+
+<RelativeLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="40dp"
+    android:layout_marginTop="8dp">
+   <View 
+       android:id="@+id/center_line6"
+       android:layout_width="16dp"
+       android:layout_height="2dp"
+       android:layout_centerInParent="true"
+       android:background="@color/gray_line3"/>
+    
+   <EditText
+            android:id="@+id/leaftemmin_edit"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_toLeftOf="@+id/center_line6"
+            android:layout_marginRight="11dp"
+            android:background="@color/white"
+            android:hint="07:00"
+            android:paddingLeft="11dp"
+            android:inputType="textNoSuggestions"
+            android:singleLine="true"
+            android:textColor="@color/item_graytext"
+            android:textColorHint="@color/item_graytext"
+            android:textSize="14dp" />
+   <EditText
+            android:id="@+id/leaftemmax_edit"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_toRightOf="@+id/center_line6"
+            android:layout_marginLeft="11dp"
+            android:background="@color/white"
+            android:hint="18:59"
+            android:paddingLeft="15dp"
+            android:inputType="textNoSuggestions"
+            android:singleLine="true"
+            android:textColor="@color/item_graytext"
+            android:textColorHint="@color/item_graytext"
+            android:textSize="14dp" />
+</RelativeLayout>
+<TextView 
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="12dp"
+    android:text="叶面湿度"
+    android:textColor="@color/item_graytext"
+    android:textSize="14dp"/>
+
+<RelativeLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="40dp"
+    android:layout_marginTop="8dp">
+   <View 
+       android:id="@+id/center_line7"
+       android:layout_width="16dp"
+       android:layout_height="2dp"
+       android:layout_centerInParent="true"
+       android:background="@color/gray_line3"/>
+    
+   <EditText
+            android:id="@+id/leafhumiditymin_edit"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_toLeftOf="@+id/center_line7"
+            android:layout_marginRight="11dp"
+            android:background="@color/white"
+            android:hint="07:00"
+            android:paddingLeft="11dp"
+            android:inputType="textNoSuggestions"
+            android:singleLine="true"
+            android:textColor="@color/item_graytext"
+            android:textColorHint="@color/item_graytext"
+            android:textSize="14dp" />
+   <EditText
+            android:id="@+id/leafhumiditymmax_edit"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_toRightOf="@+id/center_line7"
+            android:layout_marginLeft="11dp"
+            android:background="@color/white"
+            android:hint="18:59"
+            android:paddingLeft="15dp"
+            android:inputType="textNoSuggestions"
+            android:singleLine="true"
+            android:textColor="@color/item_graytext"
+            android:textColorHint="@color/item_graytext"
+            android:textSize="14dp" />
+</RelativeLayout>
+<TextView 
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="12dp"
+    android:text="土壤EC值"
+    android:textColor="@color/item_graytext"
+    android:textSize="14dp"/>
+
+<RelativeLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="40dp"
+    android:layout_marginTop="8dp">
+   <View 
+       android:id="@+id/center_line8"
+       android:layout_width="16dp"
+       android:layout_height="2dp"
+       android:layout_centerInParent="true"
+       android:background="@color/gray_line3"/>
+    
+   <EditText
+            android:id="@+id/soilecmin_edit"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_toLeftOf="@+id/center_line8"
+            android:layout_marginRight="11dp"
+            android:background="@color/white"
+            android:hint="07:00"
+            android:paddingLeft="11dp"
+            android:inputType="textNoSuggestions"
+            android:singleLine="true"
+            android:textColor="@color/item_graytext"
+            android:textColorHint="@color/item_graytext"
+            android:textSize="14dp" />
+   <EditText
+            android:id="@+id/soilecmax_edit"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_toRightOf="@+id/center_line8"
+            android:layout_marginLeft="11dp"
+            android:background="@color/white"
+            android:hint="18:59"
+            android:paddingLeft="15dp"
+            android:inputType="textNoSuggestions"
+            android:singleLine="true"
+            android:textColor="@color/item_graytext"
+            android:textColorHint="@color/item_graytext"
+            android:textSize="14dp" />
+</RelativeLayout>
+<TextView 
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="12dp"
+    android:text="二氧化碳浓度"
+    android:textColor="@color/item_graytext"
+    android:textSize="14dp"/>
+
+<RelativeLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="40dp"
+    android:layout_marginTop="8dp">
+   <View 
+       android:id="@+id/center_line9"
+       android:layout_width="16dp"
+       android:layout_height="2dp"
+       android:layout_centerInParent="true"
+       android:background="@color/gray_line3"/>
+    
+   <EditText
+            android:id="@+id/co2concentrationmin_edit"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_toLeftOf="@+id/center_line9"
+            android:layout_marginRight="11dp"
+            android:background="@color/white"
+            android:hint="07:00"
+            android:paddingLeft="11dp"
+            android:inputType="textNoSuggestions"
+            android:singleLine="true"
+            android:textColor="@color/item_graytext"
+            android:textColorHint="@color/item_graytext"
+            android:textSize="14dp" />
+   <EditText
+            android:id="@+id/co2concentrationmax_edit"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_toRightOf="@+id/center_line9"
+            android:layout_marginLeft="11dp"
+            android:background="@color/white"
+            android:hint="18:59"
+            android:paddingLeft="15dp"
+            android:inputType="textNoSuggestions"
+            android:singleLine="true"
+            android:textColor="@color/item_graytext"
+            android:textColorHint="@color/item_graytext"
+            android:textSize="14dp" />
+</RelativeLayout>
+<TextView 
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="12dp"
+    android:text="光照强度"
+    android:textColor="@color/item_graytext"
+    android:textSize="14dp"/>
+
+<RelativeLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="40dp"
+    android:layout_marginTop="8dp">
+   <View 
+       android:id="@+id/center_line10"
+       android:layout_width="16dp"
+       android:layout_height="2dp"
+       android:layout_centerInParent="true"
+       android:background="@color/gray_line3"/>
+    
+   <EditText
+            android:id="@+id/illuminationmin_edit"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_toLeftOf="@+id/center_line10"
+            android:layout_marginRight="11dp"
+            android:background="@color/white"
+            android:hint="07:00"
+            android:paddingLeft="11dp"
+            android:inputType="textNoSuggestions"
+            android:singleLine="true"
+            android:textColor="@color/item_graytext"
+            android:textColorHint="@color/item_graytext"
+            android:textSize="14dp" />
+   <EditText
+            android:id="@+id/illuminationmax_edit"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_toRightOf="@+id/center_line10"
+            android:layout_marginLeft="11dp"
+            android:background="@color/white"
+            android:hint="18:59"
+            android:paddingLeft="15dp"
+            android:inputType="textNoSuggestions"
+            android:singleLine="true"
+            android:textColor="@color/item_graytext"
+            android:textColorHint="@color/item_graytext"
+            android:textSize="14dp" />
+</RelativeLayout>
+<TextView 
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="12dp"
+    android:text="光合有效辐射"
+    android:textColor="@color/item_graytext"
+    android:textSize="14dp"/>
+
+<RelativeLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="40dp"
+    android:layout_marginTop="8dp">
+   <View 
+       android:id="@+id/center_line11"
+       android:layout_width="16dp"
+       android:layout_height="2dp"
+       android:layout_centerInParent="true"
+       android:background="@color/gray_line3"/>
+    
+   <EditText
+            android:id="@+id/parmin_edit"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_toLeftOf="@+id/center_line11"
+            android:layout_marginRight="11dp"
+            android:background="@color/white"
+            android:hint="07:00"
+            android:paddingLeft="11dp"
+            android:inputType="textNoSuggestions"
+            android:singleLine="true"
+            android:textColor="@color/item_graytext"
+            android:textColorHint="@color/item_graytext"
+            android:textSize="14dp" />
+   <EditText
+            android:id="@+id/parmax_edit"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_toRightOf="@+id/center_line11"
+            android:layout_marginLeft="11dp"
+            android:background="@color/white"
+            android:hint="18:59"
+            android:paddingLeft="15dp"
+            android:inputType="textNoSuggestions"
+            android:singleLine="true"
+            android:textColor="@color/item_graytext"
+            android:textColorHint="@color/item_graytext"
+            android:textSize="14dp" />
+</RelativeLayout>
+<TextView 
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="12dp"
+    android:text="土壤PH值"
+    android:textColor="@color/item_graytext"
+    android:textSize="14dp"/>
+
+<RelativeLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="40dp"
+    android:layout_marginTop="8dp">
+   <View 
+       android:id="@+id/center_line12"
+       android:layout_width="16dp"
+       android:layout_height="2dp"
+       android:layout_centerInParent="true"
+       android:background="@color/gray_line3"/>
+    
+   <EditText
+            android:id="@+id/soilphmin_edit"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_toLeftOf="@+id/center_line12"
+            android:layout_marginRight="11dp"
+            android:background="@color/white"
+            android:hint="07:00"
+            android:paddingLeft="11dp"
+            android:inputType="textNoSuggestions"
+            android:singleLine="true"
+            android:textColor="@color/item_graytext"
+            android:textColorHint="@color/item_graytext"
+            android:textSize="14dp" />
+   <EditText
+            android:id="@+id/soilphmax_edit"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_toRightOf="@+id/center_line12"
+            android:layout_marginLeft="11dp"
+            android:background="@color/white"
+            android:hint="18:59"
+            android:paddingLeft="15dp"
+            android:inputType="textNoSuggestions"
+            android:singleLine="true"
+            android:textColor="@color/item_graytext"
+            android:textColorHint="@color/item_graytext"
+            android:textSize="14dp" />
+</RelativeLayout>
+</LinearLayout> 
+</ScrollView>
+</LinearLayout>

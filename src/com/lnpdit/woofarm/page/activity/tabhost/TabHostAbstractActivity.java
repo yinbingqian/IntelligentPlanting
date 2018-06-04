@@ -19,7 +19,7 @@ import com.lnpdit.IntelligentPlanting.R;
 @SuppressWarnings("deprecation")
 public abstract class TabHostAbstractActivity extends TabActivity {
 
-	private TabHost mTabHost;
+	private static TabHost mTabHost;
 	private TabWidget mTabWidget;
 	private LayoutInflater mLayoutflater;
 
@@ -91,7 +91,7 @@ public abstract class TabHostAbstractActivity extends TabActivity {
 
 	abstract protected int getTabItemCount();
 
-	protected void setCurrentTab(int index) {
+	public static void setCurrentTab(int index) {
 		mTabHost.setCurrentTab(index);
 	}
 

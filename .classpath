@@ -14,6 +14,8 @@
 	<classpathentry exported="true" kind="lib" path="libs/universal-image-loader-1.9.2-SNAPSHOT-with-sources.jar"/>
 	<classpathentry exported="true" kind="lib" path="libs/pinyin4j-2.5.0.jar"/>
 	<classpathentry exported="true" kind="lib" path="libs/joda-time-2.3.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/hellocharts-library-1.5.8.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/pgyer_sdk_2.4.5.jar"/>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="gen"/>
 	<classpathentry kind="output" path="bin/classes"/>

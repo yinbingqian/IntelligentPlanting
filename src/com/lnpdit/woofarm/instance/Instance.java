@@ -14,6 +14,12 @@ public class Instance {
 	public static DisplayImageOptions new_s_options = new DisplayImageOptions.Builder()
 			.showImageOnLoading(R.drawable.img_loader_defult).showImageForEmptyUri(R.drawable.img_loader_defult)
 			.showImageOnFail(R.drawable.img_loader_defult).cacheInMemory(true).cacheOnDisc(true).build();
+	public static DisplayImageOptions zuowu_s_options = new DisplayImageOptions.Builder()
+            .showImageOnLoading(R.drawable.zuowuimg).showImageForEmptyUri(R.drawable.zuowuimg)
+            .showImageOnFail(R.drawable.zuowuimg).cacheInMemory(true).cacheOnDisc(true).build();
+	public static DisplayImageOptions news_s_options = new DisplayImageOptions.Builder()
+            .showImageOnLoading(R.drawable.newsicon).showImageForEmptyUri(R.drawable.newsicon)
+            .showImageOnFail(R.drawable.newsicon).cacheInMemory(true).cacheOnDisc(true).build();
 	public static DisplayImageOptions user_s_options = new DisplayImageOptions.Builder()
 			.showImageOnLoading(R.drawable.user_none).showImageForEmptyUri(R.drawable.user_none)
 			.showImageOnFail(R.drawable.user_none).cacheInMemory(true).cacheOnDisc(true).build();

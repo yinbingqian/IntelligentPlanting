@@ -39,11 +39,15 @@ public class BaseActivity extends Activity implements OnClickListener {
 	public DemoApplication myApplication;
 	public Intent intent = new Intent();// 页面跳转
 	private static final String TAG = "SU-JPush";
-
+//	public static AbHttpUtil mAbHttpUtil = null; 
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		addLoading();
+//		mAbHttpUtil = AbHttpUtil.getInstance(this);
+//        mAbHttpUtil.setTimeout(10000);
+        
 		myApplication = DemoApplication.getInstance();
 		EventCache.commandActivity.unregister(this);
 		EventCache.commandActivity.register(this);

@@ -5,16 +5,16 @@ import java.util.List;
 
 import com.lnpdit.IntelligentPlanting.R;
 import com.lnpdit.woofarm.base.application.DemoApplication;
-import com.lnpdit.woofarm.page.activity.tabhost.item.FrontActivity;
+import com.lnpdit.woofarm.page.activity.tabhost.item.FarmInformationActivity;
+import com.lnpdit.woofarm.page.activity.tabhost.item.FarmLoginActivity;
+import com.lnpdit.woofarm.page.activity.tabhost.item.FarmServiceActivity;
+import com.lnpdit.woofarm.page.activity.tabhost.item.FarmingManagementActivity;
 import com.lnpdit.woofarm.page.activity.tabhost.item.PersonalActivity;
-import com.lnpdit.woofarm.page.activity.tabhost.item.ShoppingActivity;
-import com.lnpdit.woofarm.page.activity.tabhost.item.AreaListActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
-import android.view.WindowManager;
 import android.view.View.OnTouchListener;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -23,7 +23,7 @@ import android.widget.TextView;
 public class MainTabHostActivity extends TabHostAbstractActivity {
 
     public static List<TabHostItem> mItems;
-    private List<ImageView> myList = new ArrayList();
+    public static List<ImageView> myList = new ArrayList();
     private int locationCur;
 
     /**
@@ -32,28 +32,30 @@ public class MainTabHostActivity extends TabHostAbstractActivity {
     @Override
     protected void prepare() {
         TabHostItem info = new TabHostItem(getString(R.string.tabHost_frist), // title
-                R.drawable.tab_icon_1_n, // icon
-                R.drawable.maintab_toolbar_bg, // background
-                new Intent(this, FrontActivity.class)); // intent
+                R.drawable.information_h, // icon
+                R.color.white, // background
+                new Intent(this, FarmInformationActivity.class)); // intent
 
-        TabHostItem video = new TabHostItem(getString(R.string.tabHost_second),
-                R.drawable.tab_icon_2_u, R.drawable.maintab_toolbar_bg,
-                new Intent(this, AreaListActivity.class));
+        TabHostItem service = new TabHostItem(getString(R.string.tabHost_second),
+                R.drawable.service_h, R.color.white,
+                new Intent(this, FarmServiceActivity.class));
 
-        TabHostItem surroundings = new TabHostItem(
-                getString(R.string.tabHost_thrid), R.drawable.tab_icon_3_u,
-                R.drawable.maintab_toolbar_bg,
-                new Intent(this, ShoppingActivity.class));
-        TabHostItem myzone = new TabHostItem(getString(R.string.tabHost_fourth),
-                R.drawable.tab_icon_4_u, R.drawable.maintab_toolbar_bg,
+        TabHostItem farm = new TabHostItem(
+                getString(R.string.tabHost_thrid), R.drawable.farm,
+                R.color.white,
+                new Intent(this, FarmLoginActivity.class));
+        TabHostItem manage = new TabHostItem(getString(R.string.tabHost_fourth),
+                R.drawable.manage_h, R.color.white,
+                new Intent(this, FarmingManagementActivity.class));
+        TabHostItem myzone = new TabHostItem(getString(R.string.tabHost_five),
+                R.drawable.personal_h, R.color.white,
                 new Intent(this, PersonalActivity.class));
-        // R.drawable.maintab_toolbar_bg, new Intent(this,
-        // QandA_Activity.class));
 
         mItems = new ArrayList<TabHostItem>();
         mItems.add(info);
-        mItems.add(video);
-        mItems.add(surroundings);
+        mItems.add(service);
+        mItems.add(farm);
+        mItems.add(manage);
         mItems.add(myzone);
 
         // 设置分割线
@@ -72,15 +74,15 @@ public class MainTabHostActivity extends TabHostAbstractActivity {
         locationCur = intent.getIntExtra("locationCur", 0);
         switch (locationCur) {
         case 1:
-            restore(0);
-            myList.get(3).setBackgroundResource(R.drawable.tab_icon_4_n);
-            setCurrentTab(3);
+            restore(2);
+            myList.get(2).setBackgroundResource(R.drawable.farm);
+            setCurrentTab(2);
             break;
         case 0:
-            setCurrentTab(0);
+            setCurrentTab(2);
             break;
         default:
-            setCurrentTab(0);
+            setCurrentTab(2);
             break;
         }
     }
@@ -98,8 +100,9 @@ public class MainTabHostActivity extends TabHostAbstractActivity {
     protected void setTabItemTextView(TextView textView,
             final ImageView imgTabItem, LinearLayout ll, final int position) {
         // 可调整图片太靠顶问题
-        // textView.setPadding(3, 8, 3, 3);
+//         textView.setPadding(3, 8, 3, 3);
         textView.setText(mItems.get(position).getTitle());
+        textView.setTextSize(11);
         // textView.setBackgroundResource(mItems.get(position).getBg());
         ll.setBackgroundResource(mItems.get(position).getBg());
         // textView.setCompoundDrawablesWithIntrinsicBounds(0,
@@ -114,10 +117,10 @@ public class MainTabHostActivity extends TabHostAbstractActivity {
                 public boolean onTouch(View v, MotionEvent event) {
                     if (event.getAction() == MotionEvent.ACTION_DOWN) {
                         imgTabItem
-                                .setBackgroundResource(R.drawable.tab_icon_1_u);
+                                .setBackgroundResource(R.drawable.information_h);
                     } else if (event.getAction() == MotionEvent.ACTION_MOVE) {
                         imgTabItem
-                                .setBackgroundResource(R.drawable.tab_icon_1_u);
+                                .setBackgroundResource(R.drawable.information_h);
                     } else if (event.getAction() == MotionEvent.ACTION_UP) {
                         for (int i = 0; i < myList.size(); i++) {
                             if (i != position) {
@@ -125,7 +128,7 @@ public class MainTabHostActivity extends TabHostAbstractActivity {
                             }
                         }
                         imgTabItem
-                                .setBackgroundResource(R.drawable.tab_icon_1_n);
+                                .setBackgroundResource(R.drawable.information);
                         setCurrentTab(position);
                     }
                     return true;
@@ -139,10 +142,10 @@ public class MainTabHostActivity extends TabHostAbstractActivity {
                 public boolean onTouch(View v, MotionEvent event) {
                     if (event.getAction() == MotionEvent.ACTION_DOWN) {
                         imgTabItem
-                                .setBackgroundResource(R.drawable.tab_icon_2_u);
+                                .setBackgroundResource(R.drawable.service_h);
                     } else if (event.getAction() == MotionEvent.ACTION_MOVE) {
                         imgTabItem
-                                .setBackgroundResource(R.drawable.tab_icon_2_u);
+                                .setBackgroundResource(R.drawable.service_h);
                     } else if (event.getAction() == MotionEvent.ACTION_UP) {
                         for (int i = 0; i < myList.size(); i++) {
                             if (i != position) {
@@ -150,7 +153,7 @@ public class MainTabHostActivity extends TabHostAbstractActivity {
                             }
                         }
                         imgTabItem
-                                .setBackgroundResource(R.drawable.tab_icon_2_n);
+                                .setBackgroundResource(R.drawable.service);
                         setCurrentTab(1);
                     }
                     return true;
@@ -164,10 +167,10 @@ public class MainTabHostActivity extends TabHostAbstractActivity {
                 public boolean onTouch(View v, MotionEvent event) {
                     if (event.getAction() == MotionEvent.ACTION_DOWN) {
                         imgTabItem
-                                .setBackgroundResource(R.drawable.tab_icon_3_u);
+                                .setBackgroundResource(R.drawable.farm_h);
                     } else if (event.getAction() == MotionEvent.ACTION_MOVE) {
                         imgTabItem
-                                .setBackgroundResource(R.drawable.tab_icon_3_u);
+                                .setBackgroundResource(R.drawable.farm_h);
                     } else if (event.getAction() == MotionEvent.ACTION_UP) {
                         for (int i = 0; i < myList.size(); i++) {
                             if (i != position) {
@@ -175,7 +178,7 @@ public class MainTabHostActivity extends TabHostAbstractActivity {
                             }
                         }
                         imgTabItem
-                                .setBackgroundResource(R.drawable.tab_icon_3_n);
+                                .setBackgroundResource(R.drawable.farm);
                         setCurrentTab(position);
                     }
                     return true;
@@ -189,10 +192,10 @@ public class MainTabHostActivity extends TabHostAbstractActivity {
                 public boolean onTouch(View v, MotionEvent event) {
                     if (event.getAction() == MotionEvent.ACTION_DOWN) {
                         imgTabItem
-                                .setBackgroundResource(R.drawable.tab_icon_4_u);
+                                .setBackgroundResource(R.drawable.manage_h);
                     } else if (event.getAction() == MotionEvent.ACTION_MOVE) {
                         imgTabItem
-                                .setBackgroundResource(R.drawable.tab_icon_4_u);
+                                .setBackgroundResource(R.drawable.manage_h);
                     } else if (event.getAction() == MotionEvent.ACTION_UP) {
                         for (int i = 0; i < myList.size(); i++) {
                             if (i != position) {
@@ -200,7 +203,32 @@ public class MainTabHostActivity extends TabHostAbstractActivity {
                             }
                         }
                         imgTabItem
-                                .setBackgroundResource(R.drawable.tab_icon_4_n);
+                                .setBackgroundResource(R.drawable.manage);
+                        setCurrentTab(position);
+                    }
+                    return true;
+                }
+            });
+            break;
+        case 4:
+            ll.setOnTouchListener(new OnTouchListener() {
+
+                @Override
+                public boolean onTouch(View v, MotionEvent event) {
+                    if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                        imgTabItem
+                                .setBackgroundResource(R.drawable.personal_h);
+                    } else if (event.getAction() == MotionEvent.ACTION_MOVE) {
+                        imgTabItem
+                                .setBackgroundResource(R.drawable.personal_h);
+                    } else if (event.getAction() == MotionEvent.ACTION_UP) {
+                        for (int i = 0; i < myList.size(); i++) {
+                            if (i != position) {
+                                restore(i);
+                            }
+                        }
+                        imgTabItem
+                                .setBackgroundResource(R.drawable.personal);
                         setCurrentTab(position);
                     }
                     return true;
@@ -217,19 +245,22 @@ public class MainTabHostActivity extends TabHostAbstractActivity {
      * 
      * @param position
      */
-    public void restore(int position) {
+    public static void restore(int position) {
         switch (position) {
         case 0:
-            myList.get(position).setBackgroundResource(R.drawable.tab_icon_1_u);
+            myList.get(position).setBackgroundResource(R.drawable.information_h);
             break;
         case 1:
-            myList.get(position).setBackgroundResource(R.drawable.tab_icon_2_u);
+            myList.get(position).setBackgroundResource(R.drawable.service_h);
             break;
         case 2:
-            myList.get(position).setBackgroundResource(R.drawable.tab_icon_3_u);
+            myList.get(position).setBackgroundResource(R.drawable.farm_h);
             break;
         case 3:
-            myList.get(position).setBackgroundResource(R.drawable.tab_icon_4_u);
+            myList.get(position).setBackgroundResource(R.drawable.manage_h);
+            break;
+        case 4:
+            myList.get(position).setBackgroundResource(R.drawable.personal_h);
             break;
         default:
             break;

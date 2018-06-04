@@ -97,8 +97,8 @@ public class ProductListActivity extends BaseActivity implements OnClickListener
     private void initData() {
         getDBData();
         
-        String[] property_va = new String[] {selltype , "10", pageIndex + ""};
-        soapService.getProductBySellType(property_va, false);
+//        String[] property_va = new String[] {selltype , "10", pageIndex + ""};
+//        soapService.getProductBySellType(property_va, false);
     }
 
     private void getDBData() {
@@ -213,32 +213,5 @@ public class ProductListActivity extends BaseActivity implements OnClickListener
         super.onDestroy();
     }
     
-    public void onEvent(SoapRes obj) {
-        if (obj.getCode().equals(SOAP_UTILS.METHOD.GETPRODUCTBYSELLTYPE)) {
-//            listView_nowlivinglist.onRefreshComplete();
-            if (obj.getObj() != null) {
-                if(obj.getObj().equals("false")){
-                    Toast.makeText(context, "获取数据失败", Toast.LENGTH_SHORT).show();  
-                }else{
-                if (obj.isPage()) {
-                    for (ProductByClass bean : (List<ProductByClass>) obj.getObj()) {
-                        productByClassList.add(bean);
-                    }
-                    productlistAdapter.notifyDataSetChanged();
-                } else {
-                    productByClassList = (List<ProductByClass>) obj.getObj();
-                    if (productByClassList.size() != 0) {
-
-                        dbh.clearProductByClass();
-                        dbh.insProductByClassList(productByClassList);
-                        pageIndex = 1;
-                    }
-                    getDBData();
-                }
-                }
-                }else{
-                    Toast.makeText(context, "网络异常", Toast.LENGTH_SHORT).show();
-                }
-        } 
-    }
+ 
 }

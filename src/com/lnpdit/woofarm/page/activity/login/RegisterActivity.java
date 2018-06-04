@@ -1,5 +1,8 @@
 package com.lnpdit.woofarm.page.activity.login;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import com.hp.hpl.sparta.Text;
 import com.lnpdit.IntelligentPlanting.R;
 import com.lnpdit.woofarm.base.component.BaseActivity;
@@ -82,6 +85,10 @@ public class RegisterActivity extends BaseActivity implements OnClickListener {
                 Toast.makeText(context, "手机号码不能为空！", Toast.LENGTH_SHORT).show();
                 break;
             }
+            if(phone_edit.getText().toString().trim().length() != 11){
+                Toast.makeText(context, "手机号格式不正确！", Toast.LENGTH_SHORT).show();
+                break;
+            }
             // 密码校验
             if (password_edit.getText().toString().trim().equals("")) {
                 Toast.makeText(context, "密码不能为空！", Toast.LENGTH_SHORT).show();
@@ -94,22 +101,22 @@ public class RegisterActivity extends BaseActivity implements OnClickListener {
             }
 
             
-            Object[] property_va2 = { phone_edit.getText().toString(),code_edit.getText().toString(),
+            Object[] property_va2 = { phone_edit.getText().toString(),
                     password_edit.getText().toString() };
             soapService.memberReg(property_va2);
             break;
-        case R.id.code_btn:
-            final String phonenum = phone_edit.getText().toString();
-            if (phonenum.equals("")) {
-                Toast.makeText(context, "手机号码不能为空！", Toast.LENGTH_SHORT).show();
-                return;
-            }
-
-           // 获取验证码
-            Object[] property_va = { phonenum };
-            soapService.getCodeByPhone(property_va);
-            
-            break;
+//        case R.id.code_btn:
+//            final String phonenum = phone_edit.getText().toString();
+//            if (phonenum.equals("")) {
+//                Toast.makeText(context, "手机号码不能为空！", Toast.LENGTH_SHORT).show();
+//                return;
+//            }
+//
+//           // 获取验证码
+//            Object[] property_va = { phonenum };
+//            soapService.getCodeByPhone(property_va);
+//            
+//            break;
         default:
             break;
         }
@@ -120,11 +127,17 @@ public class RegisterActivity extends BaseActivity implements OnClickListener {
     public void onEvent(SoapRes res) {
         if (res.getCode().equals(SOAP_UTILS.METHOD.MEMBERREG)) {
             if (res.getObj() != null) {
-                if (res.getObj().toString().equals("true")) {
-                    Toast.makeText(context, "注册成功", Toast.LENGTH_SHORT).show();
+                try {
+               JSONObject json_obj = new JSONObject(res.getObj().toString());
+                if (json_obj.get("result").toString().equals("true")) {
+                    Toast.makeText(context, json_obj.get("message").toString(), Toast.LENGTH_SHORT).show();
                     finish();
                 } else {
-                    Toast.makeText(context, res.getObj().toString(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(context, json_obj.get("message").toString(), Toast.LENGTH_SHORT).show();
+                }
+                } catch (JSONException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
                 }
             } else {
                 Toast.makeText(context, "注册失败", Toast.LENGTH_SHORT).show();
@@ -143,7 +156,8 @@ public class RegisterActivity extends BaseActivity implements OnClickListener {
             } else {
                 Toast.makeText(context, "验证码发送失败", Toast.LENGTH_SHORT).show();
             }
-            
+      
+
         }
         
     }

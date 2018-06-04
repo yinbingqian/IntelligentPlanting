@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+            <TextView
+                android:id="@+id/devicename_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="12dp"
+                android:text="设备名"
+                android:textColor="@color/item_graytext"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/devicestate_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/devicename_tv"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="16dp"
+                android:text="设备状态"
+                android:textColor="@color/item_graytext2"
+                android:textSize="14dp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/pengname_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/devicename_tv"
+                android:layout_marginTop="4dp"
+                android:layout_alignLeft="@+id/devicename_tv"
+                android:text="大棚名"
+                android:textColor="@color/item_graytext2"
+                android:textSize="14dp"/>
+            <View 
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray_line"
+                android:layout_below="@+id/pengname_tv"
+                android:layout_marginTop="11dp"/>
+        </RelativeLayout>

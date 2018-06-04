@@ -1,27 +1,15 @@
 package com.lnpdit.woofarm.page.activity.login;
 
-import com.hp.hpl.sparta.Text;
 import com.lnpdit.IntelligentPlanting.R;
-import com.lnpdit.woofarm.base.component.BaseActivity;
-import com.lnpdit.woofarm.entity.LoginUser;
-import com.lnpdit.woofarm.http.SoapRes;
-import com.lnpdit.woofarm.md5.MD5Plus;
-import com.lnpdit.woofarm.page.activity.setting.ModifyPasswordActivity;
+import com.lnpdit.woofarm.page.activity.personal.ModifyPasswordActivity;
 import com.lnpdit.woofarm.page.activity.tabhost.MainTabHostActivity;
-import com.lnpdit.woofarm.utils.SOAP_UTILS;
 
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.location.LocationManager;
 import android.os.Bundle;
-import android.text.InputType;
-import android.text.method.DigitsKeyListener;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;

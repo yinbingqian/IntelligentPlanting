@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@null"
+    android:paddingBottom="8dp"
     android:orientation="vertical" >
 
     <LinearLayout
@@ -22,25 +23,25 @@
             android:layout_weight="2" >
 
             <TextView
-                android:id="@+id/expert_name"
+                android:id="@+id/farm_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="18dp"
                 android:ellipsize="end"
                 android:maxLines="1"
                 android:text="1号棚"
-                android:textColor="@color/deep_yellow"
+                android:textColor="@color/item_graytext"
                 android:textSize="16dp" />
            <TextView
-            android:id="@+id/zbj_text"
+            android:id="@+id/area_text"
             android:layout_width="wrap_content"
             android:layout_height="20dp"
-            android:layout_toRightOf="@+id/expert_name"
-            android:layout_alignBottom="@+id/expert_name"
+            android:layout_toRightOf="@+id/farm_name"
+            android:layout_alignBottom="@+id/farm_name"
             android:layout_marginLeft="10dp"
             android:gravity="center"
             android:text="6.9亩"
-            android:textColor="@color/black"
+            android:textColor="@color/item_graytext"
             android:textSize="16dp"/>
            
   <TextView
@@ -48,27 +49,33 @@
             android:layout_width="wrap_content"
             android:layout_height="20dp"
             android:layout_alignParentRight="true"
-            android:layout_marginRight="15dp"
-            android:layout_marginTop="15dp"
+            android:layout_marginRight="18dp"
+            android:layout_alignBottom="@+id/farm_name"
             android:gravity="center"
             android:text="闲置中"
-            android:textColor="@color/deep_yellow"
-            android:textSize="13dp"/>
-  <ImageView 
+            android:textColor="@color/item_orangetext"
+            android:textSize="14dp"/>
+  <RelativeLayout 
       android:layout_width="20dp"
       android:layout_height="20dp"
-      android:background="@drawable/tab_icon_4_u"
       android:layout_toLeftOf="@+id/state_tv"
       android:layout_alignBottom="@+id/state_tv"
-      android:layout_marginRight="3dp"/>
+      android:layout_marginRight="2dp"
+      android:gravity="center">
+  <ImageView 
+      android:id="@+id/state_img"
+      android:layout_width="16dp"
+      android:layout_height="16dp"
+      android:background="@drawable/xianzhi"/>
+  </RelativeLayout>
             <TextView
                 android:id="@+id/monitor_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/expert_name"
+                android:layout_below="@+id/farm_name"
                 android:layout_marginTop="10dp"
                 android:text="监测设备：0"
-                android:textColor="@color/black"
+                android:textColor="@color/item_graytext"
                 android:textSize="14dp" />
 <TextView
                 android:id="@+id/control_tv"
@@ -78,7 +85,7 @@
                 android:layout_alignBottom="@+id/monitor_tv"
                 android:layout_marginLeft="50dp"
                 android:text="控制设施：0"
-                android:textColor="@color/black"
+                android:textColor="@color/item_graytext"
                 android:textSize="14dp" />
             </RelativeLayout>
 

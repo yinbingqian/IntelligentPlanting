@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_bg2">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="249dp"
+        android:background="@drawable/homebg">"
+
+        <ImageView
+            android:id="@+id/location_img"
+            android:layout_width="17dp"
+            android:layout_height="18dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="39dp"
+            android:background="@drawable/location"/>
+        <TextView
+            android:id="@+id/location_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_toRightOf="@+id/location_img"
+            android:text="沈阳"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:layout_alignBottom="@+id/location_img" />
+    <TextView 
+        android:id="@+id/farmname_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:layout_below="@+id/location_img"
+        android:layout_alignLeft="@+id/location_img"
+        android:text="陈相农场"
+        android:textColor="@color/white"
+        android:textSize="22dp"
+        android:layout_gravity="center_horizontal"/>
+    <TextView 
+        android:id="@+id/wind_tv"
+        android:layout_width="94dp"
+        android:layout_height="21dp"
+        android:layout_marginRight="10dp"
+        android:layout_alignBottom="@+id/farmname_tv"
+        android:layout_alignParentRight="true"
+        android:text="西南风4-6级"
+        android:textColor="@color/white"
+        android:textSize="14dp"
+        android:background="@color/green_bg2"
+        android:gravity="center"/>
+        <TextView 
+        android:id="@+id/temperature_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_above="@+id/wind_tv"
+        android:layout_marginBottom="8dp"
+        android:layout_alignParentRight="true"
+        android:text="20℃"
+        android:textColor="@color/white"
+        android:textSize="18dp"/>
+        <ImageView 
+        android:layout_width="24dp"
+        android:layout_height="16dp"
+        android:layout_above="@+id/wind_tv"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/location"
+        android:layout_toLeftOf="@+id/temperature_tv"
+        android:layout_marginRight="8dp"/>
+        
+        
+    </RelativeLayout>
+
+<ListView
+        android:id="@+id/listview_farmlist"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="180dp"
+        android:background="@null"
+        android:cacheColorHint="#00000000"
+        android:divider="#eeeeee"
+        android:fadingEdge="none"
+        android:fastScrollEnabled="false"
+        android:footerDividersEnabled="false"
+        android:headerDividersEnabled="false"
+        android:listSelector="#00000000"
+        android:smoothScrollbar="true" />
+</RelativeLayout>
