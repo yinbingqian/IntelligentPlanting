@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+<RelativeLayout
+        android:id="@+id/top_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:background="@color/green_top"
+        android:orientation="vertical" >
+       
+
+      <TextView
+          android:id="@+id/tv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:singleLine="true"
+            android:layout_marginLeft="26dp"
+            android:text="返回"
+            android:textColor="@color/white"
+            android:textSize="18dp"/>
+        <TextView
+            android:id="@+id/title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:ellipsize="marquee"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="添加设备"
+            android:textColor="@color/white"
+            android:textSize="18dp"/>
+        
+    </RelativeLayout>
+    <ScrollView 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <EditText 
+            android:id="@+id/devicenumber_et"
+          android:layout_width="330dp" 
+          android:layout_height="50dp"
+          android:layout_gravity="center_horizontal"
+          android:layout_marginTop="20dp"
+          android:paddingLeft="15dp"
+          android:paddingRight="15dp"
+          android:background="@drawable/edittext_greenbg"
+          android:text=""
+          android:textColor="#ff1c1c1c"
+          android:hint="请输入网关名称"
+/>
+        <RelativeLayout
+        android:layout_width="fill_parent" 
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal" >
+
+
+        <View 
+            android:id="@+id/view_icon2"
+        android:layout_width="5dp" 
+        android:layout_height="12dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/green_icon"
+          />
+        <TextView 
+            android:id="@+id/peng_name"
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/view_icon2"
+        android:text="当前传感器"
+        android:textColor="@color/item_graytext3"
+        android:textSize="14sp"
+           />
+
+    </RelativeLayout>
+    <RelativeLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="22dp">
+        
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="空气温度传感器"
+            android:textColor="@color/item_graytext3"
+            android:textSize="14sp"/>
+        
+        <TextView 
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:layout_alignParentRight="true"
+            android:text="解除绑定?"
+            android:textColor="#ffe5631c"
+            android:textSize="12sp"
+            />
+    </RelativeLayout>
+        <View 
+android:layout_width="324dp" 
+android:layout_height="1dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="19dp"
+android:background="#ffe6e6e6"
+/>
+          <RelativeLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="18dp">
+        
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="空气湿度传感器"
+            android:textColor="@color/item_graytext3"
+            android:textSize="14sp"/>
+        
+        <TextView 
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:layout_alignParentRight="true"
+            android:text="解除绑定?"
+            android:textColor="#ffe5631c"
+            android:textSize="12sp"
+            />
+    </RelativeLayout>
+        <View 
+android:layout_width="324dp" 
+android:layout_height="1dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="19dp"
+android:background="#ffe6e6e6"
+/>
+           <RelativeLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="18dp">
+        
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="光照传感器"
+            android:textColor="@color/item_graytext3"
+            android:textSize="14sp"/>
+        
+        <TextView 
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:layout_alignParentRight="true"
+            android:text="解除绑定?"
+            android:textColor="#ffe5631c"
+            android:textSize="12sp"
+            />
+    </RelativeLayout>
+        <View 
+android:layout_width="324dp" 
+android:layout_height="1dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="19dp"
+android:background="#ffe6e6e6"
+/>
+           <RelativeLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="18dp">
+        
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="土壤温度传感器"
+            android:textColor="@color/item_graytext3"
+            android:textSize="14sp"/>
+        
+        <TextView 
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:layout_alignParentRight="true"
+            android:text="解除绑定?"
+            android:textColor="#ffe5631c"
+            android:textSize="12sp"
+            />
+    </RelativeLayout>
+        <View 
+android:layout_width="324dp" 
+android:layout_height="1dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="19dp"
+android:background="#ffe6e6e6"
+/>
+           <RelativeLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="18dp">
+        
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="土壤湿度传感器"
+            android:textColor="@color/item_graytext3"
+            android:textSize="14sp"/>
+        
+        <TextView 
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:layout_alignParentRight="true"
+            android:text="解除绑定?"
+            android:textColor="#ffe5631c"
+            android:textSize="12sp"
+            />
+    </RelativeLayout>
+        <View 
+android:layout_width="324dp" 
+android:layout_height="1dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="19dp"
+android:background="#ffe6e6e6"
+/>
+           <RelativeLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="18dp">
+        
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="二氧化碳传感器"
+            android:textColor="@color/item_graytext3"
+            android:textSize="14sp"/>
+        
+        <TextView 
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:layout_alignParentRight="true"
+            android:text="解除绑定?"
+            android:textColor="#ffe5631c"
+            android:textSize="12sp"
+            />
+    </RelativeLayout>
+        <View 
+        android:layout_width="324dp" 
+        android:layout_height="1dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="19dp"
+        android:background="#ffe6e6e6"
+            android:visibility="gone"
+/>
+             <RelativeLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="18dp"
+            android:visibility="gone">
+        
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PH值传感器"
+            android:textColor="@color/item_graytext3"
+            android:textSize="14sp"/>
+        
+        <TextView 
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:layout_alignParentRight="true"
+            android:text="解除绑定?"
+            android:textColor="#ffe5631c"
+            android:textSize="12sp"
+            />
+    </RelativeLayout>
+        <View 
+        android:layout_width="324dp" 
+        android:layout_height="1dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="19dp"
+        android:background="#ffe6e6e6"
+            android:visibility="gone"
+/>
+    
+        <TextView 
+android:layout_width="wrap_content" 
+android:layout_height="wrap_content"
+android:text="提示*：如果不需要当前所提供的某个传感器，可点击解除绑定进行逐个拆分"
+ android:layout_marginLeft="15dp"
+ android:layout_marginRight="15dp"
+ android:layout_marginTop="15dp"
+android:textColor="#ffff0000"
+android:textSize="12sp"
+/>
+        
+        <TextView 
+            android:id="@+id/adddevice_tv"
+android:layout_width="330dp" 
+android:layout_height="44dp"
+android:background="#ff0bda75"
+android:layout_marginTop="20dp"
+android:text="确认完成"
+android:textColor="@color/white"
+android:textSize="16dp"
+android:gravity="center"
+android:layout_gravity="center_horizontal"
+/>
+        </LinearLayout>
+        </ScrollView>
+</LinearLayout>

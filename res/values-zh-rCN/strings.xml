@@ -312,4 +312,24 @@
         <item>日</item>
     </string-array>
     <string name="input_password">请输入6-15位密码!</string>
+     <!-- 二维码扫描-->
+    <string name="open_sanqr">打开扫描二维码</string>
+    <string name="open_flashlight">打开闪光灯</string>
+    <string name="close_flashlight">关闭闪光灯</string>
+    <string name="open_image">选择图库</string>
+    <string name="msg_camera_framework_bug">很遗憾，Android 相机出现问题。你可能需要重启设备。</string>
+    <string name="button_ok">确定</string>
+    <string name="scan">扫一扫</string>
+    <string name="scan_tip">将取景框对准二维码即可自动扫描</string>
+    <string name="flashlight">闪光灯</string>
+    <string name="gallery">相册</string>
+    <string name="result_fail">解析失败，请重试！</string>
+    <string name="air_temperature">单位：℃</string>
+    <string name="air_humidity">单位：%</string>
+    <string name="light">单位：Lux</string>
+    <string name="soil_temperature">单位：℃</string>
+    <string name="soil_humidity">单位：%</string>
+    <string name="co2">CO2浓度</string>
+    
+    
 </resources>

@@ -10,7 +10,7 @@ import com.lnpdit.woofarm.entity.DataInfoUn;
 import com.lnpdit.woofarm.entity.ProductRow;
 import com.lnpdit.woofarm.page.activity.product.CameraListActivity;
 import com.lnpdit.woofarm.page.activity.product.ProductInfoActivity;
-import com.lnpdit.woofarm.page.activity.setting.EditAddressActivity;
+//import com.lnpdit.woofarm.page.activity.setting.EditAddressActivity;
 
 import android.content.Context;
 import android.content.Intent;

@@ -149,6 +149,48 @@
         </RelativeLayout>
     
     </LinearLayout>
+     <LinearLayout
+        android:id="@+id/origin_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="80dp">
+
+            <TextView
+                android:id="@+id/textview_tv4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="76dp"
+                android:gravity="center"
+                android:text="农事产品溯源"
+                android:textColor="@color/item_graytext"
+                android:textSize="16dp" />
+<TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="1dp"
+                android:layout_below="@+id/textview_tv4"
+                android:layout_alignLeft="@+id/textview_tv4"
+                android:text="对每个区域的种植进行管理"
+                android:textColor="@color/gray_text5"
+                android:textSize="12dp" />
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:background="@drawable/traceability" />
+        </RelativeLayout>
+    
+    </LinearLayout>
 <LinearLayout
         android:id="@+id/devicemanage_layout"
         android:layout_width="fill_parent"

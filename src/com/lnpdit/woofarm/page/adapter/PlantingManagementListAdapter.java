@@ -43,7 +43,7 @@ public class PlantingManagementListAdapter extends BaseAdapter {
     private LayoutInflater mInflater;
     private Context mContext;
     private buttonViewHolder holder;
-    private String id = "";
+    private String plantId = "";
 
     public PlantingManagementListAdapter(Context context, List<PlantingList> appList) {
         mAppList = appList;
@@ -115,22 +115,22 @@ public class PlantingManagementListAdapter extends BaseAdapter {
         }
 
         appInfo = mAppList.get(position);
-        id = appInfo.getId();
-        String plantingstate = appInfo.getPlanting().toString();
-        if(plantingstate.equals("true")){
+        plantId = appInfo.getPlantId();
+        String plantingstate = appInfo.getPlantState().toString();
+        if(plantingstate.equals("0")){
 
             holder.crop_layout.setVisibility(1);
             holder.uncrop_tv.setVisibility(8);
             
-            holder.pengname_tv.setText(appInfo.getPengName());
-            holder.endplant_tv.setVisibility(1);; 
+            holder.pengname_tv.setText(appInfo.getPlotName());
+            holder.endplant_tv.setVisibility(1);
             holder.endplant_tv.setText("结束种植"); 
-            holder.plant_tv.setText(appInfo.getCropName());
+            holder.plant_tv.setText(appInfo.getVarietyName());
             holder.datetime_tv.setText(appInfo.getBeginTime());
             holder.enddatetime_tv.setText(appInfo.getEndTime());
             holder.date_tv.setText("已定值" +appInfo.getPlantDays() + "天");
 
-            String headPath = SOAP_UTILS.URL + appInfo.getCavatar();
+            String headPath = SOAP_UTILS.URL + appInfo.getPlantImg();
             Instance.imageLoader.displayImage(headPath, holder.photo_img, Instance.zuowu_s_options);
 
               String plantschedule =appInfo.getPlantSchedule();
@@ -151,8 +151,8 @@ public class PlantingManagementListAdapter extends BaseAdapter {
                 }
             
         }else{
-//            holder.endplant_tv.setText("开始种植"); 
-            holder.endplant_tv.setVisibility(8);; 
+            holder.endplant_tv.setText("开始种植"); 
+            holder.endplant_tv.setVisibility(8);
             holder.crop_layout.setVisibility(8);
             holder.uncrop_tv.setVisibility(1);
         }
@@ -204,7 +204,7 @@ public class PlantingManagementListAdapter extends BaseAdapter {
                 dialog.dismiss();
                 // 设置你的操作事项
 
-              String[] property_vas = new String[] {id };
+              String[] property_vas = new String[] {plantId };
               soapService.finishplant(property_vas);
             }
         });

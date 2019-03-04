@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+  
+  <SurfaceView android:id="@+id/preview_view"
+               android:layout_width="fill_parent"
+               android:layout_height="fill_parent"/>
+<RelativeLayout
+        android:id="@+id/top_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:background="@color/green_top"
+        android:orientation="vertical" >
+       
+
+      <TextView
+          android:id="@+id/tv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:singleLine="true"
+            android:layout_marginLeft="26dp"
+            android:text="返回"
+            android:textColor="@color/white"
+            android:textSize="18dp"/>
+        <TextView
+            android:id="@+id/title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:ellipsize="marquee"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="扫一扫"
+            android:textColor="@color/white"
+            android:textSize="18dp"/>
+        <TextView
+          android:id="@+id/open_gallery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:layout_marginRight="10dp"
+            android:text="相册"
+            android:textColor="@color/white"
+            android:textSize="18dp"/>
+    </RelativeLayout>
+  <RelativeLayout
+        android:id="@+id/capture_container"
+        android:layout_marginTop="45dp"
+        android:background="@drawable/sao_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+>
+        
+
+        <RelativeLayout
+            android:id="@+id/capture_crop_view"
+            android:layout_marginTop="80dp"
+            android:layout_width="260dp"
+            android:layout_height="236dp"
+            android:layout_centerHorizontal="true" >
+
+            <ImageView
+                android:id="@+id/capture_scan_line"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/scan_line" />
+        </RelativeLayout>
+        <LinearLayout
+            android:id="@+id/lin_light_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/capture_crop_view"
+            android:layout_centerHorizontal="true"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            >
+       <TextView 
+android:layout_width="211dp" 
+android:layout_height="wrap_content"
+android:layout_marginTop="21dp"
+android:text="请将二维码置于框内,即可自动扫描"
+android:textColor="#ffffffff"
+android:textSize="13sp"
+/>
+            <CheckBox
+                android:id="@+id/light_check"
+                android:layout_width="43dp"
+                android:layout_height="43dp"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/light_f"
+                android:button="@null"
+                android:checked="false" 
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="开启手电筒"
+                android:textColor="@color/white" 
+                android:textSize="12dp"/>
+  
+      <TextView 
+          android:id="@+id/switchtext_tv"
+android:layout_width="200dp" 
+android:layout_height="48dp"
+android:layout_marginTop="25dp"
+android:background="@drawable/switchnumber_default"
+android:gravity="center"
+android:text="切换二维码输入"
+android:textColor="#ffffffff"
+android:textSize="14sp"
+/>
+</LinearLayout>
+    </RelativeLayout>
+
+</merge>

@@ -57,6 +57,466 @@
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical">
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/broder"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="9dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="14dp"
+        android:orientation="vertical">
+        
+        <RelativeLayout
+        android:layout_width="fill_parent" 
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:paddingBottom="14dp"
+        android:orientation="horizontal" >
+
+
+        <View 
+            android:id="@+id/view_icon"
+        android:layout_width="5dp" 
+        android:layout_height="12dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/green_icon"
+          />
+        <TextView 
+            android:id="@+id/peng_name"
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/view_icon"
+        android:text="环境监测数据"
+        android:textColor="@color/item_graytext3"
+        android:textSize="14sp"
+           />
+<TextView 
+                android:id="@+id/planttime_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="15dp"
+        android:text="2018-08-09  17:05"
+        android:textColor="@color/item_graytext4"
+        android:textSize="13dp"
+        android:visibility="gone"/>
+    </RelativeLayout>
+<View 
+android:layout_width="324dp" 
+android:layout_height="1dp"
+android:background="#ffe6e6e6"
+/>
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+ <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+                android:orientation="horizontal" >
+
+                <RelativeLayout
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" >
+
+                    <TextView
+                        android:id="@+id/gateway1_tv"
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:text="网关1"
+                        android:textColor="@color/white"
+                        android:textSize="14dp"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/broder_orange"
+                        android:gravity="center"
+                        android:visibility="gone"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" 
+                    android:gravity="center_horizontal">
+
+                     <TextView
+                        android:id="@+id/gateway2_tv"
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:text="网关2"
+                        android:textColor="@color/item_graytext4"
+                        android:textSize="14dp"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/broder_gray2"
+                        android:gravity="center"
+                        android:visibility="gone"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" 
+                    android:gravity="center_horizontal">
+<TextView
+                        android:id="@+id/gateway3_tv"
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:text="网关3"
+                        android:textColor="@color/item_graytext4"
+                        android:textSize="14dp"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/broder_gray2"
+                        android:gravity="center"
+                        android:visibility="gone"/>
+                </RelativeLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+                android:orientation="horizontal" >
+
+                <RelativeLayout
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" >
+
+                    <TextView
+                        android:id="@+id/gateway4_tv"
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:text="网关4"
+                        android:textColor="@color/item_graytext4"
+                        android:textSize="14dp"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/broder_gray2"
+                        android:gravity="center"
+                        android:visibility="gone"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" 
+                    android:gravity="center_horizontal">
+
+                     <TextView
+                        android:id="@+id/gateway5_tv"
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:text="网关5"
+                        android:textColor="@color/item_graytext4"
+                        android:textSize="14dp"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/broder_gray2"
+                        android:gravity="center"
+                        android:visibility="gone"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" 
+                    android:gravity="center_horizontal">
+<TextView
+                        android:id="@+id/gateway6_tv"
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:text="网关6"
+                        android:textColor="@color/item_graytext4"
+                        android:textSize="14dp"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/broder_gray2"
+                        android:gravity="center"
+                        android:visibility="gone"/>
+                </RelativeLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="17dp"
+                android:orientation="horizontal" >
+
+                <RelativeLayout
+                    android:layout_width="1dp"
+                    android:layout_height="80dp"
+                    android:layout_weight="1" >
+
+                    <ImageView
+                        android:id="@+id/air_temperature_btn"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/air_temperature_icon"/>
+
+                    <TextView
+                        android:id="@+id/air_temperature_icon_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/air_temperature_btn"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="6dp"
+                        android:text="空气温度"
+                        android:textColor="@color/item_graytext3"
+                        android:textSize="13dp" />
+                    <TextView
+                        android:id="@+id/air_temperature_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@+id/air_temperature_icon_tv"
+                        android:layout_marginTop="6dp"
+                        android:text=""
+                        android:textColor="@color/item_graytext3"
+                        android:textSize="14dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="1dp"
+                    android:layout_height="80dp"
+                    android:layout_weight="1" 
+                    android:gravity="center_horizontal">
+
+                     <ImageView
+                        android:id="@+id/air_humidity_btn"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/air_humidity_icon"/>
+
+                    <TextView
+                        android:id="@+id/air_humidity_icon_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/air_humidity_btn"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="6dp"
+                        android:text="空气湿度"
+                        android:textColor="@color/item_graytext3"
+                        android:textSize="13dp" />
+                    <TextView
+                        android:id="@+id/air_humidity_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@+id/air_humidity_icon_text"
+                        android:layout_marginTop="6dp"
+                        android:text=""
+                        android:textColor="@color/item_graytext3"
+                        android:textSize="14dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="1dp"
+                    android:layout_height="80dp"
+                    android:layout_weight="1" 
+                    android:gravity="center_horizontal">
+
+                     <ImageView
+                        android:id="@+id/light_btn"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/light_icon"/>
+
+                    <TextView
+                        android:id="@+id/light_icon_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/light_btn"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="6dp"
+                        android:text="光照强度"
+                        android:textColor="@color/item_graytext3"
+                        android:textSize="13dp" />
+                    <TextView
+                        android:id="@+id/light_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@+id/light_icon_text"
+                        android:layout_marginTop="6dp"
+                        android:text=""
+                        android:textColor="@color/item_graytext3"
+                        android:textSize="14dp" />
+                </RelativeLayout>
+
+               <RelativeLayout
+                    android:layout_width="1dp"
+                    android:layout_height="80dp"
+                    android:layout_weight="1" 
+                    android:gravity="center_horizontal">
+
+                     <ImageView
+                        android:id="@+id/soil_temperature_btn"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/soil_temperature_icon"/>
+
+                    <TextView
+                        android:id="@+id/soil_temperature_icon_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/soil_temperature_btn"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="6dp"
+                        android:text="土壤温度"
+                        android:textColor="@color/item_graytext3"
+                        android:textSize="13dp" />
+                    <TextView
+                        android:id="@+id/soil_temperature_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@+id/soil_temperature_icon_text"
+                        android:layout_marginTop="6dp"
+                        android:text=""
+                        android:textColor="@color/item_graytext3"
+                        android:textSize="14dp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="1dp"
+                    android:layout_height="80dp"
+                    android:layout_weight="1" 
+                    android:gravity="center_horizontal">
+
+                     <ImageView
+                        android:id="@+id/soil_humidity_btn"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/soil_humidity_icon"/>
+
+                    <TextView
+                        android:id="@+id/soil_humidity_icon_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/soil_humidity_btn"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="6dp"
+                        android:text="土壤湿度"
+                        android:textColor="@color/item_graytext3"
+                        android:textSize="13dp" />
+                    <TextView
+                        android:id="@+id/soil_humidity_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@+id/soil_humidity_icon_text"
+                        android:layout_marginTop="6dp"
+                        android:text=""
+                        android:textColor="@color/item_graytext3"
+                        android:textSize="14dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="1dp"
+                    android:layout_height="80dp"
+                    android:layout_weight="1" 
+                    android:gravity="center_horizontal">
+
+                     <ImageView
+                        android:id="@+id/co2_btn"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/co2_icon"/>
+
+                    <TextView
+                        android:id="@+id/co2_icon_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/co2_btn"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="6dp"
+                        android:text="二氧化碳"
+                        android:textColor="@color/item_graytext3"
+                        android:textSize="13dp" />
+                    <TextView
+                        android:id="@+id/co2_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@+id/co2_icon_text"
+                        android:layout_marginTop="6dp"
+                        android:text=""
+                        android:textColor="@color/item_graytext3"
+                        android:textSize="14dp" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="1dp"
+                    android:layout_height="80dp"
+                    android:layout_weight="1" 
+                    android:gravity="center_horizontal">
+
+                     <ImageView
+                        android:id="@+id/soilph_btn"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/soilph_icon"/>
+
+                    <TextView
+                        android:id="@+id/soilph_icon_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/soilph_btn"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="6dp"
+                        android:text="土壤PH"
+                        android:textColor="@color/item_graytext3"
+                        android:textSize="13dp" />
+                    <TextView
+                        android:id="@+id/soilph_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@+id/soilph_icon_text"
+                        android:layout_marginTop="6dp"
+                        android:text=""
+                        android:textColor="@color/item_graytext3"
+                        android:textSize="14dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="1dp"
+                    android:layout_height="70dp"
+                    android:layout_weight="1" >
+
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+           <TextView 
+              android:layout_width="wrap_content" 
+              android:layout_height="wrap_content"
+              android:layout_gravity="center_horizontal"
+              android:layout_marginTop="17dp"
+              android:text="检测设备每5分钟更新一次数据"
+              android:textColor="#ffb4b4b4"
+              android:textSize="12sp"
+                  />
+            </LinearLayout>
     <RelativeLayout 
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -73,13 +533,23 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp">
+        <View 
+            android:id="@+id/view_icon0"
+        android:layout_width="5dp" 
+        android:layout_height="12dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/green_icon"
+          />
             <TextView 
                 android:id="@+id/nowplant_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" 
+        android:layout_toRightOf="@+id/view_icon0"
+        android:layout_marginLeft="5dp"
         android:text="当前种植"
-        android:textColor="@color/item_graytext"
-        android:textSize="16dp"/>
+        android:textColor="@color/item_graytext3"
+        android:textSize="14sp"/>
             
             <TextView 
                 android:id="@+id/endplant_tv"
@@ -131,7 +601,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
                 android:maxLines="1"
-                android:text="白兰豆"
+                android:text=""
                 android:textColor="@color/item_graytext"
                 android:textSize="18dp" />
   
@@ -141,7 +611,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/crop_name"
                 android:layout_marginTop="2dp"
-                android:text="定植时间:2018/04/24"
+                android:text=""
                 android:textColor="@color/gray_text5"
                 android:textSize="14dp" />
             
@@ -151,7 +621,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/begintime_tv"
                 android:layout_marginTop="2dp"
-                android:text="结束时间:2018/04/24"
+                android:text=""
                 android:textColor="@color/gray_text5"
                 android:textSize="14dp" />
             
@@ -161,7 +631,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/endtime_tv"
                 android:layout_marginTop="2dp"
-                android:text="已定植2天"
+                android:text=""
                 android:textColor="@color/gray_text5"
                 android:textSize="14dp" />
             </RelativeLayout>
@@ -200,14 +670,25 @@
             <RelativeLayout 
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
         android:gravity="center_vertical"
                 >
+        <View 
+            android:id="@+id/view_icon2"
+        android:layout_width="5dp" 
+        android:layout_height="12dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/green_icon"
+          />
                 <TextView 
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" 
+        android:layout_toRightOf="@+id/view_icon2"
+        android:layout_marginLeft="5dp"
         android:text="近24小时报警"
-        android:textColor="@color/item_graytext"
-        android:textSize="16dp"/>
+        android:textColor="@color/item_graytext3"
+        android:textSize="14dp"/>
          <ImageView 
              android:id="@+id/alarmupdown_img"
         android:layout_width="9dp"
@@ -236,16 +717,27 @@
         android:textSize="16dp"/>
             </RelativeLayout>
             
-            
+        <RelativeLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+           
         <lecho.lib.hellocharts.view.LineChartView
             android:id="@+id/line_chart"
             android:layout_width="match_parent"
-            android:layout_height="180dp"
+            android:layout_height="200dp"
             android:layout_gravity="center"
-            android:layout_marginTop="19dp"
-            android:layout_marginLeft="3dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginBottom="10dp"/>
+            android:layout_margin="10dp"/>
+         <View
+        android:id="@+id/red_line"
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="177dp"
+        android:background="@drawable/line_red"
+        android:visibility="gone"/>
+   
+        </RelativeLayout>
  <View
         android:id="@+id/line3"
         android:layout_width="fill_parent"
@@ -254,12 +746,12 @@
         android:background="@color/gran_line2"/>
  
  <TextView
-        android:id="@+id/set_tv"
+        android:id="@+id/alarminfoset_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="6dp"
-        android:text="报警阈值设定"
+        android:text="报警详情"
         android:textColor="@color/green_text2"/>
             </LinearLayout>
             
@@ -272,21 +764,36 @@
         android:layout_marginRight="8dp"
         android:layout_marginTop="8dp"
         android:paddingTop="16dp"
-        android:paddingLeft="12dp"
+        android:paddingLeft="2dp"
         android:paddingRight="16dp"
         android:paddingBottom="11dp"
         android:orientation="vertical">
-                
+ <RelativeLayout 
+     android:layout_width="fill_parent"
+     android:layout_height="wrap_content"
+        android:layout_marginTop="12dp">
+                       <View 
+            android:id="@+id/view_icon3"
+        android:layout_width="5dp" 
+        android:layout_height="12dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/green_icon"
+          />
                 <TextView 
          android:id="@+id/environment_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" 
+        android:layout_toRightOf="@+id/view_icon3"
+        android:layout_marginLeft="5dp"
         android:text="24小时环境走势"
-        android:textColor="@color/item_graytext"
-        android:textSize="16dp"/>
+        android:textColor="@color/item_graytext3"
+        android:textSize="14dp"/>
+                </RelativeLayout>
                 <LinearLayout 
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
                     android:orientation="horizontal">
                 <TextView 
                     android:id="@+id/label_tv1"
@@ -323,33 +830,83 @@
                     android:paddingBottom="5dp"
                     android:paddingLeft="10dp"
                     android:paddingRight="10dp"
-                    android:text="光照度"
+                    android:text="光照强度"
                     android:textColor="@color/item_graytext"
                     android:background="@drawable/label_focus"/>
-                   <TextView 
+                
+                </LinearLayout>
+                            <LinearLayout 
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+                    <TextView 
                     android:id="@+id/label_tv4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+	                android:layout_marginTop="12dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="土壤温度"
+                    android:textColor="@color/item_graytext"
+                    android:background="@drawable/label_focus"/>
+                 <TextView 
+                    android:id="@+id/label_tv5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
 	                android:layout_marginTop="12dp"
 	                android:layout_marginLeft="10dp"
                     android:paddingTop="5dp"
                     android:paddingBottom="5dp"
-                    android:paddingLeft="8dp"
-                    android:paddingRight="8dp"
-                    android:text="CO2浓度"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="土壤湿度"
                     android:textColor="@color/item_graytext"
                     android:background="@drawable/label_focus"/>
+                  <TextView 
+                    android:id="@+id/label_tv6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+	                android:layout_marginTop="12dp"
+	                android:layout_marginLeft="10dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="光照强度"
+                    android:textColor="@color/item_graytext"
+                    android:background="@drawable/label_focus"
+                    android:visibility="invisible"/>
+               
                 </LinearLayout>
+                   <TextView 
+                   android:id="@+id/namelabel_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:layout_gravity="right"
+        android:layout_marginRight="20dp"
+        android:gravity="center"
+        android:layout_marginTop="5dp"
+        android:text="单位：℃"
+        android:textColor="@color/orange_line"
+        android:textSize="14sp"/> 
+        <RelativeLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+                   <!-- 新曲线图 -->
            <lecho.lib.hellocharts.view.LineChartView
-            android:id="@+id/line_chart_ev"
-            android:layout_width="match_parent"
+            android:id="@+id/lvc_main"
+            android:layout_width="fill_parent"
             android:layout_height="180dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="19dp"
-            android:layout_marginLeft="3dp"
             android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"/>
-
+          
+           
+            </RelativeLayout>
+            
             </LinearLayout>
                   <LinearLayout 
         android:layout_width="fill_parent"
@@ -359,30 +916,36 @@
         android:layout_marginRight="8dp"
         android:layout_marginTop="8dp"
         android:orientation="vertical">
-        
+        <RelativeLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp">
+                       <View 
+            android:id="@+id/view_icon4"
+        android:layout_width="5dp" 
+        android:layout_height="12dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/green_icon"
+          />
                 <TextView 
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" 
-        android:layout_marginLeft="14dp"
-        android:layout_marginTop="15dp"
+        android:layout_toRightOf="@+id/view_icon4"
+        android:layout_marginLeft="5dp"
         android:layout_marginBottom="16dp"
         android:text="控制面板"
-        android:textColor="@color/item_graytext"
-        android:textSize="16dp"/>
+        android:textColor="@color/item_graytext3"
+        android:textSize="14dp"/>
+</RelativeLayout>
 
-                          <ListView
-        android:id="@+id/listview_equipmentlist"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:background="@null"
-        android:cacheColorHint="#00000000"
-        android:divider="#eeeeee"
-        android:fadingEdge="none"
-        android:fastScrollEnabled="false"
-        android:footerDividersEnabled="false"
-        android:headerDividersEnabled="false"
-        android:listSelector="#00000000"
-        android:smoothScrollbar="true" />
+    <com.lnpdit.woofarm.utils.NestedExpandaleListView
+    android:id="@+id/listview_equipmentlist"
+    android:layoutDirection="rtl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:groupIndicator="@null">
+</com.lnpdit.woofarm.utils.NestedExpandaleListView>
           </LinearLayout>
           
       <LinearLayout 
@@ -417,16 +980,30 @@
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginTop="8dp"
-        android:orientation="vertical">
-          <TextView 
+        android:orientation="vertical"
+        android:visibility="gone">
+           <RelativeLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+        android:layout_marginTop="12dp">
+                       <View 
+            android:id="@+id/view_icon5"
+        android:layout_width="5dp" 
+        android:layout_height="12dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/green_icon"
+          />
+                <TextView 
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" 
-        android:layout_marginLeft="14dp"
-        android:layout_marginTop="16dp"
+        android:layout_toRightOf="@+id/view_icon5"
+        android:layout_marginLeft="5dp"
         android:layout_marginBottom="15dp"
         android:text="场景模式"
-        android:textColor="@color/item_graytext"
-        android:textSize="16dp"/>
+        android:textColor="@color/item_graytext3"
+        android:textSize="14dp"/>
+                </RelativeLayout>
 <ListView
         android:id="@+id/listview_sceneslist"
         android:layout_width="fill_parent"
@@ -449,23 +1026,243 @@
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginTop="8dp"
-        android:paddingTop="10dp"
-        android:paddingLeft="15dp"
-        android:paddingRight="18dp"
-        android:paddingBottom="16dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
         android:orientation="vertical">
-
+ <RelativeLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+        android:layout_marginTop="12dp">
+                       <View 
+            android:id="@+id/view_icon6"
+        android:layout_width="5dp" 
+        android:layout_height="12dp"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/green_icon"
+          />
                 <TextView 
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" 
+        android:layout_toRightOf="@+id/view_icon6"
+        android:layout_marginLeft="5dp"
         android:text="视频监控"
-        android:textColor="@color/item_graytext"
-        android:textSize="16dp"/>
+        android:textColor="@color/item_graytext3"
+        android:textSize="14dp"/>
+                </RelativeLayout>
+                        <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="14dp"
+        android:background="@color/gran_line2" />
+                        
+                        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+ <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+                android:orientation="horizontal" >
+
+                <RelativeLayout
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1" >
+
+                    <RelativeLayout 
+                        android:id="@+id/camera1_layout"
+                      android:layout_width="157dp" 
+                      android:layout_height="80dp"
+                      android:background="@color/blue_bg1"
+                      >
+                     <ImageView 
+                          android:layout_width="21dp" 
+                          android:layout_height="30dp"
+                          android:layout_marginTop="25dp"
+                          android:layout_marginLeft="42dp"
+                          android:src="@drawable/view_icon"
+                       />
+                      <TextView 
+                          android:id="@+id/shipin_tv1"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_marginTop="25dp"
+                          android:layout_marginLeft="72dp"
+                          android:text="视野1"
+                          android:textColor="@color/white"
+                          android:textSize="13sp"/>
+                      <TextView 
+                         android:layout_width="wrap_content" 
+                         android:layout_height="wrap_content"
+                         android:layout_below="@+id/shipin_tv1"
+                         android:layout_alignLeft="@+id/shipin_tv1"
+                         android:text="智能监控"
+                         android:textColor="@color/white"
+                         android:textSize="12sp"
+                          />
+                      </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" 
+                    android:layout_marginLeft="5dp"
+                    android:gravity="center_horizontal">
+
+                   <RelativeLayout 
+                        android:id="@+id/camera2_layout"
+                      android:layout_width="157dp" 
+                      android:layout_height="80dp"
+                      android:background="@color/blue_bg2"
+                      >
+                      <ImageView 
+                          android:layout_width="21dp" 
+                          android:layout_height="30dp"
+                          android:layout_marginTop="25dp"
+                          android:layout_marginLeft="42dp"
+                          android:src="@drawable/view_icon"
+                       />
+                      <TextView 
+                          android:id="@+id/shipin_tv2"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_marginTop="25dp"
+                          android:layout_marginLeft="72dp"
+                          android:text="视野2"
+                          android:textColor="@color/white"
+                          android:textSize="13sp"/>
+                      <TextView 
+                         android:layout_width="wrap_content" 
+                         android:layout_height="wrap_content"
+                         android:layout_below="@+id/shipin_tv2"
+                         android:layout_alignLeft="@+id/shipin_tv2"
+                         android:text="智能监控"
+                         android:textColor="@color/white"
+                         android:textSize="12sp"
+                          />
+                      </RelativeLayout>
+                </RelativeLayout>
+
+                        </LinearLayout>
+                        <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+                android:orientation="horizontal" >
+
+                <RelativeLayout
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1" >
+
+                    <RelativeLayout 
+                        android:id="@+id/camera3_layout"
+                      android:layout_width="157dp" 
+                      android:layout_height="80dp"
+                      android:background="@color/blue_bg3"
+                      >
+                     <ImageView 
+                          android:layout_width="21dp" 
+                          android:layout_height="30dp"
+                          android:layout_marginTop="25dp"
+                          android:layout_marginLeft="42dp"
+                          android:src="@drawable/view_icon"
+                       />
+                      <TextView 
+                          android:id="@+id/shipin_tv3"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_marginTop="25dp"
+                          android:layout_marginLeft="72dp"
+                          android:text="视野3"
+                          android:textColor="@color/white"
+                          android:textSize="13sp"/>
+                      <TextView 
+                         android:layout_width="wrap_content" 
+                         android:layout_height="wrap_content"
+                         android:layout_below="@+id/shipin_tv3"
+                         android:layout_alignLeft="@+id/shipin_tv3"
+                         android:text="智能监控"
+                         android:textColor="@color/white"
+                         android:textSize="12sp"
+                          />
+                      </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" 
+                    android:layout_marginLeft="5dp"
+                    android:gravity="center_horizontal">
+
+                   <RelativeLayout 
+                        android:id="@+id/camera4_layout"
+                      android:layout_width="157dp" 
+                      android:layout_height="80dp"
+                      android:background="@color/pink_bg"
+                      >
+                      <ImageView 
+                          android:layout_width="21dp" 
+                          android:layout_height="30dp"
+                          android:layout_marginTop="25dp"
+                          android:layout_marginLeft="42dp"
+                          android:src="@drawable/view_icon"
+                       />
+                      <TextView 
+                          android:id="@+id/shipin_tv4"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_marginTop="25dp"
+                          android:layout_marginLeft="72dp"
+                          android:text="视野4"
+                          android:textColor="@color/white"
+                          android:textSize="13sp"/>
+                      <TextView 
+                         android:layout_width="wrap_content" 
+                         android:layout_height="wrap_content"
+                         android:layout_below="@+id/shipin_tv4"
+                         android:layout_alignLeft="@+id/shipin_tv4"
+                         android:text="智能监控"
+                         android:textColor="@color/white"
+                         android:textSize="12sp"
+                          />
+                      </RelativeLayout>
+                </RelativeLayout>
+
+                        </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+                android:orientation="horizontal" >
+
+                <RelativeLayout
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" >
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" 
+                    android:gravity="center_horizontal">
+                </RelativeLayout>
+
+            </LinearLayout>
+            </LinearLayout>
         <ImageView 
+            android:id="@+id/video_img"
             android:layout_width="fill_parent"
             android:layout_height="200dp"
             android:layout_marginTop="12dp"
-            android:background="@drawable/videoimage"/>
+            android:background="@drawable/videoimage"
+            android:visibility="gone"/>
 
             </LinearLayout>
             
@@ -495,7 +1292,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="7dp"
-        android:text="暂无设备"
+        android:text="暂无种植"
         android:textSize="16dp"
         android:textColor="@color/gray_text5" />
 

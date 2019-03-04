@@ -13,6 +13,7 @@ public class Planting implements Serializable {
     private String plantStatus;
     private String cropName;
     private String avatar;
+    private String varietyName;
     public String getId() {
         return id;
     }
@@ -72,6 +73,12 @@ public class Planting implements Serializable {
     }
     public void setAvatar(String avatar) {
         this.avatar = avatar;
+    }
+    public String getVarietyName() {
+        return varietyName;
+    }
+    public void setVarietyName(String varietyName) {
+        this.varietyName = varietyName;
     }
 
     

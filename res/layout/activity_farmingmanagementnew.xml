@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/graysearchs_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/mime_layout_01"
+        android:layout_width="fill_parent"
+        android:layout_height="220dp"
+        android:background="@drawable/nongshibg"
+        android:clickable="true" >
+      <TextView 
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_marginTop="23dp"
+         android:layout_centerHorizontal="true"
+         android:text="农事管理"
+         android:textColor="@color/white"
+         android:textSize="18dp"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="80dp"
+        android:background="@color/white"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+        android:id="@+id/dingzhi_layout"
+            android:layout_width="1dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@color/white" >
+
+            <ImageView
+                android:id="@+id/dingzhi_img"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_marginTop="17dp"
+                android:background="@drawable/dingzhi" 
+                android:layout_centerHorizontal="true"/>
+            <TextView
+                android:id="@+id/textview_tv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/dingzhi_img"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="7dp"
+                android:text="定植"
+                android:textColor="@color/item_graytext"
+                android:textSize="16dp" />
+            
+        </RelativeLayout>
+<RelativeLayout
+        android:id="@+id/shengzhang_layout"
+            android:layout_width="1dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@color/white" >
+
+            <ImageView
+                android:id="@+id/shengzhang_img"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_marginTop="17dp"
+                android:background="@drawable/shengzhang" 
+                android:layout_centerHorizontal="true"/>
+            <TextView
+                android:id="@+id/textview_tv2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/shengzhang_img"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="7dp"
+                android:text="生长"
+                android:textColor="@color/item_graytext"
+                android:textSize="16dp" />
+            
+        </RelativeLayout>
+        <RelativeLayout
+        android:id="@+id/caishou_layout"
+            android:layout_width="1dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@color/white" >
+
+            <ImageView
+                android:id="@+id/caishou_img"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_marginTop="17dp"
+                android:background="@drawable/caiji" 
+                android:layout_centerHorizontal="true"/>
+            <TextView
+                android:id="@+id/textview_tv3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/caishou_img"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="7dp"
+                android:text="采收"
+                android:textColor="@color/item_graytext"
+                android:textSize="16dp" />
+            
+        </RelativeLayout>
+        <RelativeLayout
+        android:id="@+id/jiancha_layout"
+            android:layout_width="1dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@color/white" >
+
+            <ImageView
+                android:id="@+id/jiancha_img"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_marginTop="17dp"
+                android:background="@drawable/jiancha" 
+                android:layout_centerHorizontal="true"/>
+            <TextView
+                android:id="@+id/textview_tv4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/jiancha_img"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="7dp"
+                android:text="检查"
+                android:textColor="@color/item_graytext"
+                android:textSize="16dp" />
+            
+        </RelativeLayout>
+</LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="80dp"
+        android:background="@color/white"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+        android:id="@+id/xiaoshou_layout"
+            android:layout_width="1dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@color/white" >
+
+            <ImageView
+                android:id="@+id/xiaoshou_img"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_marginTop="17dp"
+                android:background="@drawable/xiaoshou" 
+                android:layout_centerHorizontal="true"/>
+            <TextView
+                android:id="@+id/textview_tv5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/xiaoshou_img"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="7dp"
+                android:text="销售"
+                android:textColor="@color/item_graytext"
+                android:textSize="16dp" />
+            
+        </RelativeLayout>
+<RelativeLayout
+        android:id="@+id/dikuai_layout"
+            android:layout_width="1dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@color/white" >
+
+            <ImageView
+                android:id="@+id/dikuai_img"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_marginTop="17dp"
+                android:background="@drawable/dikuai" 
+                android:layout_centerHorizontal="true"/>
+            <TextView
+                android:id="@+id/textview_tv6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/dikuai_img"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="7dp"
+                android:text="地块"
+                android:textColor="@color/item_graytext"
+                android:textSize="16dp" />
+            
+        </RelativeLayout>
+        <RelativeLayout
+        android:id="@+id/renyuan_layout"
+            android:layout_width="1dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@color/white" >
+
+            <ImageView
+                android:id="@+id/renyuan_img"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_marginTop="17dp"
+                android:background="@drawable/renyuan" 
+                android:layout_centerHorizontal="true"/>
+            <TextView
+                android:id="@+id/textview_tv7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/renyuan_img"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="7dp"
+                android:text="人员"
+                android:textColor="@color/item_graytext"
+                android:textSize="16dp" />
+            
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/zuowuku_layout"
+            android:layout_width="1dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@color/white" >
+
+            <ImageView
+                android:id="@+id/zuowuku_img"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_marginTop="17dp"
+                android:background="@drawable/zuowuku" 
+                android:layout_centerHorizontal="true"/>
+            <TextView
+                android:id="@+id/textview_tv8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/zuowuku_img"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="7dp"
+                android:text="作物库"
+                android:textColor="@color/item_graytext"
+                android:textSize="16dp" />
+            
+        </RelativeLayout>
+</LinearLayout>
+</LinearLayout>

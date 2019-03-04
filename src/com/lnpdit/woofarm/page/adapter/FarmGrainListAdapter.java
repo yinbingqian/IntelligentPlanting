@@ -92,7 +92,7 @@ public class FarmGrainListAdapter extends BaseAdapter {
         holder.count_tv.setText(appInfo.getViewCount());
 
         String headPath = appInfo.getImgUrl();
-        Instance.imageLoader.displayImage(headPath, holder.photo_img, Instance.news_s_options);
+        Instance.imageLoader.displayImage(headPath, holder.photo_img, Instance.new_s_options);
        
         return convertView;
     }

@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+        <ImageView 
+            android:id="@+id/pic_img"
+android:layout_width="fill_parent" 
+android:layout_height="206dp"
+/>
+<TextView 
+    android:id="@+id/cropname_tv"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="【作物名称】"
+    android:textSize="15dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="10dp"
+    android:textColor="@color/item_graytext3"/>
+<TextView 
+    android:id="@+id/cropinfo_tv"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:text="百合"
+    android:textSize="14dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginTop="10dp"
+    android:textColor="@color/item_graytext"/>
+<View 
+    android:layout_width="fill_parent"
+    android:layout_height="1dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="9dp"
+    android:background="@color/gray_line2"/>
+<RelativeLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+    
+<TextView 
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="适宜环境参数指标"
+    android:textSize="15dp"
+    android:gravity="center"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginTop="16dp"
+    android:textColor="@color/item_graytext3"/>
+
+<TextView 
+    android:id="@+id/night_tv"
+    android:layout_width="55dp"
+    android:layout_height="25dp"
+    android:text="黑夜"
+    android:textSize="13dp"
+    android:gravity="center"
+    android:layout_marginRight="10dp"
+    android:layout_marginTop="16dp"
+    android:layout_alignParentRight="true"
+    android:textColor="@color/item_graytext4"
+    android:background="@drawable/gray_icon"/>
+<TextView 
+    android:id="@+id/day_tv"
+    android:layout_width="55dp"
+    android:layout_height="25dp"
+    android:text="白天"
+    android:textSize="13dp"
+    android:gravity="center"
+    android:layout_toLeftOf="@+id/night_tv"
+    android:layout_marginRight="20dp"
+    android:layout_marginTop="16dp"
+    android:textColor="@color/white"
+    android:background="@drawable/green_icon"/>
+
+</RelativeLayout>
+<LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="23dp"
+                android:orientation="horizontal" >
+
+                <RelativeLayout
+                    android:layout_width="1dp"
+                    android:layout_height="80dp"
+                    android:layout_weight="1" >
+
+                    <ImageView
+                        android:id="@+id/air_temperature_btn"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/air_temperature_icon"/>
+
+                    <TextView
+                        android:id="@+id/air_temperature_icon_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/air_temperature_btn"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="6dp"
+                        android:text="空气温度"
+                        android:textColor="@color/item_graytext3"
+                        android:textSize="13dp" />
+                    <TextView
+                        android:id="@+id/air_temperature_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@+id/air_temperature_icon_tv"
+                        android:layout_marginTop="6dp"
+                        android:text=""
+                        android:textColor="@color/item_graytext3"
+                        android:textSize="14dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="1dp"
+                    android:layout_height="80dp"
+                    android:layout_weight="1" 
+                    android:gravity="center_horizontal">
+
+                     <ImageView
+                        android:id="@+id/air_humidity_btn"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/air_humidity_icon"/>
+
+                    <TextView
+                        android:id="@+id/air_humidity_icon_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/air_humidity_btn"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="6dp"
+                        android:text="空气湿度"
+                        android:textColor="@color/item_graytext3"
+                        android:textSize="13dp" />
+                    <TextView
+                        android:id="@+id/air_humidity_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@+id/air_humidity_icon_text"
+                        android:layout_marginTop="6dp"
+                        android:text=""
+                        android:textColor="@color/item_graytext3"
+                        android:textSize="14dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="1dp"
+                    android:layout_height="80dp"
+                    android:layout_weight="1" 
+                    android:gravity="center_horizontal">
+
+                     <ImageView
+                        android:id="@+id/light_btn"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/light_icon"/>
+
+                    <TextView
+                        android:id="@+id/light_icon_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/light_btn"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="6dp"
+                        android:text="光照强度"
+                        android:textColor="@color/item_graytext3"
+                        android:textSize="13dp" />
+                    <TextView
+                        android:id="@+id/light_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@+id/light_icon_text"
+                        android:layout_marginTop="6dp"
+                        android:text=""
+                        android:textColor="@color/item_graytext3"
+                        android:textSize="14dp" />
+                </RelativeLayout>
+
+               <RelativeLayout
+                    android:layout_width="1dp"
+                    android:layout_height="80dp"
+                    android:layout_weight="1" 
+                    android:gravity="center_horizontal">
+
+                     <ImageView
+                        android:id="@+id/soil_temperature_btn"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/soil_temperature_icon"/>
+
+                    <TextView
+                        android:id="@+id/soil_temperature_icon_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/soil_temperature_btn"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="6dp"
+                        android:text="土壤温度"
+                        android:textColor="@color/item_graytext3"
+                        android:textSize="13dp" />
+                    <TextView
+                        android:id="@+id/soil_temperature_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@+id/soil_temperature_icon_text"
+                        android:layout_marginTop="6dp"
+                        android:text=""
+                        android:textColor="@color/item_graytext3"
+                        android:textSize="14dp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="1dp"
+                    android:layout_height="80dp"
+                    android:layout_weight="1" 
+                    android:gravity="center_horizontal">
+
+                     <ImageView
+                        android:id="@+id/soil_humidity_btn"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/soil_humidity_icon"/>
+
+                    <TextView
+                        android:id="@+id/soil_humidity_icon_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/soil_humidity_btn"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="6dp"
+                        android:text="土壤湿度"
+                        android:textColor="@color/item_graytext3"
+                        android:textSize="13dp" />
+                    <TextView
+                        android:id="@+id/soil_humidity_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@+id/soil_humidity_icon_text"
+                        android:layout_marginTop="6dp"
+                        android:text=""
+                        android:textColor="@color/item_graytext3"
+                        android:textSize="14dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="1dp"
+                    android:layout_height="80dp"
+                    android:layout_weight="1" 
+                    android:gravity="center_horizontal">
+
+                     <ImageView
+                        android:id="@+id/co2_btn"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/co2_icon"/>
+
+                    <TextView
+                        android:id="@+id/co2_icon_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/co2_btn"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="6dp"
+                        android:text="二氧化碳"
+                        android:textColor="@color/item_graytext3"
+                        android:textSize="13dp" />
+                    <TextView
+                        android:id="@+id/co2_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@+id/co2_icon_text"
+                        android:layout_marginTop="6dp"
+                        android:text=""
+                        android:textColor="@color/item_graytext3"
+                        android:textSize="14dp" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="1dp"
+                    android:layout_height="80dp"
+                    android:layout_weight="1" 
+                    android:gravity="center_horizontal">
+
+                     <ImageView
+                        android:id="@+id/soilph_btn"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/soilph_icon"/>
+
+                    <TextView
+                        android:id="@+id/soilph_icon_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/soilph_btn"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="6dp"
+                        android:text="土壤PH"
+                        android:textColor="@color/item_graytext3"
+                        android:textSize="13dp" />
+                    <TextView
+                        android:id="@+id/soilph_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@+id/soilph_icon_text"
+                        android:layout_marginTop="6dp"
+                        android:text=""
+                        android:textColor="@color/item_graytext3"
+                        android:textSize="14dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="1dp"
+                    android:layout_height="80dp"
+                    android:layout_weight="1" 
+                    android:gravity="center_horizontal">
+
+                     <ImageView
+                        android:id="@+id/ec_btn"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/ec"/>
+
+                    <TextView
+                        android:id="@+id/ec_icon_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/ec_btn"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="6dp"
+                        android:text="EC值"
+                        android:textColor="@color/item_graytext3"
+                        android:textSize="13dp" />
+                    <TextView
+                        android:id="@+id/ec_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@+id/ec_icon_text"
+                        android:layout_marginTop="6dp"
+                        android:text=""
+                        android:textColor="@color/item_graytext3"
+                        android:textSize="14dp" />
+                </RelativeLayout>
+            </LinearLayout>
+            
+<View 
+    android:layout_width="fill_parent"
+    android:layout_height="10dp"
+    android:background="@color/white"/>
+        </LinearLayout>
+<View 
+    android:layout_width="fill_parent"
+    android:layout_height="10dp"
+    android:background="@color/graysearchs_bg"/>
+
+</LinearLayout>

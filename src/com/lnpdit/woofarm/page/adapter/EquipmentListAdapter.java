@@ -96,188 +96,163 @@ public class EquipmentListAdapter extends BaseAdapter {
        
         String equipname= appInfo.getEquipName();
         holder.equipname_tv.setText(equipname);
-        String status = appInfo.getEquipStatus().toString();
-        String equipid= appInfo.getSwitchId();
-        if(equipid.equals("1")||equipid.equals("4")){
-            holder.status_tv3.setVisibility(1);
-            if(status.equals("1")){
-                holder.status_tv1.setBackgroundResource(R.drawable.broder_orange);
-                holder.status_tv2.setBackgroundResource(R.drawable.broder_graylabel);
-                holder.status_tv3.setBackgroundResource(R.drawable.broder_graylabel);
-                holder.status_tv1.setTextColor(mContext.getResources().getColor(R.color.white));
-                holder.status_tv2.setTextColor(mContext.getResources().getColor(R.color.item_graytext));
-                holder.status_tv3.setTextColor(mContext.getResources().getColor(R.color.item_graytext));
-            }else if(status.equals("2")){
-
-                holder.status_tv1.setBackgroundResource(R.drawable.broder_graylabel);
-                holder.status_tv2.setBackgroundResource(R.drawable.broder_orange);
-                holder.status_tv3.setBackgroundResource(R.drawable.broder_graylabel);
-                holder.status_tv1.setTextColor(mContext.getResources().getColor(R.color.item_graytext));
-                holder.status_tv2.setTextColor(mContext.getResources().getColor(R.color.white));
-                holder.status_tv3.setTextColor(mContext.getResources().getColor(R.color.item_graytext));
-            }else if(status.equals("3")){
-
-                holder.status_tv1.setBackgroundResource(R.drawable.broder_graylabel);
-                holder.status_tv2.setBackgroundResource(R.drawable.broder_graylabel);
-                holder.status_tv3.setBackgroundResource(R.drawable.broder_orange);
-                holder.status_tv1.setTextColor(mContext.getResources().getColor(R.color.item_graytext));
-                holder.status_tv2.setTextColor(mContext.getResources().getColor(R.color.item_graytext));
-                holder.status_tv3.setTextColor(mContext.getResources().getColor(R.color.white));
-            }
-        }else{
-            holder.status_tv3.setVisibility(8);
-            if(status.equals("1")){
-                holder.status_tv1.setBackgroundResource(R.drawable.broder_orange);
-                holder.status_tv2.setBackgroundResource(R.drawable.broder_graylabel);
-                holder.status_tv1.setTextColor(mContext.getResources().getColor(R.color.white));
-                holder.status_tv2.setTextColor(mContext.getResources().getColor(R.color.item_graytext));
-            }else if(status.equals("3")){
-
-                holder.status_tv1.setBackgroundResource(R.drawable.broder_graylabel);
-                holder.status_tv2.setBackgroundResource(R.drawable.broder_orange);
-                holder.status_tv1.setTextColor(mContext.getResources().getColor(R.color.item_graytext));
-                holder.status_tv2.setTextColor(mContext.getResources().getColor(R.color.white));
-            }
-        }
-//        if(equipname.equals("风机")){
+//        String status = appInfo.getChannelStatus().toString();
+//        String equipid= appInfo.getEquipCode();
+//        if(equipid.equals("1")||equipid.equals("4")){
+//            holder.status_tv3.setVisibility(1);
+//            if(status.equals("1")){
+//                holder.status_tv1.setBackgroundResource(R.drawable.broder_orange);
+//                holder.status_tv2.setBackgroundResource(R.drawable.broder_graylabel);
+//                holder.status_tv3.setBackgroundResource(R.drawable.broder_graylabel);
+//                holder.status_tv1.setTextColor(mContext.getResources().getColor(R.color.white));
+//                holder.status_tv2.setTextColor(mContext.getResources().getColor(R.color.item_graytext));
+//                holder.status_tv3.setTextColor(mContext.getResources().getColor(R.color.item_graytext));
+//            }else if(status.equals("2")){
 //
-//            holder.equipname_img.setBackgroundResource(R.drawable.fengji);
-//        }else if(equipname.equals("补光灯")){
+//                holder.status_tv1.setBackgroundResource(R.drawable.broder_graylabel);
+//                holder.status_tv2.setBackgroundResource(R.drawable.broder_orange);
+//                holder.status_tv3.setBackgroundResource(R.drawable.broder_graylabel);
+//                holder.status_tv1.setTextColor(mContext.getResources().getColor(R.color.item_graytext));
+//                holder.status_tv2.setTextColor(mContext.getResources().getColor(R.color.white));
+//                holder.status_tv3.setTextColor(mContext.getResources().getColor(R.color.item_graytext));
+//            }else if(status.equals("3")){
 //
-//            holder.equipname_img.setBackgroundResource(R.drawable.iocopy);
-//        }else if(equipname.equals("放风")){
+//                holder.status_tv1.setBackgroundResource(R.drawable.broder_graylabel);
+//                holder.status_tv2.setBackgroundResource(R.drawable.broder_graylabel);
+//                holder.status_tv3.setBackgroundResource(R.drawable.broder_orange);
+//                holder.status_tv1.setTextColor(mContext.getResources().getColor(R.color.item_graytext));
+//                holder.status_tv2.setTextColor(mContext.getResources().getColor(R.color.item_graytext));
+//                holder.status_tv3.setTextColor(mContext.getResources().getColor(R.color.white));
+//            }
+//        }else{
+//            holder.status_tv3.setVisibility(8);
+//            if(status.equals("1")){
+//                holder.status_tv1.setBackgroundResource(R.drawable.broder_orange);
+//                holder.status_tv2.setBackgroundResource(R.drawable.broder_graylabel);
+//                holder.status_tv1.setTextColor(mContext.getResources().getColor(R.color.white));
+//                holder.status_tv2.setTextColor(mContext.getResources().getColor(R.color.item_graytext));
+//            }else if(status.equals("3")){
 //
-//            holder.equipname_img.setBackgroundResource(R.drawable.io);
-//        }else if(equipname.equals("井水")){
-//
-//            holder.equipname_img.setBackgroundResource(R.drawable.fengji);
-//        }else if(equipname.equals("卷帘")){
-//
-//            holder.equipname_img.setBackgroundResource(R.drawable.fengji);
-//        }else if(equipname.equals("照明")){
-//
-//            holder.equipname_img.setBackgroundResource(R.drawable.fengji);
-//        }else if(equipname.equals("水泵")){
-//
-//            holder.equipname_img.setBackgroundResource(R.drawable.fengji);
-//        }else if(equipname.equals("滴灌")){
-//
-//            holder.equipname_img.setBackgroundResource(R.drawable.ing);
+//                holder.status_tv1.setBackgroundResource(R.drawable.broder_graylabel);
+//                holder.status_tv2.setBackgroundResource(R.drawable.broder_orange);
+//                holder.status_tv1.setTextColor(mContext.getResources().getColor(R.color.item_graytext));
+//                holder.status_tv2.setTextColor(mContext.getResources().getColor(R.color.white));
+//            }
 //        }
        
-        
-        holder.status_tv1.setClickable(true);
-        holder.status_tv1.setOnClickListener(new ButtonListener_a(position, holder.status_tv1, holder.status_tv2, holder.status_tv3));
-
-        holder.status_tv2.setClickable(true);
-        holder.status_tv2.setOnClickListener(new ButtonListener_b(position, holder.status_tv1, holder.status_tv2, holder.status_tv3));
-
-        holder.status_tv3.setClickable(true);
-        holder.status_tv3.setOnClickListener(new ButtonListener_c(position, holder.status_tv1, holder.status_tv2, holder.status_tv3));
+//        
+//        holder.status_tv1.setClickable(true);
+//        holder.status_tv1.setOnClickListener(new ButtonListener_a(position, holder.status_tv1, holder.status_tv2, holder.status_tv3));
+//
+//        holder.status_tv2.setClickable(true);
+//        holder.status_tv2.setOnClickListener(new ButtonListener_b(position, holder.status_tv1, holder.status_tv2, holder.status_tv3));
+//
+//        holder.status_tv3.setClickable(true);
+//        holder.status_tv3.setOnClickListener(new ButtonListener_c(position, holder.status_tv1, holder.status_tv2, holder.status_tv3));
         
         return convertView;
     }
 
-    class ButtonListener_a implements OnClickListener {
-        private int position;
-        private TextView tv1;
-        private TextView tv2;
-        private TextView tv3;
+//    class ButtonListener_a implements OnClickListener {
+//        private int position;
+//        private TextView tv1;
+//        private TextView tv2;
+//        private TextView tv3;
+//
+//        public ButtonListener_a(int pos,TextView _tv1,TextView _tv2,TextView _tv3) {
+//            // TODO Auto-generated constructor stub
+//            position = pos;
+//            tv1 = _tv1;
+//            tv2 = _tv2;
+//            tv3 = _tv3;
+//        }
+//
+//        @Override
+//        public void onClick(View v) {
+//            // TODO Auto-generated method stub
+//            
+//            tv1.setBackgroundResource(R.drawable.broder_orange);
+//            tv2.setBackgroundResource(R.drawable.broder_graylabel);
+//            tv3.setBackgroundResource(R.drawable.broder_graylabel);
 
-        public ButtonListener_a(int pos,TextView _tv1,TextView _tv2,TextView _tv3) {
-            // TODO Auto-generated constructor stub
-            position = pos;
-            tv1 = _tv1;
-            tv2 = _tv2;
-            tv3 = _tv3;
-        }
+//            tv1.setTextColor(mContext.getResources().getColor(R.color.white));
+//            tv2.setTextColor(mContext.getResources().getColor(R.color.item_graytext));
+//            tv3.setTextColor(mContext.getResources().getColor(R.color.item_graytext));
+//            
+//            String[] property_vaa = new String[] {mAppList.get(position).getChannelNo(), "1" ,mAppList.get(position).getEquipCode() };
+//            soapService.equipmentState(property_vaa); 
+//    }
+//            
+//    }
+//    
+//    class ButtonListener_b implements OnClickListener {
+//        private int position;
+//        private TextView tv1;
+//        private TextView tv2;
+//        private TextView tv3;
+//
+//        public ButtonListener_b(int pos,TextView _tv1,TextView _tv2,TextView _tv3) {
+//            // TODO Auto-generated constructor stub
+//            position = pos;
+//            tv1 = _tv1;
+//            tv2 = _tv2;
+//            tv3 = _tv3;
+//        }
+//
+//        @Override
+//        public void onClick(View v) {
+//            // TODO Auto-generated method stub
+//            
+//            tv1.setBackgroundResource(R.drawable.broder_graylabel);
+//            tv2.setBackgroundResource(R.drawable.broder_orange);
+//            tv3.setBackgroundResource(R.drawable.broder_graylabel);
 
-        @Override
-        public void onClick(View v) {
-            // TODO Auto-generated method stub
-            
-            tv1.setBackgroundResource(R.drawable.broder_orange);
-            tv2.setBackgroundResource(R.drawable.broder_graylabel);
-            tv3.setBackgroundResource(R.drawable.broder_graylabel);
-
-            tv1.setTextColor(mContext.getResources().getColor(R.color.white));
-            tv2.setTextColor(mContext.getResources().getColor(R.color.item_graytext));
-            tv3.setTextColor(mContext.getResources().getColor(R.color.item_graytext));
-            
-            String[] property_vaa = new String[] {mAppList.get(position).getSwitchId(), "1" ,mAppList.get(position).getEquipCode() };
-            soapService.equipmentState(property_vaa); 
-    }
-            
-    }
-    
-    class ButtonListener_b implements OnClickListener {
-        private int position;
-        private TextView tv1;
-        private TextView tv2;
-        private TextView tv3;
-
-        public ButtonListener_b(int pos,TextView _tv1,TextView _tv2,TextView _tv3) {
-            // TODO Auto-generated constructor stub
-            position = pos;
-            tv1 = _tv1;
-            tv2 = _tv2;
-            tv3 = _tv3;
-        }
-
-        @Override
-        public void onClick(View v) {
-            // TODO Auto-generated method stub
-            
-            tv1.setBackgroundResource(R.drawable.broder_graylabel);
-            tv2.setBackgroundResource(R.drawable.broder_orange);
-            tv3.setBackgroundResource(R.drawable.broder_graylabel);
-
-            tv1.setTextColor(mContext.getResources().getColor(R.color.item_graytext));
-            tv2.setTextColor(mContext.getResources().getColor(R.color.white));
-            tv3.setTextColor(mContext.getResources().getColor(R.color.item_graytext));
-
-            String switchid = mAppList.get(position).getSwitchId();
-            if(switchid.equals("1")||switchid.equals("4")){
-
-                String[] property_vab = new String[] {switchid, "2" ,mAppList.get(position).getEquipCode() };
-                soapService.equipmentState(property_vab); 
-            }else{
-
-                String[] property_vab = new String[] {switchid, "3" ,mAppList.get(position).getEquipCode() };
-                soapService.equipmentState(property_vab); 
-            }
-            
-    }
-    }
-    
-    class ButtonListener_c implements OnClickListener {
-        private int position;
-        private TextView tv1;
-        private TextView tv2;
-        private TextView tv3;
-
-        public ButtonListener_c(int pos,TextView _tv1,TextView _tv2,TextView _tv3) {
-            // TODO Auto-generated constructor stub
-            position = pos;
-            tv1 = _tv1;
-            tv2 = _tv2;
-            tv3 = _tv3;
-        }
-
-        @Override
-        public void onClick(View v) {
-            // TODO Auto-generated method stub
-            
-            tv1.setBackgroundResource(R.drawable.broder_graylabel);
-            tv2.setBackgroundResource(R.drawable.broder_graylabel);
-            tv3.setBackgroundResource(R.drawable.broder_orange);
-            tv1.setTextColor(mContext.getResources().getColor(R.color.item_graytext));
-            tv2.setTextColor(mContext.getResources().getColor(R.color.item_graytext));
-            tv3.setTextColor(mContext.getResources().getColor(R.color.white));
-
-            String[] property_vab = new String[] {mAppList.get(position).getSwitchId(), "3" ,mAppList.get(position).getEquipCode() };
-            soapService.equipmentState(property_vab); 
-    }
-            
-    }
+//            tv1.setTextColor(mContext.getResources().getColor(R.color.item_graytext));
+//            tv2.setTextColor(mContext.getResources().getColor(R.color.white));
+//            tv3.setTextColor(mContext.getResources().getColor(R.color.item_graytext));
+//
+//            String switchid = mAppList.get(position).getChannelNo();
+//            if(switchid.equals("1")||switchid.equals("4")){
+//
+//                String[] property_vab = new String[] {switchid, "2" ,mAppList.get(position).getEquipCode() };
+//                soapService.equipmentState(property_vab); 
+//            }else{
+//
+//                String[] property_vab = new String[] {switchid, "3" ,mAppList.get(position).getEquipCode() };
+//                soapService.equipmentState(property_vab); 
+//            }
+//            
+//    }
+//    }
+//    
+//    class ButtonListener_c implements OnClickListener {
+//        private int position;
+//        private TextView tv1;
+//        private TextView tv2;
+//        private TextView tv3;
+//
+//        public ButtonListener_c(int pos,TextView _tv1,TextView _tv2,TextView _tv3) {
+//            // TODO Auto-generated constructor stub
+//            position = pos;
+//            tv1 = _tv1;
+//            tv2 = _tv2;
+//            tv3 = _tv3;
+//        }
+//
+//        @Override
+//        public void onClick(View v) {
+//            // TODO Auto-generated method stub
+//            
+//            tv1.setBackgroundResource(R.drawable.broder_graylabel);
+//            tv2.setBackgroundResource(R.drawable.broder_graylabel);
+//            tv3.setBackgroundResource(R.drawable.broder_orange);
+//            tv1.setTextColor(mContext.getResources().getColor(R.color.item_graytext));
+//            tv2.setTextColor(mContext.getResources().getColor(R.color.item_graytext));
+//            tv3.setTextColor(mContext.getResources().getColor(R.color.white));
+//
+//            String[] property_vab = new String[] {mAppList.get(position).getChannelNo(), "3" ,mAppList.get(position).getEquipCode() };
+//            soapService.equipmentState(property_vab); 
+//    }
+//            
+//    }
 }

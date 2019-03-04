@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white" 
+        android:paddingLeft="16dp"
+        android:paddingRight="9dp"
+        android:paddingBottom="14dp"
+        android:paddingTop="12dp">
+
+<com.lnpdit.woofarm.utils.XCRoundImageView
+            android:id="@+id/iv_avatar"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_alignParentLeft="true"
+            android:scaleType="centerCrop" 
+         android:background="@drawable/zuowuimg" />
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/iv_avatar"
+            android:layout_toLeftOf="@+id/ask_tv"
+            android:layout_marginLeft="14dp" >
+
+
+               <TextView
+                   android:id="@+id/name_tv"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="韩伟良"
+                   android:textColor="@color/item_graytext"
+                   android:textSize="18dp" />
+<TextView
+                   android:id="@+id/type_tv"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_below="@+id/name_tv"
+                   android:layout_marginTop="4dp"
+                   android:paddingLeft="8dp"
+                   android:paddingRight="8dp"
+                   android:paddingTop="2dp"
+                   android:paddingBottom="2dp"
+                   android:background="@color/gray_bg"
+                   android:text="土肥、植保、栽培、设施"
+                   android:textColor="@color/white"
+                   android:textSize="12dp" />
+<TextView
+                   android:id="@+id/info_tv"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_below="@+id/type_tv"
+                   android:layout_marginTop="5dp"
+                   android:text="蔬菜、水果、经济作物、绿化作物"
+                   android:textColor="@color/gray_text5"
+                   android:textSize="14dp" />
+            </RelativeLayout>
+          <TextView 
+            android:id="@+id/ask_tv"
+            android:layout_width="64dp"
+            android:layout_height="25dp"
+            android:gravity="center"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="9dp"
+            android:background="@drawable/broder_green"
+            android:text="提问"
+            android:textColor="@color/white"
+            android:textSize="16dp"/>
+    </RelativeLayout>

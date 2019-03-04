@@ -1,337 +1,351 @@
-<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.lnpdit.IntelligentPlanting"
-    android:versionCode="1"
-    android:versionName="1.1.1" >
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.1.2" package="com.lnpdit.IntelligentPlanting">
 
-    <uses-sdk
-        android:minSdkVersion="9"
-        android:targetSdkVersion="19" />
+    <uses-sdk android:minSdkVersion="19" android:targetSdkVersion="24"/>
 
-    <uses-permission android:name="com.sxit.dreamiya.permission.JPUSH_MESSAGE" />
-    <uses-permission android:name="android.permission.VIBRATE" />
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.RECORD_AUDIO" />
-    <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
-    <uses-permission android:name="android.permission.GET_TASKS" />
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
-    <uses-permission android:name="android.permission.WAKE_LOCK" />
-    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
-    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
-    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
-    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
-    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
-    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
-    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
-    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
-    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />  
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> 
+    <uses-permission android:name="com.sxit.dreamiya.permission.JPUSH_MESSAGE"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.USE_CREDENTIALS"/>
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS"/>
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS"/>
+    <uses-permission android:name="android.permission.BROADCAST_STICKY"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>  
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/> 
 
     <!-- Optional for location -->
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
-    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    
+   <instrumentation android:name="android.test.InstrumentationTestRunner" android:targetPackage="com.lnpdit.IntelligentPlanting">
+       
+   </instrumentation> 
 
-    <application
-        android:name="com.lnpdit.woofarm.base.application.DemoApplication"
-        android:allowBackup="true"
-        android:icon="@drawable/icon"
-        android:label="@string/app_name" >
-        <activity
-            android:name="com.lnpdit.woofarm.page.activity.welcome.WelcomeActivity"
-            android:launchMode="singleTask"
-            android:screenOrientation="portrait"
-            android:theme="@style/horizontal_slide"
-            android:windowSoftInputMode="adjustPan" >
+    <application android:allowBackup="true" android:icon="@drawable/logo" android:label="@string/app_name" android:name="com.lnpdit.woofarm.base.application.DemoApplication">
+        
+       <uses-library android:name="android.test.runner"/> 
+        
+        
+        <activity android:launchMode="singleTask" android:name="com.lnpdit.woofarm.page.activity.welcome.WelcomeActivity" android:screenOrientation="portrait" android:theme="@style/horizontal_slide" android:windowSoftInputMode="adjustPan">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity
-            android:name="com.lnpdit.woofarm.page.activity.welcome.GuideActivity"
-            android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.NoTitleBar" >
-            <meta-data
-                android:name="DESCRIPTION"
-                android:value="引导页" />
+        <activity android:name="com.lnpdit.woofarm.page.activity.welcome.GuideActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar">
+            <meta-data android:name="DESCRIPTION" android:value="引导页"/>
         </activity>
-        <activity
-            android:name="com.lnpdit.woofarm.page.activity.login.LoginActivity"
-            android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.NoTitleBar" >
-            <meta-data
-                android:name="DESCRIPTION"
-                android:value="登陆页面" />
+        <activity android:name="com.lnpdit.woofarm.page.activity.login.LoginActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar">
+            <meta-data android:name="DESCRIPTION" android:value="登陆页面"/>
         </activity>
-        <activity
-            android:name="com.lnpdit.woofarm.page.activity.login.RegisterActivity"
-            android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.NoTitleBar" >
-            <meta-data
-                android:name="DESCRIPTION"
-                android:value="注册界面 " />
+        <activity android:name="com.lnpdit.woofarm.page.activity.login.RegisterActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar">
+            <meta-data android:name="DESCRIPTION" android:value="注册界面 "/>
         </activity>
-        <activity
-            android:name="com.lnpdit.woofarm.page.activity.login.ForgetActivity"
-            android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.NoTitleBar" >
-            <meta-data
-                android:name="DESCRIPTION"
-                android:value="找回密码界面 " />
+        <activity android:name="com.lnpdit.woofarm.page.activity.login.ForgetActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar">
+            <meta-data android:name="DESCRIPTION" android:value="找回密码界面 "/>
         </activity>
      
-        <activity
-            android:name="com.lnpdit.woofarm.page.activity.setting.AddressListActivity"
-            android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.NoTitleBar" >
-            <meta-data
-                android:name="DESCRIPTION"
-                android:value="地址列表界面 " />
+        <activity android:name="com.lnpdit.woofarm.page.activity.setting.AddressListActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar">
+            <meta-data android:name="DESCRIPTION" android:value="地址列表界面 "/>
         </activity>
-        <activity
-            android:name="com.lnpdit.woofarm.page.activity.setting.EditAddressActivity"
-            android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.NoTitleBar" >
-            <meta-data
-                android:name="DESCRIPTION"
-                android:value="编辑地址界面 " />
+        <activity android:name="com.lnpdit.woofarm.page.activity.setting.EditAddressActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar">
+            <meta-data android:name="DESCRIPTION" android:value="编辑地址界面 "/>
         </activity>
-        <activity
-            android:name="com.lnpdit.woofarm.page.activity.product.MyOrderActivity"
-            android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.NoTitleBar" >
-            <meta-data
-                android:name="DESCRIPTION"
-                android:value="我的订单列表" />
+        <activity android:name="com.lnpdit.woofarm.page.activity.product.MyOrderActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar">
+            <meta-data android:name="DESCRIPTION" android:value="我的订单列表"/>
         </activity>
-        <activity
-            android:name="com.lnpdit.woofarm.page.activity.product.MyOrderDetailActivity"
-            android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.NoTitleBar" >
-            <meta-data
-                android:name="DESCRIPTION"
-                android:value="我的订单-订单详情" />
+        <activity android:name="com.lnpdit.woofarm.page.activity.product.MyOrderDetailActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar">
+            <meta-data android:name="DESCRIPTION" android:value="我的订单-订单详情"/>
         </activity>
-        <activity
-            android:name="com.lnpdit.woofarm.page.activity.tabhost.MainTabHostActivity"
-            android:excludeFromRecents="true"
-            android:label="@string/app_name"
-            android:launchMode="singleTask"
-            android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.NoTitleBar"
-            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" >
-            <meta-data
-                android:name="DESCRIPTION"
-                android:value="首页页面" />
+        <activity android:excludeFromRecents="true" android:label="@string/app_name" android:launchMode="singleTask" android:name="com.lnpdit.woofarm.page.activity.tabhost.MainTabHostActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar" android:windowSoftInputMode="stateAlwaysHidden|adjustPan">
+            <meta-data android:name="DESCRIPTION" android:value="首页页面"/>
         </activity>
-        <activity
-            android:name="com.lnpdit.woofarm.page.activity.tabhost.item.FarmLoginActivity"
-            android:excludeFromRecents="true"
-            android:label="@string/app_name"
-            android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.NoTitleBar" >
-            <meta-data
-                android:name="DESCRIPTION"
-                android:value="首页页面" />
+        <activity android:excludeFromRecents="true" android:label="@string/app_name" android:name="com.lnpdit.woofarm.page.activity.tabhost.item.FarmLoginActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar">
+            <meta-data android:name="DESCRIPTION" android:value="首页页面"/>
         </activity>
-        <activity
-            android:name="com.lnpdit.woofarm.page.activity.product.CameraListActivity"
-            android:excludeFromRecents="true"
-            android:label="@string/app_name"
-            android:launchMode="singleTask"
-            android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.NoTitleBar" >
-            <meta-data
-                android:name="DESCRIPTION"
-                android:value="摄像头列表页面" />
+        <activity android:excludeFromRecents="true" android:label="@string/app_name" android:launchMode="singleTask" android:name="com.lnpdit.woofarm.page.activity.product.CameraListActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar">
+            <meta-data android:name="DESCRIPTION" android:value="摄像头列表页面"/>
         </activity>
-        <activity
-            android:name="com.lnpdit.woofarm.page.activity.tabhost.item.ShoppingActivity"
-            android:excludeFromRecents="true"
-            android:label="@string/app_name"
-            android:launchMode="singleTask"
-            android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.NoTitleBar" >
-            <meta-data
-                android:name="DESCRIPTION"
-                android:value="购物车页面" />
+        <activity android:excludeFromRecents="true" android:label="@string/app_name" android:launchMode="singleTask" android:name="com.lnpdit.woofarm.page.activity.tabhost.item.ShoppingActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar">
+            <meta-data android:name="DESCRIPTION" android:value="购物车页面"/>
         </activity>
-        <activity
-            android:name="com.lnpdit.woofarm.page.activity.tabhost.item.PersonalActivity"
-            android:excludeFromRecents="true"
-            android:label="@string/app_name"
-            android:launchMode="singleTask"
-            android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.NoTitleBar" >
-            <meta-data
-                android:name="DESCRIPTION"
-                android:value="个人页面" />
+        <activity android:excludeFromRecents="true" android:label="@string/app_name" android:launchMode="singleTask" android:name="com.lnpdit.woofarm.page.activity.tabhost.item.PersonalActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar">
+            <meta-data android:name="DESCRIPTION" android:value="个人页面"/>
         </activity>
-        <activity
-            android:name="com.lnpdit.woofarm.page.activity.tabhost.item.FarmingManagementActivity"
-            android:excludeFromRecents="true"
-            android:label="@string/app_name"
-            android:launchMode="singleTask"
-            android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.NoTitleBar" >
-            <meta-data
-                android:name="DESCRIPTION"
-                android:value="农事管理" />
+        <activity android:excludeFromRecents="true" android:label="@string/app_name" android:launchMode="singleTask" android:name="com.lnpdit.woofarm.page.activity.tabhost.item.FarmingManagementActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar">
+            <meta-data android:name="DESCRIPTION" android:value="农事管理"/>
         </activity>
 
- <activity
-            android:name="com.lnpdit.woofarm.page.activity.farm.FarmListActivity"
-            android:excludeFromRecents="true"
-            android:label="@string/app_name"
-            android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.NoTitleBar" >
-            <meta-data
-                android:name="DESCRIPTION"
-                android:value="农场列表" />
+ <activity android:excludeFromRecents="true" android:label="@string/app_name" android:name="com.lnpdit.woofarm.page.activity.farm.FarmListActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar">
+            <meta-data android:name="DESCRIPTION" android:value="农场列表"/>
         </activity>
-        <activity
-            android:name="com.lnpdit.woofarm.page.activity.farm.GreenHouseInfoActivity"
-            android:excludeFromRecents="true"
-            android:label="@string/app_name"
-            android:launchMode="singleTask"
-            android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.NoTitleBar" >
-            <meta-data
-                android:name="DESCRIPTION"
-                android:value="大棚信息" />
+        <activity android:excludeFromRecents="true" android:label="@string/app_name" android:launchMode="singleTask" android:name="com.lnpdit.woofarm.page.activity.farm.GreenHouseInfoActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar">
+            <meta-data android:name="DESCRIPTION" android:value="大棚信息"/>
         </activity>
-          <activity
-            android:name="com.lnpdit.woofarm.page.activity.farmingmanagement.ZuowukuListActivity"
-            android:excludeFromRecents="true"
-            android:label="@string/app_name"
-            android:launchMode="singleTask"
-            android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.NoTitleBar" >
-            <meta-data
-                android:name="DESCRIPTION"
-                android:value="作物库列表" />
-        </activity>
-         <activity
-            android:name="com.lnpdit.woofarm.page.activity.farmingmanagement.ZuowuInfoActivity"
-            android:excludeFromRecents="true"
-            android:label="@string/app_name"
-            android:launchMode="singleTask"
-            android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.NoTitleBar" >
-            <meta-data
-                android:name="DESCRIPTION"
-                android:value="作物库详情" />
-        </activity>
-         <activity
-            android:name="com.lnpdit.woofarm.page.activity.farmingmanagement.PlantingManagementListActivity"
-            android:excludeFromRecents="true"
-            android:label="@string/app_name"
-            android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.NoTitleBar" >
-            <meta-data
-                android:name="DESCRIPTION"
-                android:value="种植管理列表" />
+                <activity android:excludeFromRecents="true" android:label="@string/app_name" android:launchMode="singleTask" android:name="com.lnpdit.woofarm.page.activity.farm.VideoMonitor_Activity" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar">
+            <meta-data android:name="DESCRIPTION" android:value="视频监控"/>
         </activity>
         
-              <activity
-            android:name="com.lnpdit.woofarm.page.activity.tabhost.item.FarmServiceActivity"
-            android:excludeFromRecents="true"
-            android:label="@string/app_name"
-            android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.NoTitleBar" >
-            <meta-data
-                android:name="DESCRIPTION"
-                android:value="农技服务" />
+                <activity android:excludeFromRecents="true" android:label="@string/app_name" android:launchMode="singleTask" android:name="com.lnpdit.woofarm.page.activity.farm.ShuifeiInfoActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar">
+            <meta-data android:name="DESCRIPTION" android:value="水肥信息"/>
         </activity>
-      <activity
-            android:name="com.lnpdit.woofarm.page.activity.tabhost.item.FarmInformationActivity"
-            android:excludeFromRecents="true"
-            android:label="@string/app_name"
-            android:screenOrientation="portrait"
-            android:taskAffinity=""
-            android:theme="@android:style/Theme.NoTitleBar" >
-            <meta-data
-                android:name="DESCRIPTION"
-                android:value="农情资讯" />
+                        <activity android:excludeFromRecents="true" android:label="@string/app_name" android:launchMode="singleTask" android:name="com.lnpdit.woofarm.page.activity.farm.ShuifeijianceInfoActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar">
+            <meta-data android:name="DESCRIPTION" android:value="水肥监测信息"/>
         </activity>
-              <activity
-            android:name="com.lnpdit.woofarm.page.activity.farminformation.NewsInfo_Activity"
-            android:excludeFromRecents="true"
-            android:label="@string/app_name"
-            android:screenOrientation="portrait"
-            android:taskAffinity=""
-            android:theme="@android:style/Theme.NoTitleBar" >
-            <meta-data
-                android:name="DESCRIPTION"
-                android:value="农情资讯详细信息页" />
+          <activity android:excludeFromRecents="true" android:label="@string/app_name" android:launchMode="singleTask" android:name="com.lnpdit.woofarm.page.activity.farmingmanagement.ZuowukuListActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar">
+            <meta-data android:name="DESCRIPTION" android:value="作物库列表"/>
         </activity>
-                   <activity
-            android:name="com.lnpdit.woofarm.page.activity.personal.AboutUsActivity"
-            android:excludeFromRecents="true"
-            android:label="@string/app_name"
-            android:screenOrientation="portrait"
-            android:taskAffinity=""
-            android:theme="@android:style/Theme.NoTitleBar" >
-            <meta-data
-                android:name="DESCRIPTION"
-                android:value="用户中心-关于我们" />
+         <activity android:excludeFromRecents="true" android:label="@string/app_name" android:launchMode="singleTask" android:name="com.lnpdit.woofarm.page.activity.farmingmanagement.ZuowuInfoActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar">
+            <meta-data android:name="DESCRIPTION" android:value="作物库详情"/>
+        </activity>
+         <activity android:excludeFromRecents="true" android:label="@string/app_name" android:name="com.lnpdit.woofarm.page.activity.farmingmanagement.PlantingManagementListActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar">
+            <meta-data android:name="DESCRIPTION" android:value="种植管理列表"/>
+        </activity>
+                 <activity android:excludeFromRecents="true" android:label="@string/app_name" android:name="com.lnpdit.woofarm.page.activity.farmingmanagement.AddPlantingActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar">
+            <meta-data android:name="DESCRIPTION" android:value="新增种植管理"/>
+        </activity>
+                         <activity android:excludeFromRecents="true" android:label="@string/app_name" android:name="com.lnpdit.woofarm.page.activity.farmingmanagement.GrowListActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar">
+            <meta-data android:name="DESCRIPTION" android:value="生长详情列表"/>
+        </activity>
+                      <activity android:excludeFromRecents="true" android:label="@string/app_name" android:name="com.lnpdit.woofarm.page.activity.farmingmanagement.GrowCropListActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar">
+            <meta-data android:name="DESCRIPTION" android:value="生长列表"/>
+        </activity>
+                         
+                         <activity android:excludeFromRecents="true" android:label="@string/app_name" android:name="com.lnpdit.woofarm.page.activity.farmingmanagement.AddGrowActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar">
+            <meta-data android:name="DESCRIPTION" android:value="新增生长"/>
+        </activity>
+                              <activity android:excludeFromRecents="true" android:label="@string/app_name" android:name="com.lnpdit.woofarm.page.activity.farmingmanagement.PickListActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar">
+            <meta-data android:name="DESCRIPTION" android:value="采摘列表"/>
+        </activity>
+                            <activity android:excludeFromRecents="true" android:label="@string/app_name" android:name="com.lnpdit.woofarm.page.activity.farmingmanagement.AddPickActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar">
+            <meta-data android:name="DESCRIPTION" android:value="增加采摘"/>
+        </activity>
+        
+              <activity android:excludeFromRecents="true" android:label="@string/app_name" android:name="com.lnpdit.woofarm.page.activity.tabhost.item.FarmServiceActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar">
+            <meta-data android:name="DESCRIPTION" android:value="农技服务"/>
+        </activity>
+      <activity android:excludeFromRecents="true" android:label="@string/app_name" android:name="com.lnpdit.woofarm.page.activity.tabhost.item.FarmInformationActivity" android:screenOrientation="portrait" android:taskAffinity="" android:theme="@android:style/Theme.NoTitleBar">
+            <meta-data android:name="DESCRIPTION" android:value="农情资讯"/>
+        </activity>
+              <activity android:excludeFromRecents="true" android:label="@string/app_name" android:name="com.lnpdit.woofarm.page.activity.farminformation.NewsInfo_Activity" android:screenOrientation="portrait" android:taskAffinity="" android:theme="@android:style/Theme.NoTitleBar">
+            <meta-data android:name="DESCRIPTION" android:value="农情资讯详细信息页"/>
+        </activity>
+                   <activity android:excludeFromRecents="true" android:label="@string/app_name" android:name="com.lnpdit.woofarm.page.activity.personal.AboutUsActivity" android:screenOrientation="portrait" android:taskAffinity="" android:theme="@android:style/Theme.NoTitleBar">
+            <meta-data android:name="DESCRIPTION" android:value="用户中心-关于我们"/>
             
         </activity>   
-                           <activity
-            android:name="com.lnpdit.woofarm.page.activity.personal.BasicInfoActivity"
-            android:excludeFromRecents="true"
-            android:label="@string/app_name"
-            android:screenOrientation="portrait"
-            android:taskAffinity=""
-            android:theme="@android:style/Theme.NoTitleBar" >
-            <meta-data
-                android:name="DESCRIPTION"
-                android:value="用户中心-基本信息" />
+                           <activity android:excludeFromRecents="true" android:label="@string/app_name" android:name="com.lnpdit.woofarm.page.activity.personal.BasicInfoActivity" android:screenOrientation="portrait" android:taskAffinity="" android:theme="@android:style/Theme.NoTitleBar">
+            <meta-data android:name="DESCRIPTION" android:value="用户中心-基本信息"/>
             
         </activity> 
-           <activity
-            android:name="com.lnpdit.woofarm.page.activity.personal.OldPasswordActivity"
-            android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.NoTitleBar" >
-            <meta-data
-                android:name="DESCRIPTION"
-                android:value="用户中心-修改密码1-旧密码界面 " />
+           <activity android:name="com.lnpdit.woofarm.page.activity.personal.OldPasswordActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar">
+            <meta-data android:name="DESCRIPTION" android:value="用户中心-修改密码1-旧密码界面 "/>
         </activity>
-          <activity
-            android:name="com.lnpdit.woofarm.page.activity.personal.ModifyPasswordActivity"
-            android:excludeFromRecents="true"
-            android:label="@string/app_name"
-            android:screenOrientation="portrait"
-            android:taskAffinity=""
-            android:theme="@android:style/Theme.NoTitleBar" >
-            <meta-data
-                android:name="DESCRIPTION"
-                android:value="用户中心-修改密码1-输入新密码" />
+          <activity android:excludeFromRecents="true" android:label="@string/app_name" android:name="com.lnpdit.woofarm.page.activity.personal.ModifyPasswordActivity" android:screenOrientation="portrait" android:taskAffinity="" android:theme="@android:style/Theme.NoTitleBar">
+            <meta-data android:name="DESCRIPTION" android:value="用户中心-修改密码1-输入新密码"/>
         </activity>   
-                 <activity
-            android:name="com.lnpdit.woofarm.page.activity.personal.DeviceListActivity"
-            android:excludeFromRecents="true"
-            android:label="@string/app_name"
-            android:screenOrientation="portrait"
-            android:taskAffinity=""
-            android:theme="@android:style/Theme.NoTitleBar" >
-            <meta-data
-                android:name="DESCRIPTION"
-                android:value="设备管理列表" />
+                 <activity android:excludeFromRecents="true" android:label="@string/app_name" android:name="com.lnpdit.woofarm.page.activity.personal.DeviceListActivity" android:screenOrientation="portrait" android:taskAffinity="" android:theme="@android:style/Theme.NoTitleBar">
+            <meta-data android:name="DESCRIPTION" android:value="设备管理列表"/>
         </activity>    
        
+       <activity android:excludeFromRecents="true" android:label="@string/app_name" android:name="com.lnpdit.woofarm.page.activity.farmservice.AskExpertListActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar">
+            <meta-data android:name="DESCRIPTION" android:value="专家问答列表"/>
+        </activity>       
+       <activity android:excludeFromRecents="true" android:label="@string/app_name" android:name="com.lnpdit.woofarm.page.activity.farmservice.AllQandAListActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar">
+            <meta-data android:name="DESCRIPTION" android:value="全部问答列表"/>
+        </activity>       
+       <activity android:excludeFromRecents="true" android:label="@string/app_name" android:name="com.lnpdit.woofarm.page.activity.farmservice.MyQandAListActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar">
+            <meta-data android:name="DESCRIPTION" android:value="我的问答列表"/>
+        </activity>
+               <activity android:excludeFromRecents="true" android:label="@string/app_name" android:name="com.lnpdit.woofarm.page.activity.ztiany2011.simplezxing.CaptureActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar">
+            <meta-data android:name="DESCRIPTION" android:value="扫码添加设备"/>
+        </activity>
+        <activity android:excludeFromRecents="true" android:label="@string/app_name" android:name="com.lnpdit.woofarm.page.activity.farm.FarmAddAdviceActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar">
+            <meta-data android:name="DESCRIPTION" android:value="添加设备"/>
+        </activity>
+           <activity android:excludeFromRecents="true" android:label="@string/app_name" android:name="com.lnpdit.woofarm.page.activity.farm.FarmAddAdviceSubmitActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar">
+            <meta-data android:name="DESCRIPTION" android:value="添加设备提交页"/>
+        </activity>
+           <activity android:excludeFromRecents="true" android:label="@string/app_name" android:name="com.lnpdit.woofarm.page.activity.farm.CameraInfo_Activity" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar">
+            <meta-data android:name="DESCRIPTION" android:value="视频监控详情页"/>
+        </activity>
+                  <activity android:excludeFromRecents="true" android:label="@string/app_name" android:name="com.lnpdit.woofarm.page.activity.farmservice.ActivityFarmserviceSidebarlist" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar">
+            <meta-data android:name="DESCRIPTION" android:value="农技服务列表"/>
+        </activity>
+                                  <activity android:excludeFromRecents="true" android:label="@string/app_name" android:name="com.lnpdit.woofarm.page.activity.farmservice.CropListActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar">
+            <meta-data android:name="DESCRIPTION" android:value="病虫害列表"/>
+        </activity>
+                          <activity android:excludeFromRecents="true" android:label="@string/app_name" android:name="com.lnpdit.woofarm.page.activity.farmservice.CropDiseaseListActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar">
+            <meta-data android:name="DESCRIPTION" android:value="病虫害列表"/>
+        </activity>
+                                  <activity android:excludeFromRecents="true" android:label="@string/app_name" android:name="com.lnpdit.woofarm.page.activity.farmservice.CropDiseaseInfoActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar">
+            <meta-data android:name="DESCRIPTION" android:value="病虫害详情"/>
+        </activity>
+                                        <activity android:excludeFromRecents="true" android:label="@string/app_name" android:name="com.lnpdit.woofarm.page.activity.farmingmanagement.FarmOriginsActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar">
+            <meta-data android:name="DESCRIPTION" android:value="农产品溯源"/>
+        </activity>
+                               <activity android:excludeFromRecents="true" android:label="@string/app_name" android:name="com.lnpdit.woofarm.page.activity.farmingmanagement.OriginsListActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar">
+            <meta-data android:name="DESCRIPTION" android:value="农产品溯源列表"/>
+        </activity>    
+           <activity android:excludeFromRecents="true" android:label="@string/app_name" android:name="com.lnpdit.woofarm.page.activity.farmservice.PesticidesInfoActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar">
+            <meta-data android:name="DESCRIPTION" android:value="农技服务-视频列表详情"/>
+        </activity>  
+           <activity android:excludeFromRecents="true" android:label="@string/app_name" android:name="com.lnpdit.woofarm.page.activity.farmservice.FarmServiceListActivity2" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar">
+            <meta-data android:name="DESCRIPTION" android:value="农技服务-农药使用技术"/>
+        </activity>    
+                    <activity android:excludeFromRecents="true" android:label="@string/app_name" android:name="com.lnpdit.woofarm.page.activity.farmservice.FarmServiceListActivity3" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar">
+            <meta-data android:name="DESCRIPTION" android:value="农技服务-土壤百科"/>
+        </activity>        
+                   <activity android:excludeFromRecents="true" android:label="@string/app_name" android:name="com.lnpdit.woofarm.page.activity.farmservice.FarmServiceListActivity4" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar">
+            <meta-data android:name="DESCRIPTION" android:value="农技服务-科学种植"/>
+        </activity>   
+                       <activity android:excludeFromRecents="true" android:label="@string/app_name" android:name="com.lnpdit.woofarm.page.activity.farmingmanagement.OriginsScoreActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar">
+            <meta-data android:name="DESCRIPTION" android:value="农事管理-溯源打分"/>
+        </activity>  
+                           <activity android:excludeFromRecents="true" android:label="@string/app_name" android:name="com.lnpdit.woofarm.page.activity.farmingmanagement.FarmPlanListActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar">
+            <meta-data android:name="DESCRIPTION" android:value="农事管理-溯源打分"/>
+        </activity> 
+         <activity android:excludeFromRecents="true" android:label="@string/app_name" android:name="com.lnpdit.woofarm.page.activity.farm.FarmAlarmInfoListActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar">
+            <meta-data android:name="DESCRIPTION" android:value="报警详情"/>
+        </activity> 
+        
+      
+          <meta-data android:name="UMENG_APPKEY" android:value="5b9b60b3f29d981314000087">
+        </meta-data>
+        <meta-data android:name="UMENG_MESSAGE_SECRET" android:value="20f2cd9f515ce078db58b1a9ccdbca68">
+        </meta-data>
+
+<!-- Channel ID用来标识App的推广渠道，作为推送消息时给用户分组的一个维度。-->
+<meta-data android:name="UMENG_CHANNEL" android:value="Umeng"/>
+
+        <service android:exported="true" android:name="com.taobao.accs.ChannelService" android:process=":channel">
+            <intent-filter>
+                <action android:name="com.taobao.accs.intent.action.SERVICE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.taobao.accs.intent.action.ELECTION"/>
+            </intent-filter>
+        </service>
+
+        <service android:exported="true" android:name="com.taobao.accs.data.MsgDistributeService">
+            <intent-filter>
+                <action android:name="com.taobao.accs.intent.action.RECEIVE"/>
+            </intent-filter>
+        </service>
+
+        <service android:name="com.taobao.accs.internal.AccsJobService" android:permission="android.permission.BIND_JOB_SERVICE" android:process=":channel"/>
+
+        <service android:name="com.taobao.accs.ChannelService$KernelService" android:process=":channel"/>
+
+        <service android:exported="true" android:name="org.android.agoo.accs.AgooService">
+            <intent-filter>
+                <action android:name="com.taobao.accs.intent.action.RECEIVE"/>
+            </intent-filter>
+        </service>
+
+        <service android:exported="true" android:name="com.umeng.message.UmengIntentService" android:process=":channel">
+            <intent-filter>
+                <action android:name="org.agoo.android.intent.action.RECEIVE"/>
+            </intent-filter>
+        </service>
+
+        <service android:exported="true" android:name="com.umeng.message.XiaomiIntentService" android:process=":channel">
+            <intent-filter>
+                <action android:name="org.agoo.android.intent.action.RECEIVE"/>
+            </intent-filter>
+        </service>
+
+        <service android:exported="true" android:name="com.umeng.message.UmengMessageIntentReceiverService" android:process=":channel">
+            <intent-filter>
+                <action android:name="org.android.agoo.client.MessageReceiverService"/>
+            </intent-filter>
+        </service>
+
+        <service android:exported="false" android:name="com.umeng.message.UmengMessageCallbackHandlerService">
+            <intent-filter>
+                <action android:name="com.umeng.messge.registercallback.action"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.umeng.message.enablecallback.action"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.umeng.message.disablecallback.action"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.umeng.message.message.handler.action"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.umeng.message.message.sendmessage.action"/>
+            </intent-filter>
+        </service>
+
+        <service android:exported="false" android:name="com.umeng.message.UmengDownloadResourceService"/>
+
+        <receiver android:name="com.taobao.accs.EventReceiver" android:process=":channel">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+                <data android:scheme="package"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT"/>
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name="com.taobao.accs.ServiceReceiver" android:process=":channel">
+            <intent-filter>
+                <action android:name="com.taobao.accs.intent.action.COMMAND"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.taobao.accs.intent.action.START_FROM_AGOO"/>
+            </intent-filter>
+        </receiver>
+
+        <receiver android:exported="true" android:name="com.taobao.agoo.AgooCommondReceiver" android:process=":channel">
+            <intent-filter>
+                <action android:name="com.lnpdit.IntelligentPlanting.intent.action.COMMAND"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+                <data android:scheme="package"/>
+            </intent-filter>
+        </receiver>
+
+        <receiver android:exported="false" android:name="com.umeng.message.NotificationProxyBroadcastReceiver"/>
+
+        <provider android:authorities="com.lnpdit.IntelligentPlanting.umeng.message" android:exported="false" android:name="com.umeng.message.provider.MessageProvider">
+            <grant-uri-permission android:pathPattern=".*"/>
+        </provider>
     </application>
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_ADDED"/>
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_CHANGED"/>
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_INSTALL"/>
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_REPLACED"/>
+    <uses-permission android:name="android.permission.RESTART_PACKAGES"/>
 
 </manifest>

@@ -32,12 +32,14 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.View.OnClickListener;
 import android.widget.AdapterView;
+import android.widget.LinearLayout;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 import android.widget.Toast;
 
-public class FarmFruitFragment extends Fragment {
+public class FarmFruitFragment extends Fragment{
 
 	Context context;
 	View view;
@@ -46,12 +48,17 @@ public class FarmFruitFragment extends Fragment {
 
     private PullToRefreshListView listView_farmnewslist;
     private ListView listView;
+    private LinearLayout vegetables_layout;
+    private LinearLayout fruit_layout;
+    private LinearLayout grain_layout;
+    private LinearLayout seedling_layout;
+    private LinearLayout more_layout;
 	private int pageIndex = 1;
 
 	private DBHelper dbh;
 	private FarmFruitListAdapter adapter;
 	private List<FarmNewsList> list;
-	private FarmNewsList farmnews;
+//	private FarmNewsList farmnews;
 	public DemoApplication myApplication;
 //	private static final String TAG = "SU-JPush";
 
@@ -81,7 +88,7 @@ public class FarmFruitFragment extends Fragment {
 
 		context = this.getActivity().getApplicationContext();
 
-		view = inflater.inflate(R.layout.fragment_informationitem, container, false);
+		view = inflater.inflate(R.layout.fragment_informationitem_newstype, container, false);
 
 	    initView();
 	    initData();
@@ -93,12 +100,54 @@ private void initView() {
     listView_farmnewslist = (PullToRefreshListView) view.findViewById(R.id.listView_farmnewslist);
     listView = listView_farmnewslist.getRefreshableView();
   
-
+    vegetables_layout = (LinearLayout) view.findViewById(R.id.vegetables_layout);
+    vegetables_layout.setClickable(true);
+    vegetables_layout.setOnClickListener(new OnClickListener() {  
+        @Override  
+        public void onClick(View v) {  
+            
+            String[] property_va = new String[] {"3", pageIndex + "","10","蔬菜"};
+            soapService.getNewsList3(property_va, false);
+        }  
+            });  
+    fruit_layout = (LinearLayout) view.findViewById(R.id.fruit_layout);
+    fruit_layout.setClickable(true);
+    fruit_layout.setOnClickListener(new OnClickListener() {  
+        @Override  
+        public void onClick(View v) {  
+            
+            String[] property_va = new String[] {"3", pageIndex + "","10","水果"};
+            soapService.getNewsList3(property_va, false);
+        }  
+            });
+    grain_layout = (LinearLayout) view.findViewById(R.id.grain_layout);
+    grain_layout.setClickable(true);
+    grain_layout.setOnClickListener(new OnClickListener() {  
+        @Override  
+        public void onClick(View v) {  
+            
+            String[] property_va = new String[] {"3", pageIndex + "","10","粮油作物"};
+            soapService.getNewsList3(property_va, false);
+        }  
+            });
+    seedling_layout = (LinearLayout) view.findViewById(R.id.seedling_layout);
+    seedling_layout.setClickable(true); 
+    seedling_layout.setOnClickListener(new OnClickListener() {  
+        @Override  
+        public void onClick(View v) {  
+            
+            String[] property_va = new String[] {"3", pageIndex + "","10","种苗"};
+            soapService.getNewsList3(property_va, false);
+        }  
+            });
+    more_layout = (LinearLayout) view.findViewById(R.id.more_layout);
+    more_layout.setClickable(true);
+    
 }
 
 private void initData() {
     list = new ArrayList<FarmNewsList>();
-    farmnews = new FarmNewsList();
+//    farmnews = new FarmNewsList();
     if(list.size() != 0){
         adapter = new FarmFruitListAdapter(context, list);
         listView.setAdapter(adapter);

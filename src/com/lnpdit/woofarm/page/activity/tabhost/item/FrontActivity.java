@@ -83,7 +83,7 @@ public class FrontActivity extends Activity implements OnClickListener {
         context = this;
         resources = this.getResources();
 
-        initAd();
+//        initAd();
         initView();
         initData();
         // setListeners();
@@ -190,30 +190,30 @@ public class FrontActivity extends Activity implements OnClickListener {
                 .findViewById(R.id.listview_productlist);
     }
 
-    private void initAd() {
-        infos = new ArrayList<ADInfo>();
-        ADInfo adi = new ADInfo();
-        for (int i = 0; i < 4; i++) {
-            adi = new ADInfo();
-            adi.setId(String.valueOf(i + 1));
-            if (i == 0) {
-                adi.setUrl("http://www.tvlicai.cn/ad1.png");
-                adi.setImg(R.drawable.ad1);
-            } else if (i == 1) {
-                adi.setUrl("http://www.tvlicai.cn/ad2.png");
-                adi.setImg(R.drawable.ad2);
-            } else if (i == 2) {
-                adi.setUrl("http://www.tvlicai.cn/ad3.png");
-                adi.setImg(R.drawable.ad3);
-            } else if (i == 3) {
-                adi.setUrl("http://www.tvlicai.cn/ad4.png");
-                adi.setImg(R.drawable.ad4);
-            }
-            adi.setTitle("");
-            adi.setContent("");
-            infos.add(adi);
-        }
-    }
+//    private void initAd() {
+//        infos = new ArrayList<ADInfo>();
+//        ADInfo adi = new ADInfo();
+//        for (int i = 0; i < 4; i++) {
+//            adi = new ADInfo();
+//            adi.setId(String.valueOf(i + 1));
+//            if (i == 0) {
+//                adi.setUrl("http://www.tvlicai.cn/ad1.png");
+//                adi.setImg(R.drawable.ad1);
+//            } else if (i == 1) {
+//                adi.setUrl("http://www.tvlicai.cn/ad2.png");
+//                adi.setImg(R.drawable.ad2);
+//            } else if (i == 2) {
+//                adi.setUrl("http://www.tvlicai.cn/ad3.png");
+//                adi.setImg(R.drawable.ad3);
+//            } else if (i == 3) {
+//                adi.setUrl("http://www.tvlicai.cn/ad4.png");
+//                adi.setImg(R.drawable.ad4);
+//            }
+//            adi.setTitle("");
+//            adi.setContent("");
+//            infos.add(adi);
+//        }
+//    }
 
     private void initData() {
 

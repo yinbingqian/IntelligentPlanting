@@ -38,7 +38,6 @@ public class RegisterActivity extends BaseActivity implements OnClickListener {
     EditText phone_edit;
     EditText code_edit;
     EditText password_edit;
-    private ImageView imgBack;
     private TextView tvBack;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,8 +51,6 @@ public class RegisterActivity extends BaseActivity implements OnClickListener {
     }
 
     private void initView() {
-        imgBack = (ImageView) findViewById(R.id.img_back);
-        imgBack.setOnClickListener(this);
         tvBack = (TextView) findViewById(R.id.tv_back);
         tvBack.setOnClickListener(this);
         reg_bt = (Button) findViewById(R.id.reg_bt);
@@ -74,9 +71,6 @@ public class RegisterActivity extends BaseActivity implements OnClickListener {
     public void onClick(View v) {
         switch (v.getId()) {
         case R.id.tv_back:
-            finish();
-            break;
-        case R.id.img_back:
             finish();
             break;
         case R.id.reg_bt:

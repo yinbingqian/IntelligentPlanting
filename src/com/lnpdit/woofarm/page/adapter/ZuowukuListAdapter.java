@@ -18,7 +18,7 @@ import android.widget.TextView;
 public class ZuowukuListAdapter extends BaseAdapter {
     private class buttonViewHolder {
         TextView crop_name;
-        TextView biaozhun_tv;
+        TextView leibie_tv;
         TextView huanjing_tv;
         ImageView zuowu_img;
     }
@@ -68,8 +68,8 @@ public class ZuowukuListAdapter extends BaseAdapter {
             holder = new buttonViewHolder();
             holder.crop_name = (TextView) convertView
                     .findViewById(R.id.crop_name);
-            holder.biaozhun_tv = (TextView) convertView
-                    .findViewById(R.id.biaozhun_tv);
+            holder.leibie_tv = (TextView) convertView
+                    .findViewById(R.id.leibie_tv);
             holder.huanjing_tv = (TextView) convertView
                     .findViewById(R.id.huanjing_tv);
             holder.zuowu_img = (ImageView) convertView
@@ -85,9 +85,9 @@ public class ZuowukuListAdapter extends BaseAdapter {
         appInfo = mAppList.get(position);
 
         holder.crop_name.setText(appInfo.getCropName());
-        holder.biaozhun_tv.setText(appInfo.getStandard());
+        holder.leibie_tv.setText(appInfo.getCropVariety());
         holder.huanjing_tv.setText(appInfo.getEnvironment());
-        String headPath = SOAP_UTILS.URL + appInfo.getAvatar();
+        String headPath = SOAP_UTILS.PIC_PATH + appInfo.getAvatar();
         Instance.imageLoader.displayImage(headPath, holder.zuowu_img, Instance.zuowu_s_options);
 
         return convertView;

@@ -2,11 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.lnpdit.IntelligentPlanting"
     android:versionCode="1"
-    android:versionName="1.1.1" >
+    android:versionName="1.1.2" >
 
     <uses-sdk
-        android:minSdkVersion="9"
-        android:targetSdkVersion="19" />
+        android:minSdkVersion="19"
+        android:targetSdkVersion="24" />
 
     <uses-permission android:name="com.sxit.dreamiya.permission.JPUSH_MESSAGE" />
     <uses-permission android:name="android.permission.VIBRATE" />
@@ -41,12 +41,21 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
     <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    
+   <instrumentation android:name="android.test.InstrumentationTestRunner" 
+       android:targetPackage="com.lnpdit.IntelligentPlanting">
+       
+   </instrumentation> 
 
     <application
         android:name="com.lnpdit.woofarm.base.application.DemoApplication"
         android:allowBackup="true"
-        android:icon="@drawable/icon"
+        android:icon="@drawable/logo"
         android:label="@string/app_name" >
+        
+       <uses-library android:name="android.test.runner" /> 
+        
+        
         <activity
             android:name="com.lnpdit.woofarm.page.activity.welcome.WelcomeActivity"
             android:launchMode="singleTask"
@@ -212,6 +221,40 @@
                 android:name="DESCRIPTION"
                 android:value="大棚信息" />
         </activity>
+                <activity
+            android:name="com.lnpdit.woofarm.page.activity.farm.VideoMonitor_Activity"
+            android:excludeFromRecents="true"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+            <meta-data
+                android:name="DESCRIPTION"
+                android:value="视频监控" />
+        </activity>
+        
+                <activity
+            android:name="com.lnpdit.woofarm.page.activity.farm.ShuifeiInfoActivity"
+            android:excludeFromRecents="true"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+            <meta-data
+                android:name="DESCRIPTION"
+                android:value="水肥信息" />
+        </activity>
+                        <activity
+            android:name="com.lnpdit.woofarm.page.activity.farm.ShuifeijianceInfoActivity"
+            android:excludeFromRecents="true"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+            <meta-data
+                android:name="DESCRIPTION"
+                android:value="水肥监测信息" />
+        </activity>
           <activity
             android:name="com.lnpdit.woofarm.page.activity.farmingmanagement.ZuowukuListActivity"
             android:excludeFromRecents="true"
@@ -243,6 +286,67 @@
             <meta-data
                 android:name="DESCRIPTION"
                 android:value="种植管理列表" />
+        </activity>
+                 <activity
+            android:name="com.lnpdit.woofarm.page.activity.farmingmanagement.AddPlantingActivity"
+            android:excludeFromRecents="true"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+            <meta-data
+                android:name="DESCRIPTION"
+                android:value="新增种植管理" />
+        </activity>
+                         <activity
+            android:name="com.lnpdit.woofarm.page.activity.farmingmanagement.GrowListActivity"
+            android:excludeFromRecents="true"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+            <meta-data
+                android:name="DESCRIPTION"
+                android:value="生长详情列表" />
+        </activity>
+                      <activity
+            android:name="com.lnpdit.woofarm.page.activity.farmingmanagement.GrowCropListActivity"
+            android:excludeFromRecents="true"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+            <meta-data
+                android:name="DESCRIPTION"
+                android:value="生长列表" />
+        </activity>
+                         
+                         <activity
+            android:name="com.lnpdit.woofarm.page.activity.farmingmanagement.AddGrowActivity"
+            android:excludeFromRecents="true"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+            <meta-data
+                android:name="DESCRIPTION"
+                android:value="新增生长" />
+        </activity>
+                              <activity
+            android:name="com.lnpdit.woofarm.page.activity.farmingmanagement.PickListActivity"
+            android:excludeFromRecents="true"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+            <meta-data
+                android:name="DESCRIPTION"
+                android:value="采摘列表" />
+        </activity>
+                            <activity
+            android:name="com.lnpdit.woofarm.page.activity.farmingmanagement.AddPickActivity"
+            android:excludeFromRecents="true"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+            <meta-data
+                android:name="DESCRIPTION"
+                android:value="增加采摘" />
         </activity>
         
               <activity
@@ -332,6 +436,221 @@
                 android:value="设备管理列表" />
         </activity>    
        
+       <activity
+            android:name="com.lnpdit.woofarm.page.activity.farmservice.AskExpertListActivity"
+            android:excludeFromRecents="true"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+            <meta-data
+                android:name="DESCRIPTION"
+                android:value="专家问答列表" />
+        </activity>       
+       <activity
+            android:name="com.lnpdit.woofarm.page.activity.farmservice.AllQandAListActivity"
+            android:excludeFromRecents="true"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+            <meta-data
+                android:name="DESCRIPTION"
+                android:value="全部问答列表" />
+        </activity>       
+       <activity
+            android:name="com.lnpdit.woofarm.page.activity.farmservice.MyQandAListActivity"
+            android:excludeFromRecents="true"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+            <meta-data
+                android:name="DESCRIPTION"
+                android:value="我的问答列表" />
+        </activity>
+               <activity
+            android:name="com.lnpdit.woofarm.page.activity.ztiany2011.simplezxing.CaptureActivity"
+            android:excludeFromRecents="true"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+            <meta-data
+                android:name="DESCRIPTION"
+                android:value="扫码添加设备" />
+        </activity>
+        <activity
+            android:name="com.lnpdit.woofarm.page.activity.farm.FarmAddAdviceActivity"
+            android:excludeFromRecents="true"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+            <meta-data
+                android:name="DESCRIPTION"
+                android:value="添加设备" />
+        </activity>
+           <activity
+            android:name="com.lnpdit.woofarm.page.activity.farm.FarmAddAdviceSubmitActivity"
+            android:excludeFromRecents="true"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+            <meta-data
+                android:name="DESCRIPTION"
+                android:value="添加设备提交页" />
+        </activity>
+           <activity
+            android:name="com.lnpdit.woofarm.page.activity.farm.CameraInfo_Activity"
+            android:excludeFromRecents="true"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+            <meta-data
+                android:name="DESCRIPTION"
+                android:value="视频监控详情页" />
+        </activity>
+                  <activity
+            android:name="com.lnpdit.woofarm.page.activity.farmservice.ActivityFarmserviceSidebarlist"
+            android:excludeFromRecents="true"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+            <meta-data
+                android:name="DESCRIPTION"
+                android:value="农技服务列表" />
+        </activity>
+                                  <activity
+            android:name="com.lnpdit.woofarm.page.activity.farmservice.CropListActivity"
+            android:excludeFromRecents="true"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+            <meta-data
+                android:name="DESCRIPTION"
+                android:value="病虫害列表" />
+        </activity>
+                          <activity
+            android:name="com.lnpdit.woofarm.page.activity.farmservice.CropDiseaseListActivity"
+            android:excludeFromRecents="true"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+            <meta-data
+                android:name="DESCRIPTION"
+                android:value="病虫害列表" />
+        </activity>
+                                  <activity
+            android:name="com.lnpdit.woofarm.page.activity.farmservice.CropDiseaseInfoActivity"
+            android:excludeFromRecents="true"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+            <meta-data
+                android:name="DESCRIPTION"
+                android:value="病虫害详情" />
+        </activity>
+                                        <activity
+            android:name="com.lnpdit.woofarm.page.activity.farmingmanagement.FarmOriginsActivity"
+            android:excludeFromRecents="true"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+            <meta-data
+                android:name="DESCRIPTION"
+                android:value="农产品溯源" />
+        </activity>
+                               <activity
+            android:name="com.lnpdit.woofarm.page.activity.farmingmanagement.OriginsListActivity"
+            android:excludeFromRecents="true"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+            <meta-data
+                android:name="DESCRIPTION"
+                android:value="农产品溯源列表" />
+        </activity>    
+           <activity
+            android:name="com.lnpdit.woofarm.page.activity.farmservice.PesticidesInfoActivity"
+            android:excludeFromRecents="true"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+            <meta-data
+                android:name="DESCRIPTION"
+                android:value="农技服务-视频列表详情" />
+        </activity>  
+           <activity
+            android:name="com.lnpdit.woofarm.page.activity.farmservice.FarmServiceListActivity2"
+            android:excludeFromRecents="true"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+            <meta-data
+                android:name="DESCRIPTION"
+                android:value="农技服务-农药使用技术" />
+        </activity>    
+                    <activity
+            android:name="com.lnpdit.woofarm.page.activity.farmservice.FarmServiceListActivity3"
+            android:excludeFromRecents="true"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+            <meta-data
+                android:name="DESCRIPTION"
+                android:value="农技服务-土壤百科" />
+        </activity>        
+                   <activity
+            android:name="com.lnpdit.woofarm.page.activity.farmservice.FarmServiceListActivity4"
+            android:excludeFromRecents="true"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+            <meta-data
+                android:name="DESCRIPTION"
+                android:value="农技服务-科学种植" />
+        </activity>   
+                       <activity
+            android:name="com.lnpdit.woofarm.page.activity.farmingmanagement.OriginsScoreActivity"
+            android:excludeFromRecents="true"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+            <meta-data
+                android:name="DESCRIPTION"
+                android:value="农事管理-溯源打分" />
+        </activity>  
+                           <activity
+            android:name="com.lnpdit.woofarm.page.activity.farmingmanagement.FarmPlanListActivity"
+            android:excludeFromRecents="true"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+            <meta-data
+                android:name="DESCRIPTION"
+                android:value="农事管理-溯源打分" />
+        </activity> 
+         <activity
+            android:name="com.lnpdit.woofarm.page.activity.farm.FarmAlarmInfoListActivity"
+            android:excludeFromRecents="true"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+            <meta-data
+                android:name="DESCRIPTION"
+                android:value="报警详情" />
+        </activity> 
+        
+      
+          <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="5b9b60b3f29d981314000087" >
+        </meta-data>
+        <meta-data
+            android:name="UMENG_MESSAGE_SECRET"
+            android:value="20f2cd9f515ce078db58b1a9ccdbca68" >
+        </meta-data>
+
+<!-- Channel ID用来标识App的推广渠道，作为推送消息时给用户分组的一个维度。-->
+<meta-data
+    android:name="UMENG_CHANNEL"
+    android:value="Umeng" />
     </application>
 
 </manifest>

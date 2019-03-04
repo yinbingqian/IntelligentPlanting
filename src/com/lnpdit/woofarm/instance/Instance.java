@@ -12,8 +12,8 @@ public class Instance {
 			.showImageForEmptyUri(R.drawable.carloong_radar_item_default)
 			.showImageOnFail(R.drawable.carloong_radar_item_default).cacheInMemory(true).cacheOnDisc(true).build();
 	public static DisplayImageOptions new_s_options = new DisplayImageOptions.Builder()
-			.showImageOnLoading(R.drawable.img_loader_defult).showImageForEmptyUri(R.drawable.img_loader_defult)
-			.showImageOnFail(R.drawable.img_loader_defult).cacheInMemory(true).cacheOnDisc(true).build();
+			.showImageOnLoading(R.drawable.default_bg).showImageForEmptyUri(R.drawable.default_bg)
+			.showImageOnFail(R.drawable.default_bg).cacheInMemory(true).cacheOnDisc(true).build();
 	public static DisplayImageOptions zuowu_s_options = new DisplayImageOptions.Builder()
             .showImageOnLoading(R.drawable.zuowuimg).showImageForEmptyUri(R.drawable.zuowuimg)
             .showImageOnFail(R.drawable.zuowuimg).cacheInMemory(true).cacheOnDisc(true).build();
@@ -26,4 +26,5 @@ public class Instance {
 	public static DisplayImageOptions advert_options = new DisplayImageOptions.Builder()
 			.showImageOnLoading(R.drawable.adt_bg).showImageForEmptyUri(R.drawable.adt_bg)
 			.showImageOnFail(R.drawable.adt_bg).cacheInMemory(true).cacheOnDisc(true).build();
+	
 }

@@ -8,7 +8,7 @@ import com.lnpdit.woofarm.entity.Cart;
 import com.lnpdit.woofarm.entity.DataInfoUn;
 import com.lnpdit.woofarm.entity.ProductRow;
 import com.lnpdit.woofarm.page.activity.product.ProductInfoActivity;
-import com.lnpdit.woofarm.page.activity.setting.EditAddressActivity;
+//import com.lnpdit.woofarm.page.activity.setting.EditAddressActivity;
 
 import android.content.Context;
 import android.content.Intent;
@@ -108,18 +108,18 @@ public class AddressListAdapter extends BaseAdapter {
 
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent();
-                intent.setClass(mContext, EditAddressActivity.class);
-                mContext.startActivity(intent);
+//                Intent intent = new Intent();
+//                intent.setClass(mContext, EditAddressActivity.class);
+//                mContext.startActivity(intent);
             }
         });
         holder.tv_edit.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent();
-                intent.setClass(mContext, EditAddressActivity.class);
-                mContext.startActivity(intent);
+//                Intent intent = new Intent();
+//                intent.setClass(mContext, EditAddressActivity.class);
+//                mContext.startActivity(intent);
             }
         });
         return convertView;

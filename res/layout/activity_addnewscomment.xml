@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+<LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="54dp"
+        android:background="#20000000"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="290dp"
+        android:layout_height="210dp"
+        android:background="@color/white"
+        android:layout_marginTop="70dp"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/comment_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:text="添加评分"
+                android:textColor="#ff282828"
+                android:textSize="16sp"/>
+
+            <Button
+                android:id="@+id/cancel_bt"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/closewindow_default" />
+        </RelativeLayout>
+<View 
+android:layout_width="fill_parent" 
+android:layout_height="1dp"
+android:layout_marginTop="16dp"
+android:background="#ffe6e6e6"
+/>
+         <LinearLayout 
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="10dp"
+              android:layout_marginRight="10dp"
+              android:layout_marginTop="20dp"
+              android:layout_gravity="center_horizontal"
+              android:orientation="horizontal">
+                            
+              <ImageView 
+                  android:id="@+id/star_click_img1"
+android:layout_width="30dp" 
+android:layout_height="30dp"
+ android:background="@drawable/star_click"
+/>
+              <ImageView 
+                  android:id="@+id/star_click_img2"
+android:layout_width="30dp" 
+android:layout_height="30dp"
+android:layout_marginLeft="20dp"
+ android:background="@drawable/star_click"
+/>
+            <ImageView 
+                  android:id="@+id/star_click_img3"
+android:layout_width="30dp" 
+android:layout_height="30dp"
+android:layout_marginLeft="20dp"
+ android:background="@drawable/star_click"
+/>
+           <ImageView 
+                  android:id="@+id/star_click_img4"
+android:layout_width="30dp" 
+android:layout_height="30dp"
+android:layout_marginLeft="20dp"
+ android:background="@drawable/star_click"
+/>
+           <ImageView 
+                  android:id="@+id/star_click_img5"
+android:layout_width="30dp" 
+android:layout_height="30dp"
+android:layout_marginLeft="20dp"
+ android:background="@drawable/star_click"
+/>
+          </LinearLayout>
+        <Button 
+         android:id="@+id/send_bt"
+         android:layout_width="250dp" 
+         android:layout_height="40dp"
+         android:layout_marginTop="36dp"
+         android:background="#0BDA75"
+         android:text="我要评分"
+         android:textColor="#ffffffff"
+         android:textSize="16sp"
+         android:gravity="center"
+         android:layout_gravity="center_horizontal"
+         android:layout_marginBottom="20dp"
+/>
+    </LinearLayout>
+</LinearLayout>
+</LinearLayout>

@@ -12,6 +12,8 @@ import com.lnpdit.woofarm.entity.Product;
 import com.lnpdit.woofarm.http.RdaResultPack;
 import com.lnpdit.woofarm.mservice.UserService;
 import com.lnpdit.woofarm.page.activity.tabhost.MainTabHostActivity;
+import com.umeng.message.IUmengRegisterCallback;
+import com.umeng.message.PushAgent;
 
 import java.util.List;
 
@@ -20,8 +22,10 @@ import com.lnpdit.IntelligentPlanting.R;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
 import android.widget.Toast;
 
 public class WelcomeActivity extends BaseActivity {
@@ -35,6 +39,10 @@ public class WelcomeActivity extends BaseActivity {
     private Classify classify;
     private Area area;
     private Camera camera;
+    
+    
+//   Toast提示mPushAgent.register should be called in both main process and channel process。
+//   https://developer.umeng.com/docs/66632/detail/67140?um_channel=sdk
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,13 +51,21 @@ public class WelcomeActivity extends BaseActivity {
         this.setContentView(R.layout.activity_welcome);
 
         initData();
-
+//        
+//        Intent intent = new Intent();
+//        intent.setClass(getBaseContext(),
+//                MainTabHostActivity.class);
+//        startActivity(intent);
+      
         new Handler().postDelayed(new Runnable() {
 
             public void run() {
+                
+                SharedPreferences sp = context.getSharedPreferences("device", MODE_PRIVATE);
+                String ss=sp.getString("device_token", "111");
 
-                boolean mFirst = isFirstEnter(WelcomeActivity.this,
-                        WelcomeActivity.this.getClass().getName());
+//                boolean mFirst = isFirstEnter(WelcomeActivity.this,
+//                        WelcomeActivity.this.getClass().getName());
 //                if (mFirst) {
 //
 //                    Intent intent = new Intent();
@@ -58,16 +74,20 @@ public class WelcomeActivity extends BaseActivity {
 //                    writeEnter(WelcomeActivity.this);
 //                } else {
                     Intent intent = new Intent();
-                    intent.setClass(getBaseContext(),
+                    intent.setClass(context,
                             MainTabHostActivity.class);
                     startActivity(intent);
-//                }
-
+                   
+//                     SharedPreferences sp = context.getSharedPreferences("device", MODE_PRIVATE);
+//                     String ss=sp.getString("device_token", "111");
+//                    Toast.makeText(context,sp.getString("device_token", "111") , Toast.LENGTH_SHORT).show();
+//                    Log.i("sssssss", sp.getString("device_token", "111") );
                 finish();
             }
 
-        }, 1500);
+        }, 2500);
     }
+
 
     private void initData() {
         dbh = new DBHelper(this);

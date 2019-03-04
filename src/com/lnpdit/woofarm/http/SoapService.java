@@ -99,22 +99,11 @@ public class SoapService implements ISoapService {
             @Override
             public void soapResult(Object obj) {
                 // TODO Auto-generated method stub
-                try {
-                    JSONObject json_obj = new JSONObject(obj.toString());
-                    String result = json_obj.get("status").toString();
-                    String message = json_obj.get("msg").toString();
-                    if (result.equals("true")) {
-                        message = "true";
-                    }
-                soapRes.setObj(message);
+                  
+                soapRes.setObj(obj);
                 soapRes.setCode(SOAP_UTILS.METHOD.MEMBERREG);
-                
                 EventCache.commandActivity.post(soapRes);
-                
-                } catch (JSONException e) {
-                    // TODO Auto-generated catch block
-                    e.printStackTrace();
-                }
+             
             }
 
             @Override
@@ -211,7 +200,7 @@ public class SoapService implements ISoapService {
     @Override
     public void planting(Object[] property_va) {
         // TODO Auto-generated method stub
-        String[] property_nm = {"farmCode"};
+        String[] property_nm = {"plantId"};
         asynTaskBase.setMethod(SOAP_UTILS.METHOD.PLANTING);
         asynTaskBase.setProperty_nm(property_nm);
         asynTaskBase.setProperty_va(property_va);
@@ -314,11 +303,11 @@ public class SoapService implements ISoapService {
             }
         });
     }
-    //作物库
+    //种植管理
     @Override
     public void getPlantingList(Object[] property_va) {
         // TODO Auto-generated method stub
-        String[] property_nm = {"farmCode"};
+        String[] property_nm = {"userCode"};
         asynTaskBase.setMethod(SOAP_UTILS.METHOD.PLANTINGLIST);
         asynTaskBase.setProperty_nm(property_nm);
         asynTaskBase.setProperty_va(property_va);
@@ -394,6 +383,7 @@ public class SoapService implements ISoapService {
             }
         });
     } 
+    
     //结束种植
     @Override
     public void finishplant(Object[] property_va) {
@@ -425,7 +415,7 @@ public class SoapService implements ISoapService {
     @Override
     public void collection(Object[] property_va) {
         // TODO Auto-generated method stub
-        String[] property_nm = {"pengCode","equipType"};
+        String[] property_nm = {"equipCode","sensorType"};
         asynTaskBase.setMethod(SOAP_UTILS.METHOD.COLLECTIONLIST);
         asynTaskBase.setProperty_nm(property_nm);
         asynTaskBase.setProperty_va(property_va);
@@ -448,6 +438,114 @@ public class SoapService implements ISoapService {
         });
     } 
     
+    
+    //大棚温度
+    @Override
+    public void collection3(Object[] property_va) {
+        // TODO Auto-generated method stub
+        String[] property_nm = {"equipCode","sensorType"};
+        asynTaskBase.setMethod(SOAP_UTILS.METHOD.COLLECTIONLIST3);
+        asynTaskBase.setProperty_nm(property_nm);
+        asynTaskBase.setProperty_va(property_va);
+        asynTaskBase.executeDo(new HttpObjectResult() {
+
+            @Override
+            public void soapResult(Object obj) {
+                // TODO Auto-generated method stub
+                soapRes.setObj(obj);
+                soapRes.setCode(SOAP_UTILS.METHOD.COLLECTIONLIST3);
+                EventCache.commandActivity.post(soapRes);
+            }
+
+            @Override
+            public void soapError() {
+                soapRes.setObj(null);
+                soapRes.setCode(SOAP_UTILS.METHOD.COLLECTIONLIST3);
+                EventCache.commandActivity.post(soapRes);
+            }
+        });
+    } 
+    
+    //大棚温度
+    @Override
+    public void collection4(Object[] property_va) {
+        // TODO Auto-generated method stub
+        String[] property_nm = {"equipCode","sensorType"};
+        asynTaskBase.setMethod(SOAP_UTILS.METHOD.COLLECTIONLIST4);
+        asynTaskBase.setProperty_nm(property_nm);
+        asynTaskBase.setProperty_va(property_va);
+        asynTaskBase.executeDo(new HttpObjectResult() {
+
+            @Override
+            public void soapResult(Object obj) {
+                // TODO Auto-generated method stub
+                soapRes.setObj(obj);
+                soapRes.setCode(SOAP_UTILS.METHOD.COLLECTIONLIST4);
+                EventCache.commandActivity.post(soapRes);
+            }
+
+            @Override
+            public void soapError() {
+                soapRes.setObj(null);
+                soapRes.setCode(SOAP_UTILS.METHOD.COLLECTIONLIST4);
+                EventCache.commandActivity.post(soapRes);
+            }
+        });
+    } 
+    
+    //大棚曲线 土壤湿度温度
+    @Override
+    public void collection5(Object[] property_va) {
+        // TODO Auto-generated method stub
+        String[] property_nm = {"equipCode","sensorType"};
+        asynTaskBase.setMethod(SOAP_UTILS.METHOD.COLLECTIONLIST5);
+        asynTaskBase.setProperty_nm(property_nm);
+        asynTaskBase.setProperty_va(property_va);
+        asynTaskBase.executeDo(new HttpObjectResult() {
+
+            @Override
+            public void soapResult(Object obj) {
+                // TODO Auto-generated method stub
+                soapRes.setObj(obj);
+                soapRes.setCode(SOAP_UTILS.METHOD.COLLECTIONLIST5);
+                EventCache.commandActivity.post(soapRes);
+            }
+
+            @Override
+            public void soapError() {
+                soapRes.setObj(null);
+                soapRes.setCode(SOAP_UTILS.METHOD.COLLECTIONLIST5);
+                EventCache.commandActivity.post(soapRes);
+            }
+        });
+    } 
+
+    //大棚曲线 土壤湿度
+    @Override
+    public void collection6(Object[] property_va) {
+        // TODO Auto-generated method stub
+        String[] property_nm = {"equipCode","sensorType"};
+        asynTaskBase.setMethod(SOAP_UTILS.METHOD.COLLECTIONLIST6);
+        asynTaskBase.setProperty_nm(property_nm);
+        asynTaskBase.setProperty_va(property_va);
+        asynTaskBase.executeDo(new HttpObjectResult() {
+
+            @Override
+            public void soapResult(Object obj) {
+                // TODO Auto-generated method stub
+                soapRes.setObj(obj);
+                soapRes.setCode(SOAP_UTILS.METHOD.COLLECTIONLIST6);
+                EventCache.commandActivity.post(soapRes);
+            }
+
+            @Override
+            public void soapError() {
+                soapRes.setObj(null);
+                soapRes.setCode(SOAP_UTILS.METHOD.COLLECTIONLIST6);
+                EventCache.commandActivity.post(soapRes);
+            }
+        });
+    } 
     
     //大棚温度
     @Override
@@ -481,7 +579,7 @@ public class SoapService implements ISoapService {
     @Override
     public void equipmentList(Object[] property_va) {
         // TODO Auto-generated method stub
-        String[] property_nm = {"pengCode","equipKind"};
+        String[] property_nm = {"plotId"};
         asynTaskBase.setMethod(SOAP_UTILS.METHOD.EQUIPMENTLIST);
         asynTaskBase.setProperty_nm(property_nm);
         asynTaskBase.setProperty_va(property_va);
@@ -509,7 +607,7 @@ public class SoapService implements ISoapService {
     @Override
     public void equipmentState(Object[] property_va) {
         // TODO Auto-generated method stub
-        String[] property_nm = {"switchId","equipStatus","equipCode"};
+        String[] property_nm = {"equipCode","channelNo","channelStatus"};
         asynPostTaskBase.setMethod(SOAP_UTILS.METHOD.EQUIPMENTSTATE);
         asynPostTaskBase.setProperty_nm(property_nm);
         asynPostTaskBase.setProperty_va(property_va);
@@ -590,7 +688,7 @@ public class SoapService implements ISoapService {
     @Override
     public void getNewsList3(Object[] property_va, final boolean isPage) {
         // TODO Auto-generated method stub
-        String[] property_nm = {"type","pageNo","pageSize"};
+        String[] property_nm = {"type","pageNo","pageSize","label"};
         asynTaskBase.setMethod(SOAP_UTILS.METHOD.NEWSLIST3);
         asynTaskBase.setProperty_nm(property_nm);
         asynTaskBase.setProperty_va(property_va);
@@ -747,4 +845,683 @@ public class SoapService implements ISoapService {
             }
         });
     } 
+    
+    
+    //我的农场传感器数据
+    @Override
+    public void getSensorData(Object[] property_va) {
+        // TODO Auto-generated method stub
+        String[] property_nm = {"equipCode"};
+        asynTaskBase.setMethod(SOAP_UTILS.METHOD.SENSORDATALIST);
+        asynTaskBase.setProperty_nm(property_nm);
+        asynTaskBase.setProperty_va(property_va);
+        asynTaskBase.executeDo(new HttpObjectResult() {
+
+            @Override
+            public void soapResult(Object obj) {
+                // TODO Auto-generated method stub
+                soapRes.setObj(obj);
+                soapRes.setCode(SOAP_UTILS.METHOD.SENSORDATALIST);
+                EventCache.commandActivity.post(soapRes);
+            }
+
+            @Override
+            public void soapError() {
+                soapRes.setObj(null);
+                soapRes.setCode(SOAP_UTILS.METHOD.SENSORDATALIST);
+                EventCache.commandActivity.post(soapRes);
+            }
+        });
+    }
+    
+    //网关列表
+    @Override
+    public void getGatewayList(Object[] property_va) {
+        // TODO Auto-generated method stub
+        String[] property_nm = {"pengCode"};
+        asynTaskBase.setMethod(SOAP_UTILS.METHOD.GATEWATLIST);
+        asynTaskBase.setProperty_nm(property_nm);
+        asynTaskBase.setProperty_va(property_va);
+        asynTaskBase.executeDo(new HttpObjectResult() {
+
+            @Override
+            public void soapResult(Object obj) {
+                // TODO Auto-generated method stub
+                soapRes.setObj(obj);
+                soapRes.setCode(SOAP_UTILS.METHOD.GATEWATLIST);
+                EventCache.commandActivity.post(soapRes);
+            }
+
+            @Override
+            public void soapError() {
+                soapRes.setObj(null);
+                soapRes.setCode(SOAP_UTILS.METHOD.GATEWATLIST);
+                EventCache.commandActivity.post(soapRes);
+            }
+        });
+    }
+    
+    //我的农场绑定设备
+    @Override
+    public void equipmentBind(Object[] property_va) {
+        // TODO Auto-generated method stub
+        String[] property_nm = {"equipCode","equipName","pengCode","sensors"};
+        asynPostTaskBase.setMethod(SOAP_UTILS.METHOD.EQUIPMENTBIND);
+        asynPostTaskBase.setProperty_nm(property_nm);
+        asynPostTaskBase.setProperty_va(property_va);
+        asynPostTaskBase.executeDo(new HttpPostObjectResult() {
+
+            @Override
+            public void soapResult(Object obj) {
+                // TODO Auto-generated method stub
+                soapRes.setObj(obj);
+                soapRes.setCode(SOAP_UTILS.METHOD.EQUIPMENTBIND);
+                EventCache.commandActivity.post(soapRes);
+            }
+
+            @Override
+            public void soapError() {
+                soapRes.setObj(null);
+                soapRes.setCode(SOAP_UTILS.METHOD.EQUIPMENTBIND);
+                EventCache.commandActivity.post(soapRes);
+            }
+        });
+    }  
+    
+    //摄像头列表
+    @Override
+    public void getCameraList(Object[] property_va) {
+        // TODO Auto-generated method stub
+        String[] property_nm = {"pengCode"};
+        asynTaskBase.setMethod(SOAP_UTILS.METHOD.CAMERALIST);
+        asynTaskBase.setProperty_nm(property_nm);
+        asynTaskBase.setProperty_va(property_va);
+        asynTaskBase.executeDo(new HttpObjectResult() {
+
+            @Override
+            public void soapResult(Object obj) {
+                // TODO Auto-generated method stub
+                soapRes.setObj(obj);
+                soapRes.setCode(SOAP_UTILS.METHOD.CAMERALIST);
+                EventCache.commandActivity.post(soapRes);
+            }
+
+            @Override
+            public void soapError() {
+                soapRes.setObj(null);
+                soapRes.setCode(SOAP_UTILS.METHOD.CAMERALIST);
+                EventCache.commandActivity.post(soapRes);
+            }
+        });
+    }
+    
+    //摄像头列表
+    @Override
+    public void getCropDiseaseList(Object[] property_va) {
+        // TODO Auto-generated method stub
+        String[] property_nm = {"cropCode"};
+        asynTaskBase.setMethod(SOAP_UTILS.METHOD.CROPDISEASE);
+        asynTaskBase.setProperty_nm(property_nm);
+        asynTaskBase.setProperty_va(property_va);
+        asynTaskBase.executeDo(new HttpObjectResult() {
+
+            @Override
+            public void soapResult(Object obj) {
+                // TODO Auto-generated method stub
+                soapRes.setObj(obj);
+                soapRes.setCode(SOAP_UTILS.METHOD.CROPDISEASE);
+                EventCache.commandActivity.post(soapRes);
+            }
+
+            @Override
+            public void soapError() {
+                soapRes.setObj(null);
+                soapRes.setCode(SOAP_UTILS.METHOD.CROPDISEASE);
+                EventCache.commandActivity.post(soapRes);
+            }
+        });
+    }
+
+    //作物库
+    @Override
+    public void getCropList(Object[] property_va) {
+        // TODO Auto-generated method stub
+        String[] property_nm = {};
+        asynTaskBase.setMethod(SOAP_UTILS.METHOD.CROPLIST);
+        asynTaskBase.setProperty_nm(property_nm);
+        asynTaskBase.setProperty_va(property_va);
+        asynTaskBase.executeDo(new HttpObjectResult() {
+
+            @Override
+            public void soapResult(Object obj) {
+                // TODO Auto-generated method stub
+                soapRes.setObj(obj);
+                soapRes.setCode(SOAP_UTILS.METHOD.CROPLIST);
+                EventCache.commandActivity.post(soapRes);
+            }
+
+            @Override
+            public void soapError() {
+                soapRes.setObj(null);
+                soapRes.setCode(SOAP_UTILS.METHOD.CROPLIST);
+                EventCache.commandActivity.post(soapRes);
+            }
+        });
+    }
+
+    //农产品溯源列表
+    @Override
+    public void getOriginsList(Object[] property_va) {
+        // TODO Auto-generated method stub
+        String[] property_nm = {"userCode"};
+        asynTaskBase.setMethod(SOAP_UTILS.METHOD.ORIGINSLIST);
+        asynTaskBase.setProperty_nm(property_nm);
+        asynTaskBase.setProperty_va(property_va);
+        asynTaskBase.executeDo(new HttpObjectResult() {
+
+            @Override
+            public void soapResult(Object obj) {
+                // TODO Auto-generated method stub
+                soapRes.setObj(obj);
+                soapRes.setCode(SOAP_UTILS.METHOD.ORIGINSLIST);
+                EventCache.commandActivity.post(soapRes);
+            }
+
+            @Override
+            public void soapError() {
+                soapRes.setObj(null);
+                soapRes.setCode(SOAP_UTILS.METHOD.ORIGINSLIST);
+                EventCache.commandActivity.post(soapRes);
+            }
+        });
+    }
+    
+    //溯源详情
+    @Override
+    public void getOriginsInfo(Object[] property_va) {
+        // TODO Auto-generated method stub
+        String[] property_nm = {"plantId"};
+        asynTaskBase.setMethod(SOAP_UTILS.METHOD.ORIGINSINFO);
+        asynTaskBase.setProperty_nm(property_nm);
+        asynTaskBase.setProperty_va(property_va);
+        asynTaskBase.executeDo(new HttpObjectResult() {
+
+            @Override
+            public void soapResult(Object obj) {
+                // TODO Auto-generated method stub
+                soapRes.setObj(obj);
+                soapRes.setCode(SOAP_UTILS.METHOD.ORIGINSINFO);
+                EventCache.commandActivity.post(soapRes);
+            }
+
+            @Override
+            public void soapError() {
+                soapRes.setObj(null);
+                soapRes.setCode(SOAP_UTILS.METHOD.ORIGINSINFO);
+                EventCache.commandActivity.post(soapRes);
+            }
+        });
+    }
+    
+    //溯源详情打分
+    @Override
+    public void getOriginsScore(Object[] property_va) {
+        // TODO Auto-generated method stub
+        String[] property_nm = {"plantId","client","stars"};
+        asynPostTaskBase.setMethod(SOAP_UTILS.METHOD.ORIGINSSCORE);
+        asynPostTaskBase.setProperty_nm(property_nm);
+        asynPostTaskBase.setProperty_va(property_va);
+        asynPostTaskBase.executeDo(new HttpPostObjectResult() {
+
+            @Override
+            public void soapResult(Object obj) {
+                // TODO Auto-generated method stub
+                soapRes.setObj(obj);
+                soapRes.setCode(SOAP_UTILS.METHOD.ORIGINSSCORE);
+                EventCache.commandActivity.post(soapRes);
+            }
+
+            @Override
+            public void soapError() {
+                soapRes.setObj(null);
+                soapRes.setCode(SOAP_UTILS.METHOD.ORIGINSSCORE);
+                EventCache.commandActivity.post(soapRes);
+            }
+        });
+    }  
+    
+    //农技服务视频
+    @Override
+    public void getVideolist(Object[] property_va) {
+        // TODO Auto-generated method stub
+        String[] property_nm = {"type"};
+        asynTaskBase.setMethod(SOAP_UTILS.METHOD.FARMSERVICEVIDEOLIST);
+        asynTaskBase.setProperty_nm(property_nm);
+        asynTaskBase.setProperty_va(property_va);
+        asynTaskBase.executeDo(new HttpObjectResult() {
+
+            @Override
+            public void soapResult(Object obj) {
+                // TODO Auto-generated method stub
+                soapRes.setObj(obj);
+                soapRes.setCode(SOAP_UTILS.METHOD.FARMSERVICEVIDEOLIST);
+                EventCache.commandActivity.post(soapRes);
+            }
+
+            @Override
+            public void soapError() {
+                soapRes.setObj(null);
+                soapRes.setCode(SOAP_UTILS.METHOD.FARMSERVICEVIDEOLIST);
+                EventCache.commandActivity.post(soapRes);
+            }
+        });
+    }
+    
+    //农事计划
+    @Override
+    public void getPlanlist(Object[] property_va) {
+        // TODO Auto-generated method stub
+        String[] property_nm = {"userCode"};
+        asynTaskBase.setMethod(SOAP_UTILS.METHOD.PLANLIST);
+        asynTaskBase.setProperty_nm(property_nm);
+        asynTaskBase.setProperty_va(property_va);
+        asynTaskBase.executeDo(new HttpObjectResult() {
+
+            @Override
+            public void soapResult(Object obj) {
+                // TODO Auto-generated method stub
+                soapRes.setObj(obj);
+                soapRes.setCode(SOAP_UTILS.METHOD.PLANLIST);
+                EventCache.commandActivity.post(soapRes);
+            }
+
+            @Override
+            public void soapError() {
+                soapRes.setObj(null);
+                soapRes.setCode(SOAP_UTILS.METHOD.PLANLIST);
+                EventCache.commandActivity.post(soapRes);
+            }
+        });
+    }   
+    
+    //农事计划-完成计划
+    @Override
+    public void finishPlan(Object[] property_va) {
+        // TODO Auto-generated method stub
+        String[] property_nm = {"id"};
+        asynPostTaskBase.setMethod(SOAP_UTILS.METHOD.PLANFINISH);
+        asynPostTaskBase.setProperty_nm(property_nm);
+        asynPostTaskBase.setProperty_va(property_va);
+        asynPostTaskBase.executeDo(new HttpPostObjectResult() {
+
+            @Override
+            public void soapResult(Object obj) {
+                // TODO Auto-generated method stub
+                soapRes.setObj(obj);
+                soapRes.setCode(SOAP_UTILS.METHOD.PLANFINISH);
+                EventCache.commandActivity.post(soapRes);
+            }
+
+            @Override
+            public void soapError() {
+                soapRes.setObj(null);
+                soapRes.setCode(SOAP_UTILS.METHOD.PLANFINISH);
+                EventCache.commandActivity.post(soapRes);
+            }
+        });
+    }  
+    
+    //报警详情
+    @Override
+    public void getAlarmInfo(Object[] property_va) {
+        // TODO Auto-generated method stub
+        String[] property_nm = {"pengCode"};
+        asynTaskBase.setMethod(SOAP_UTILS.METHOD.ALARMINFO);
+        asynTaskBase.setProperty_nm(property_nm);
+        asynTaskBase.setProperty_va(property_va);
+        asynTaskBase.executeDo(new HttpObjectResult() {
+
+            @Override
+            public void soapResult(Object obj) {
+                // TODO Auto-generated method stub
+                soapRes.setObj(obj);
+                soapRes.setCode(SOAP_UTILS.METHOD.ALARMINFO);
+                EventCache.commandActivity.post(soapRes);
+            }
+
+            @Override
+            public void soapError() {
+                soapRes.setObj(null);
+                soapRes.setCode(SOAP_UTILS.METHOD.ALARMINFO);
+                EventCache.commandActivity.post(soapRes);
+            }
+        });
+    }  
+    
+    //获取大棚阈值
+    @Override
+    public void getPengLimit(Object[] property_va) {
+        // TODO Auto-generated method stub
+        String[] property_nm = {"pengCode"};
+        asynTaskBase.setMethod(SOAP_UTILS.METHOD.GETPENGLIMIT);
+        asynTaskBase.setProperty_nm(property_nm);
+        asynTaskBase.setProperty_va(property_va);
+        asynTaskBase.executeDo(new HttpObjectResult() {
+
+            @Override
+            public void soapResult(Object obj) {
+                // TODO Auto-generated method stub
+                soapRes.setObj(obj);
+                soapRes.setCode(SOAP_UTILS.METHOD.GETPENGLIMIT);
+                EventCache.commandActivity.post(soapRes);
+            }
+
+            @Override
+            public void soapError() {
+                soapRes.setObj(null);
+                soapRes.setCode(SOAP_UTILS.METHOD.GETPENGLIMIT);
+                EventCache.commandActivity.post(soapRes);
+            }
+        });
+    }  
+
+    //大棚阈值更新
+    @Override
+    public void updatePengLimit(Object[] property_va) {
+        // TODO Auto-generated method stub
+        String[] property_nm = {"pengCode","brightnessMini","brightnessMax","airTemperatureMini","airTemperatureMax",
+                "airHumidityMini","airHumidityMax","soilTemperatureMini","soilTemperatureMax","soilHumidityMini","soilHumidityMax"};
+        asynTaskBase.setMethod(SOAP_UTILS.METHOD.UPDATEPENGLIMIT);
+        asynTaskBase.setProperty_nm(property_nm);
+        asynTaskBase.setProperty_va(property_va);
+        asynTaskBase.executeDo(new HttpObjectResult() {
+
+            @Override
+            public void soapResult(Object obj) {
+                // TODO Auto-generated method stub
+                soapRes.setObj(obj);
+                soapRes.setCode(SOAP_UTILS.METHOD.UPDATEPENGLIMIT);
+                EventCache.commandActivity.post(soapRes);
+            }
+
+            @Override
+            public void soapError() {
+                soapRes.setObj(null);
+                soapRes.setCode(SOAP_UTILS.METHOD.UPDATEPENGLIMIT);
+                EventCache.commandActivity.post(soapRes);
+            }
+        });
+    }  
+
+    //新增定植--plotId地块id|yield产量|varietyName作物名称|cropCode作物id（作物库获取）|beginTime2019-01-01|cropVariety作物类别0-5
+    @Override
+    public void savePlantingInfo(Object[] property_va) {
+        // TODO Auto-generated method stub
+        String[] property_nm = {"plotId","yield","varietyName","cropCode","beginTime","cropVariety","remarks","unit","endTime"};
+        asynPostTaskBase.setMethod(SOAP_UTILS.METHOD.SAVEPLANTINGINFO);
+        asynPostTaskBase.setProperty_nm(property_nm);
+        asynPostTaskBase.setProperty_va(property_va);
+        asynPostTaskBase.executeDo(new HttpPostObjectResult() {
+
+            @Override
+            public void soapResult(Object obj) {
+                // TODO Auto-generated method stub
+                soapRes.setObj(obj);
+                soapRes.setCode(SOAP_UTILS.METHOD.SAVEPLANTINGINFO);
+                EventCache.commandActivity.post(soapRes);
+            }
+
+            @Override
+            public void soapError() {
+                soapRes.setObj(null);
+                soapRes.setCode(SOAP_UTILS.METHOD.SAVEPLANTINGINFO);
+                EventCache.commandActivity.post(soapRes);
+            }
+        });
+    }  
+    
+    //新增定植页基地 
+    @Override
+    public void getBaseList(Object[] property_va) {
+        // TODO Auto-generated method stub
+        String[] property_nm = {"userCode"};
+        asynTaskBase.setMethod(SOAP_UTILS.METHOD.GETBASELIST);
+        asynTaskBase.setProperty_nm(property_nm);
+        asynTaskBase.setProperty_va(property_va);
+        asynTaskBase.executeDo(new HttpObjectResult() {
+
+            @Override
+            public void soapResult(Object obj) {
+                // TODO Auto-generated method stub
+                soapRes.setObj(obj);
+                soapRes.setCode(SOAP_UTILS.METHOD.GETBASELIST);
+                EventCache.commandActivity.post(soapRes);
+            }
+
+            @Override
+            public void soapError() {
+                soapRes.setObj(null);
+                soapRes.setCode(SOAP_UTILS.METHOD.GETBASELIST);
+                EventCache.commandActivity.post(soapRes);
+            }
+        });
+    } 
+
+    //新增定植中获取作物品种列表
+    @Override
+    public void getZuowukuVarietyList(Object[] property_va) {
+        // TODO Auto-generated method stub
+        String[] property_nm = {};
+        asynTaskBase.setMethod(SOAP_UTILS.METHOD.ZUOWUKU2);
+        asynTaskBase.setProperty_nm(property_nm);
+        asynTaskBase.setProperty_va(property_va);
+        asynTaskBase.executeDo(new HttpObjectResult() {
+
+            @Override
+            public void soapResult(Object obj) {
+                // TODO Auto-generated method stub
+                soapRes.setObj(obj);
+                soapRes.setCode(SOAP_UTILS.METHOD.ZUOWUKU2);
+                EventCache.commandActivity.post(soapRes);
+            }
+
+            @Override
+            public void soapError() {
+                soapRes.setObj(null);
+                soapRes.setCode(SOAP_UTILS.METHOD.ZUOWUKU2);
+                EventCache.commandActivity.post(soapRes);
+            }
+        });
+    }
+    
+    //新增定植页基地 
+    @Override
+    public void getGrowList(Object[] property_va) {
+        // TODO Auto-generated method stub
+        String[] property_nm = {"userCode"};
+        asynTaskBase.setMethod(SOAP_UTILS.METHOD.GETGROWLIST);
+        asynTaskBase.setProperty_nm(property_nm);
+        asynTaskBase.setProperty_va(property_va);
+        asynTaskBase.executeDo(new HttpObjectResult() {
+
+            @Override
+            public void soapResult(Object obj) {
+                // TODO Auto-generated method stub
+                soapRes.setObj(obj);
+                soapRes.setCode(SOAP_UTILS.METHOD.GETGROWLIST);
+                EventCache.commandActivity.post(soapRes);
+            }
+
+            @Override
+            public void soapError() {
+                soapRes.setObj(null);
+                soapRes.setCode(SOAP_UTILS.METHOD.GETGROWLIST);
+                EventCache.commandActivity.post(soapRes);
+            }
+        });
+    } 
+    
+    //新增定植页基地 
+    @Override
+    public void getGrowInfo(Object[] property_va) {
+        // TODO Auto-generated method stub
+        String[] property_nm = {"plantId"};
+        asynTaskBase.setMethod(SOAP_UTILS.METHOD.GETGROWINFO);
+        asynTaskBase.setProperty_nm(property_nm);
+        asynTaskBase.setProperty_va(property_va);
+        asynTaskBase.executeDo(new HttpObjectResult() {
+
+            @Override
+            public void soapResult(Object obj) {
+                // TODO Auto-generated method stub
+                soapRes.setObj(obj);
+                soapRes.setCode(SOAP_UTILS.METHOD.GETGROWINFO);
+                EventCache.commandActivity.post(soapRes);
+            }
+
+            @Override
+            public void soapError() {
+                soapRes.setObj(null);
+                soapRes.setCode(SOAP_UTILS.METHOD.GETGROWINFO);
+                EventCache.commandActivity.post(soapRes);
+            }
+        });
+    } 
+    
+    //采摘列表
+    @Override
+    public void getPickList(Object[] property_va) {
+        // TODO Auto-generated method stub
+        String[] property_nm = {"userCode"};
+        asynTaskBase.setMethod(SOAP_UTILS.METHOD.GETPICKLIST);
+        asynTaskBase.setProperty_nm(property_nm);
+        asynTaskBase.setProperty_va(property_va);
+        asynTaskBase.executeDo(new HttpObjectResult() {
+
+            @Override
+            public void soapResult(Object obj) {
+                // TODO Auto-generated method stub
+                soapRes.setObj(obj);
+                soapRes.setCode(SOAP_UTILS.METHOD.GETPICKLIST);
+                EventCache.commandActivity.post(soapRes);
+            }
+
+            @Override
+            public void soapError() {
+                soapRes.setObj(null);
+                soapRes.setCode(SOAP_UTILS.METHOD.GETPICKLIST);
+                EventCache.commandActivity.post(soapRes);
+            }
+        });
+    } 
+    
+    //新增定植--plantId采摘作物|userCode采摘人员|pickDate采摘时间|pickUnit采摘规格|traceType|remarks备注|pickQuantity采摘数量
+    @Override
+    public void savePickInfo(Object[] property_va) {
+        // TODO Auto-generated method stub
+        String[] property_nm = {"plantId","userCode","pickDate","pickUnit","traceType","remarks","pickQuantity"};
+        asynTaskBase.setMethod(SOAP_UTILS.METHOD.SAVEPICKINFO);
+        asynTaskBase.setProperty_nm(property_nm);
+        asynTaskBase.setProperty_va(property_va);
+        asynTaskBase.executeDo(new HttpObjectResult() {
+
+            @Override
+            public void soapResult(Object obj) {
+                // TODO Auto-generated method stub
+                soapRes.setObj(obj);
+                soapRes.setCode(SOAP_UTILS.METHOD.SAVEPICKINFO);
+                EventCache.commandActivity.post(soapRes);
+            }
+
+            @Override
+            public void soapError() {
+                soapRes.setObj(null);
+                soapRes.setCode(SOAP_UTILS.METHOD.SAVEPICKINFO);
+                EventCache.commandActivity.post(soapRes);
+            }
+        });
+    } 
+    
+    //新增采摘中采摘作物列表
+    @Override
+    public void getPickCropList(Object[] property_va) {
+        // TODO Auto-generated method stub
+        String[] property_nm = {"userCode"};
+        asynTaskBase.setMethod(SOAP_UTILS.METHOD.PICKCROPLIST);
+        asynTaskBase.setProperty_nm(property_nm);
+        asynTaskBase.setProperty_va(property_va);
+        asynTaskBase.executeDo(new HttpObjectResult() {
+
+            @Override
+            public void soapResult(Object obj) {
+                // TODO Auto-generated method stub
+                soapRes.setObj(obj);
+                soapRes.setCode(SOAP_UTILS.METHOD.PICKCROPLIST);
+                EventCache.commandActivity.post(soapRes);
+            }
+
+            @Override
+            public void soapError() {
+                soapRes.setObj(null);
+                soapRes.setCode(SOAP_UTILS.METHOD.PICKCROPLIST);
+                EventCache.commandActivity.post(soapRes);
+            }
+        });
+    } 
+
+
+    //新增采摘中采摘作物列表
+    @Override
+    public void getPickUserList(Object[] property_va) {
+        // TODO Auto-generated method stub
+        String[] property_nm = {"userCode"};
+        asynTaskBase.setMethod(SOAP_UTILS.METHOD.PICKCROPLIST);
+        asynTaskBase.setProperty_nm(property_nm);
+        asynTaskBase.setProperty_va(property_va);
+        asynTaskBase.executeDo(new HttpObjectResult() {
+
+            @Override
+            public void soapResult(Object obj) {
+                // TODO Auto-generated method stub
+                soapRes.setObj(obj);
+                soapRes.setCode(SOAP_UTILS.METHOD.PICKCROPLIST);
+                EventCache.commandActivity.post(soapRes);
+            }
+
+            @Override
+            public void soapError() {
+                soapRes.setObj(null);
+                soapRes.setCode(SOAP_UTILS.METHOD.PICKCROPLIST);
+                EventCache.commandActivity.post(soapRes);
+            }
+        });
+    } 
+    //首页种植列表
+    @Override
+    public void getPlantingLists(Object[] property_va) {
+        // TODO Auto-generated method stub
+        String[] property_nm = {"userCode"};
+        asynTaskBase.setMethod(SOAP_UTILS.METHOD.PLANTINGLISTS);
+        asynTaskBase.setProperty_nm(property_nm);
+        asynTaskBase.setProperty_va(property_va);
+        asynTaskBase.executeDo(new HttpObjectResult() {
+
+            @Override
+            public void soapResult(Object obj) {
+                // TODO Auto-generated method stub
+                soapRes.setObj(obj);
+                soapRes.setCode(SOAP_UTILS.METHOD.PLANTINGLISTS);
+                EventCache.commandActivity.post(soapRes);
+            }
+
+            @Override
+            public void soapError() {
+                soapRes.setObj(null);
+                soapRes.setCode(SOAP_UTILS.METHOD.PLANTINGLISTS);
+                EventCache.commandActivity.post(soapRes);
+            }
+        });
+    } 
+
+    
 }

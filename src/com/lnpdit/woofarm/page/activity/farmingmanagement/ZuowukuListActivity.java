@@ -85,18 +85,10 @@ public class ZuowukuListActivity extends BaseActivity implements OnClickListener
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 System.out.println("Click Towns");
-//                farmname = farmList.get(position).getFarmName();
-//                SharedPreferences sp = getSharedPreferences("farm", Context.MODE_PRIVATE); 
-//                Editor editor = sp.edit();
-//                editor.putString("farmname", farmname);
-//                editor.putString("farmcode", farmcode);
-//                editor.commit();
                 
                 Intent intent = new Intent();
                 intent.putExtra("cropName", zuowukuList.get(position).getCropName());
-                intent.putExtra("cropStandard", zuowukuList.get(position).getStandard());
-                intent.putExtra("cropEnvironment", zuowukuList.get(position).getEnvironment());
-                intent.putExtra("cropid", zuowukuList.get(position).getId());
+                intent.putExtra("cropcode", zuowukuList.get(position).getCropCode());
                 intent.setClass(context, ZuowuInfoActivity.class);
                 startActivity(intent);
             }
@@ -119,9 +111,9 @@ public class ZuowukuListActivity extends BaseActivity implements OnClickListener
                        JSONObject json_obj= (JSONObject) json_arr.get(i);
                        ZuowukuList farm = new ZuowukuList();
                        farm.setId(json_obj.getString("id"));
-                       farm.setCropName(json_obj.getString("cropCode"));
+                       farm.setCropCode(json_obj.getString("cropCode"));
                        farm.setCropName(json_obj.getString("cropName"));
-                       farm.setCropVariety(json_obj.getString("cropVariety"));
+                       farm.setCropVariety(json_obj.getString("cropCategory"));
                        farm.setAvatar(json_obj.getString("avatar"));
                        farm.setEnvironment(json_obj.getString("environment"));
                        farm.setStandard(json_obj.getString("standard"));

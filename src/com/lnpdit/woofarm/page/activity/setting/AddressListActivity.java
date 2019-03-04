@@ -97,9 +97,9 @@ public class AddressListActivity extends Activity implements OnClickListener {
             finish();
             break;
         case R.id.add_btn:
-            Intent intent = new Intent();
-            intent.setClass(context, EditAddressActivity.class);
-            startActivity(intent);
+//            Intent intent = new Intent();
+//            intent.setClass(context, EditAddressActivity.class);
+//            startActivity(intent);
             break;
         default:
             break;

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical" >
+            <CheckBox
+                android:id="@+id/equipment_cbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:text="设备1"
+                android:textSize="15dp"
+                android:textColor="@color/item_graytext3"
+                android:checked="true"
+                android:button="@null"
+                android:background="@drawable/choose_click"/>
+                
+                   <View 
+                       android:layout_width="fill_parent"
+                       android:layout_height="1dp"
+                       android:background="@color/gray_line2"
+                       android:layout_marginLeft="15dp"
+                       android:layout_marginRight="15dp"/>
+</LinearLayout>

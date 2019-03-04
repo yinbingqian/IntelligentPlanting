@@ -32,7 +32,8 @@
         android:text="结束种植"
         android:textColor="@color/white"
         android:textSize="14dp"
-        android:background="@drawable/broder_greentextbg"/>
+        android:background="@drawable/broder_greentextbg"
+        android:visibility="gone"/>
 
         </RelativeLayout>
       <LinearLayout 

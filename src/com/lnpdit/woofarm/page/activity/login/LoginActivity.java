@@ -7,8 +7,9 @@ import com.lnpdit.IntelligentPlanting.R;
 import com.lnpdit.woofarm.base.component.BaseActivity;
 import com.lnpdit.woofarm.db.DBHelper;
 import com.lnpdit.woofarm.http.SoapRes;
-import com.lnpdit.woofarm.md5.MD5Plus;
 import com.lnpdit.woofarm.utils.SOAP_UTILS;
+import com.umeng.message.PushAgent;
+import com.umeng.message.UTrack;
 
 import android.content.Context;
 import android.content.Intent;
@@ -35,6 +36,8 @@ public class LoginActivity extends BaseActivity implements OnClickListener {
 
     private String type;
     private DBHelper dbh;
+    private PushAgent mPushAgent;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         // TODO Auto-generated method stub
@@ -52,7 +55,10 @@ public class LoginActivity extends BaseActivity implements OnClickListener {
 
         dbh = new DBHelper(this);
         initView();
-
+        
+//        mPushAgent = PushAgent.getInstance(this);
+//        String device_token = mPushAgent.getRegistrationId();//device token是【友盟+】消息推送生成的用于标识设备的id
+        PushAgent.getInstance(context).onAppStart();//统计应用启动数据
     }
 
     private void initView() {
@@ -207,6 +213,7 @@ public class LoginActivity extends BaseActivity implements OnClickListener {
                   String userCode= json_user.get("userCode").toString();
                   String loginCode= json_user.get("loginCode").toString();
                   String userlogo= json_user.get("avatarUrl").toString();
+                  String userName= json_user.get("userName").toString();
                   
                   String sessionid= json_obj.get("sessionid").toString();
 //                  UserInfo loginUser = (UserInfo) json_user.;
@@ -218,14 +225,21 @@ public class LoginActivity extends BaseActivity implements OnClickListener {
                  Editor editor = sp.edit();
                  editor.putString("id",id);
                  editor.putString("userCode",userCode);
+                 editor.putString("userName",userName);
                  editor.putString("loginCode", loginCode);
                  editor.putString("userlogo", userlogo);
                  editor.putString("sessionid", sessionid);
                  editor.commit();
+//                 //友盟推送
+//                 mPushAgent.addAlias(id, "liankeyounong", new UTrack.ICallBack() {
+//                     @Override
+//                     public void onMessage(boolean isSuccess, String message) {
+//                    
+//                     }
+//                  });
                  
                  Intent in=new Intent();
                  setResult(2,in);
-                 
                  finish();
                  }else{
 

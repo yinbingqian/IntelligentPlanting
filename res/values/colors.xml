@@ -111,6 +111,7 @@
     <color name="gray_appname">#313131</color>
     <color name="gray_text2">#999999</color>
     <color name="gray_line">#d8d8d8</color>
+    <color name="gray_line2">#e6e6e6</color>
     <color name="green_text">#0cd473</color>
     <color name="gray_text3">#bbbbbb</color>
     <color name="green_text2">#00c263</color>
@@ -125,7 +126,6 @@
     <color name="gray_line5">#dedede</color>
     <color name="gray_bg2">#eeeef0</color>
     <color name="gray_text6">#7f7f7f</color>
-    <color name="green_bg2">#0bd070</color>
     <color name="red_graph">#db0c0c</color>
     <color name="paintcolor">#abb3b9</color>
     <color name="gray_text7">#e1e5e9</color>
@@ -135,6 +135,28 @@
     <color name="green_text3">#1dc637</color>
     <color name="gray_line3">#bdbec0</color>
     <color name="item_graytext2">#959595</color>
+    <color name="item_graytext3">#282828</color>
+    <color name="item_graytext4">#b4b4b4</color>
+    <color name="item_graytext5">#787878</color>
+    <color name="item_graytext6">#dcdcdc</color>
+    <color name="item_graytext7">#a0a0a0</color>
+    <color name="item_pinktext">#E91E63</color>
+    <!--绿-->
+    <color name="item_greentext2">#0A8F08</color>
+    <color name="item_greentext3">#12B163</color>
+    <color name="item_greentext4">#009688</color>
+    <color name="green_bg2">#0bd070</color>
+    <color name="green_bg3">#a9d18e</color>
+    
+    <color name="item_orangetext2">#EF6C00</color>
+    <color name="item_orangetext3">#FF9200</color>
+    <color name="item_redtext">#E51C23</color>
+    <color name="blue_bg1">#84CCC9</color>
+    <color name="blue_bg2">#7ECEF4</color>
+    <color name="blue_bg3">#88ABDA</color>
+    <color name="pink_bg">#F19EC2</color>
+    <color name="colorAccent">#FF4081</color>
+    
     
     
 

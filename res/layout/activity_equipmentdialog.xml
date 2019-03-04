@@ -1,0 +1,67 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="290dp"
+        android:layout_height="260dp"
+        android:layout_gravity="center_horizontal"
+    android:layout_marginTop="242dp"
+    android:background="@drawable/wihte_border">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/item_graytext3"
+            android:textSize="16sp"
+            android:text="执行工作状态" />
+        <TextView 
+            android:id="@+id/content_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="请再次确认是否要终止水肥机工作"
+            android:textColor="@color/item_graytext5"
+            android:textSize="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/title"/>
+        <ImageView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/content_tv"
+            android:background="@drawable/stop_icon"/>
+            <TextView
+                android:id="@+id/positiveButton"
+            android:layout_width="115dp"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:text="停止工作"
+            android:background="@drawable/green_border" />
+        <TextView
+            android:id="@+id/negativeButton"
+            android:layout_width="115dp"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="25dp"
+            android:textColor="@color/item_graytext7"
+            android:textSize="16sp"
+            android:text="取消停止" 
+            android:background="@drawable/grey_border"/>
+
+    </RelativeLayout>
+</FrameLayout>

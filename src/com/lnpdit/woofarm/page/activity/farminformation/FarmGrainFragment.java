@@ -105,7 +105,7 @@ private void initData() {
         listView.setAdapter(adapter);
         }
     String[] property_va = new String[] {"4", pageIndex + "","10"};
-    soapService.getNewsList3(property_va, false);
+    soapService.getNewsList4(property_va, false);
 
 }
 
@@ -133,7 +133,7 @@ private void setListeners() {
 
             pageIndex = 1;
             String[] property_va = new String[] {"4", pageIndex + "","10"};
-            soapService.getNewsList3(property_va, false);
+            soapService.getNewsList4(property_va, false);
         }
 
     });
@@ -145,7 +145,7 @@ private void setListeners() {
         public void onLastItemVisible() {
 
                 String[] property_va = new String[] { "4", ++pageIndex + "","10"};
-                soapService.getNewsList3(property_va, true);
+                soapService.getNewsList4(property_va, true);
 
         }
     });

@@ -30,9 +30,9 @@ public class NewsInfo_Activity extends BaseActivity {
     Context context;
 	private TextView tv_back;
 	private ProgressWebView webView;
-	private String newsurl;
-    private String newsid;
-    private String newscontent;
+	private String newsurl = "";
+    private String newsid = "";
+    private String newscontent = "";
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +43,7 @@ public class NewsInfo_Activity extends BaseActivity {
 		intent = getIntent();
 		newsurl = intent.getStringExtra("newsurl");
 		newsid = intent.getStringExtra("newsid");
+		
 		
 		initView();
 		setListeners();
@@ -67,30 +68,39 @@ public class NewsInfo_Activity extends BaseActivity {
 //		webView.loadDataWithBaseURL(null, newsurl, "text/html", "utf-8", null);
 //        webView.loadUrl("http://backlogin.guzhang.tv/agreement/index.html");
 //		webView.loadUrl(newsurl); 
+	    
+	    
 	    webView.getSettings().setBuiltInZoomControls(true);
 	    webView.getSettings().setSupportZoom(true);
 	    webView.getSettings().setUseWideViewPort(true);
 	    webView.getSettings().setJavaScriptEnabled(true);
-	    webView.setDownloadListener(new DownloadListener() {
-            @Override
-            public void onDownloadStart(String url, String userAgent, String contentDisposition, String mimetype,
-                    long contentLength) {
-                if (url != null && url.startsWith("http://"))
-                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
-            }
-        });
+//	    webView.setDownloadListener(new DownloadListener() {
+//            @Override
+//            public void onDownloadStart(String url, String userAgent, String contentDisposition, String mimetype,
+//                    long contentLength) {
+//                if (url != null && url.startsWith("http://"))
+////                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
+//                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://192.168.1.196:8980/zhzz/static/yingshi/demo.html")));
+//            }
+//        });
         
         //复写WebViewClient的shouldOverrideUrlLoading()的方法
         //如果需要事件处理返回false,否则返回true.这样就可以解决问题了(解决点击webview中的连接不用浏览器打开问题)
 	    webView.setWebViewClient(new WebViewClient() {
          public boolean shouldOverrideUrlLoading(WebView view, String url) {
          view.loadUrl(url);
+//         view.loadUrl("http://192.168.1.196:8980/zhzz/static/yingshi/demo.html");
          return false;
          }
          });
-        
-	    webView.loadUrl(newsurl);
-//		webView.loadData(newscontent, "text/html", "UTF-8");
+
+//	    webView.loadUrl(newsurl);
+//        webView.loadUrl("http://192.168.1.196:8980/zhzz/static/yingshi/demo.html");
+	    if(!newscontent.equals("")){
+
+//	        webView.loadData(newscontent, "text/html", "UTF-8");
+            webView.loadData(getHtmlData(newscontent), "text/html", "UTF-8");
+	    }
 	}
 
 	private String getHtmlData(String bodyHTML) {

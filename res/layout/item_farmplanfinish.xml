@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" 
+    android:background="@color/white">
+ <LinearLayout
+     android:id="@+id/layout1"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="11dp"
+    android:layout_marginRight="90dp"
+    android:layout_marginTop="10dp"
+    android:orientation="horizontal" >
+<TextView 
+android:layout_width="wrap_content" 
+android:layout_height="wrap_content"
+android:text="大棚名称："
+android:textColor="@color/item_graytext3"
+android:textSize="15sp"
+/>
+<TextView 
+    android:id="@+id/pengname_tv"
+android:layout_width="wrap_content" 
+android:layout_height="wrap_content"
+android:text="大棚名称"
+android:textColor="@color/item_graytext5"
+android:textSize="15sp"
+/>
+</LinearLayout>
+<LinearLayout
+    android:id="@+id/layout2"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/layout1"
+    android:layout_marginLeft="11dp"
+    android:layout_marginRight="90dp"
+    android:layout_marginTop="10dp"
+    android:orientation="horizontal" >
+<TextView 
+android:layout_width="wrap_content" 
+android:layout_height="wrap_content"
+android:text="操作时间："
+android:textColor="@color/item_graytext3"
+android:textSize="15sp"
+/>
+<TextView 
+    android:id="@+id/creatdate_tv"
+android:layout_width="wrap_content" 
+android:layout_height="wrap_content"
+android:text="2018年8月24日"
+android:textColor="@color/item_graytext5"
+android:textSize="15sp"
+/>
+</LinearLayout>
+<LinearLayout
+    android:id="@+id/layout3"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/layout2"
+    android:layout_marginLeft="11dp"
+    android:layout_marginRight="90dp"
+    android:layout_marginTop="10dp"
+    android:orientation="horizontal" >
+<TextView 
+android:layout_width="wrap_content" 
+android:layout_height="wrap_content"
+android:text="品种名称："
+android:textColor="@color/item_graytext3"
+android:textSize="15sp"
+/>
+<TextView 
+    android:id="@+id/planname_tv"
+android:layout_width="wrap_content" 
+android:layout_height="wrap_content"
+android:text="西红柿"
+android:textColor="@color/item_graytext5"
+android:textSize="15sp"
+/>
+</LinearLayout>
+<LinearLayout
+    android:id="@+id/layout4"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/layout3"
+    android:layout_marginLeft="11dp"
+    android:layout_marginRight="90dp"
+    android:layout_marginTop="10dp"
+    android:orientation="horizontal" >
+<TextView 
+android:layout_width="wrap_content" 
+android:layout_height="wrap_content"
+android:text="操作类型："
+android:textColor="@color/item_graytext3"
+android:textSize="15sp"
+/>
+<TextView 
+    android:id="@+id/operation_tv"
+android:layout_width="wrap_content" 
+android:layout_height="wrap_content"
+android:text="施肥"
+android:textColor="@color/item_graytext5"
+android:textSize="15sp"
+/>
+</LinearLayout>
+<View 
+    android:id="@+id/lineview"
+    android:layout_width="fill_parent"
+    android:layout_height="1dp"
+    android:layout_below="@id/layout4"
+    android:layout_marginTop="10dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:background="@color/gray_line2"/>
+<TextView 
+    android:id="@+id/finished_tv"
+    android:layout_width="60dp" 
+    android:layout_height="60dp"
+    android:background="@drawable/complete_logo"
+    android:layout_centerVertical="true"
+    android:layout_alignParentRight="true"
+    android:layout_marginRight="15dp"
+    android:visibility="gone"
+/>
+<TextView 
+    android:id="@+id/finish_tv"
+android:layout_width="70dp" 
+android:layout_height="30dp"
+android:background="@color/greenbg_btn"
+android:text="完成"
+android:textColor="@color/white"
+android:textSize="14sp"
+android:gravity="center"
+android:layout_above="@+id/lineview"
+android:layout_marginBottom="10dp"
+    android:layout_alignParentRight="true"
+    android:layout_marginRight="15dp"
+/>
+</RelativeLayout>

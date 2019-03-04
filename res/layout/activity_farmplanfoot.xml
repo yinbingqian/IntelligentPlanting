@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+<RelativeLayout
+        android:id="@+id/top_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="49dp"
+        android:background="@color/green_top"
+        android:orientation="vertical" 
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:ellipsize="marquee"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="农事计划"
+            android:textColor="@color/white"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/tv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="26dp"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="返回"
+            android:textColor="@color/white"
+            android:textSize="18dp" />
+    </RelativeLayout>
+    <ScrollView 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+<RelativeLayout
+    android:id="@+id/finished_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="50dp" 
+    android:background="@color/white">
+    
+    <ImageView 
+        android:id="@+id/left_img1"
+android:layout_width="30dp" 
+android:layout_height="30dp"
+android:layout_marginLeft="10dp"
+android:layout_marginTop="10dp"
+android:background="@drawable/finished_icon"
+/>
+   
+<ImageView 
+        android:id="@+id/right_img1"
+android:layout_width="13dp" 
+android:layout_height="13dp"
+android:layout_alignParentRight="true"
+android:layout_centerVertical="true"
+android:layout_marginRight="15dp"
+android:background="@drawable/unfold"
+/>     
+<TextView
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_toRightOf="@+id/left_img1"
+    android:layout_toLeftOf="@+id/right_img1"
+    android:gravity="center_vertical"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:text="已完成"
+    android:textColor="#ff282828"
+    android:textSize="15sp"
+  />
+    
+</RelativeLayout>
+
+<View 
+android:layout_width="fill_parent" 
+android:layout_height="1dp"
+android:background="@color/gray_line2"
+/>
+<ListView
+        android:id="@+id/listview_finished"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@null"
+        android:cacheColorHint="#00000000"
+        android:divider="#eeeeee"
+        android:fadingEdge="none"
+        android:fastScrollEnabled="false"
+        android:footerDividersEnabled="false"
+        android:headerDividersEnabled="false"
+        android:listSelector="#00000000"
+        android:smoothScrollbar="true" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

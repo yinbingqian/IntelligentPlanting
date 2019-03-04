@@ -1,0 +1,142 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_bg2" >
+
+<RelativeLayout
+        android:id="@+id/top_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="49dp"
+        android:background="@color/green_top"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:ellipsize="marquee"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="提问"
+            android:textColor="@color/white"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/tv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="26dp"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="返回"
+            android:textColor="@color/white"
+            android:textSize="18dp" />
+        
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top_layout">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <AutoCompleteTextView
+                android:id="@+id/content"
+                android:layout_width="fill_parent"
+                android:layout_height="170dp"
+                android:background="@color/white"
+                android:gravity="left|top"
+                android:padding="10dp"
+                android:hint="请描述你的问题"
+                android:textColor="@color/gray_text5"
+                android:textSize="16dp" />
+             <View 
+                 android:layout_width="fill_parent"
+                 android:layout_height="1dp"
+                 android:background="@color/gray_line5"/>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal" >
+              <RelativeLayout 
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="15dp"
+                  android:layout_marginLeft="10dp"
+                  android:paddingBottom="8dp">
+                <ImageView
+                    android:id="@+id/img1"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:background="@drawable/add" />
+                <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="8dp"
+            android:layout_below="@+id/img1"
+            android:text="添加照片"
+            android:textColor="@color/gray_text5"
+            android:textSize="14dp" />
+              </RelativeLayout>
+         <RelativeLayout 
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="15dp"
+                  android:layout_marginLeft="20dp"
+                  android:paddingBottom="8dp">
+                <ImageView
+                    android:id="@+id/img2"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:background="@drawable/add" />
+                <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="8dp"
+            android:layout_below="@+id/img2"
+            android:text="添加照片"
+            android:textColor="@color/gray_text5"
+            android:textSize="14dp" />
+              </RelativeLayout>
+            </LinearLayout>
+
+<TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="17dp"
+            android:background="@color/white"
+            android:text="提交问题"
+            android:textColor="@color/item_graytext"
+            android:textSize="16dp" />
+<TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="17dp"
+            android:background="@color/white"
+            android:text="提交问题"
+            android:textColor="@color/item_graytext"
+            android:textSize="16dp" />
+<TextView
+            android:layout_width="fill_parent"
+            android:layout_height="44dp"
+            android:layout_marginTop="17dp"
+            android:background="@color/white"
+            android:gravity="center"
+            android:text="提交问题"
+            android:textColor="@color/item_graytext"
+            android:textSize="16dp" />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

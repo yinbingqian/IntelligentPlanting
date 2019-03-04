@@ -13,13 +13,13 @@
         android:layout_marginRight="10dp"
         android:layout_marginTop="12dp"
         android:paddingBottom="15dp"
-        android:paddingLeft="10dp"
         android:paddingTop="12dp"
         android:orientation="horizontal" >
        <ImageView 
          android:id="@+id/zuowu_img"
          android:layout_width="64dp"
-         android:layout_height="64dp" />
+         android:layout_height="64dp" 
+         android:layout_marginLeft="10dp"/>
 
         <RelativeLayout
             android:layout_width="fill_parent"
@@ -41,11 +41,11 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/crop_name"
                 android:layout_marginTop="6dp"
-                android:text="种植标准"
+                android:text="种植类别"
                 android:textColor="@color/item_graytext"
                 android:textSize="14dp" />
 <TextView
-                android:id="@+id/biaozhun_tv"
+                android:id="@+id/leibie_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@+id/monitor_tv"

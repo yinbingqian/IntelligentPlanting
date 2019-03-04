@@ -33,28 +33,19 @@
             android:text="返回"
             android:textColor="@color/white"
             android:textSize="18dp" />
-        <ImageView
-            android:id="@+id/changefarm_img"
-            android:layout_width="19dp"
-            android:layout_height="20dp"
+
+            <TextView
+            android:id="@+id/add_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_alignParentRight="true"
             android:layout_marginRight="11dp"
             android:gravity="center"
-            android:background="@drawable/switchicon"
-            />
-         <TextView
-            android:id="@+id/farm_tv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_toLeftOf="@+id/changefarm_img"
-            android:layout_marginRight="5dp"
-            android:gravity="center"
-            android:singleLine="true"
-            android:text="切换农场"
+            android:text="新增"
             android:textColor="@color/white"
-            android:textSize="16dp" />
+            android:textSize="16dp"
+            />
     </RelativeLayout>
 <ListView
         android:id="@+id/listview_plantinglist"

@@ -10,6 +10,7 @@ import com.lnpdit.woofarm.page.activity.tabhost.item.FarmLoginActivity;
 import com.lnpdit.woofarm.page.activity.tabhost.item.FarmServiceActivity;
 import com.lnpdit.woofarm.page.activity.tabhost.item.FarmingManagementActivity;
 import com.lnpdit.woofarm.page.activity.tabhost.item.PersonalActivity;
+import com.umeng.message.PushAgent;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -70,8 +71,11 @@ public class MainTabHostActivity extends TabHostAbstractActivity {
         DemoApplication myApplication = DemoApplication.getInstance();
         myApplication.mainTabHostActivity = this;
 
+        PushAgent.getInstance(this).onAppStart();
+        
         Intent intent = getIntent();
-        locationCur = intent.getIntExtra("locationCur", 0);
+//        locationCur = intent.getIntExtra("locationCur", 0);
+        locationCur=2;
         switch (locationCur) {
         case 1:
             restore(2);

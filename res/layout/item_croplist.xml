@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="201dp">
+<ImageView 
+    android:id="@+id/cropdisease_img"
+    android:layout_width="fill_parent"
+    android:layout_height="201dp"
+    android:scaleType="fitXY"
+    android:background="@drawable/default_bg"/>
+            <TextView
+                android:id="@+id/cropdisease_name"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:maxLines="1"
+                android:text="1号棚"
+                android:textColor="@color/white"
+                android:textSize="15dp" 
+                android:layout_alignParentBottom="true"
+                android:background="#60000000"/>
+</RelativeLayout>

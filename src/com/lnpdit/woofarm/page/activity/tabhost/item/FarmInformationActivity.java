@@ -55,7 +55,7 @@ public class FarmInformationActivity extends FragmentActivity {
         fragmentsList.add(new FarmFruitFragment());
         fragmentsList.add(new FarmGrainFragment());
 
-        tags = new String[] { "头条新闻", "蔬菜菌类", "生鲜瓜果","粮油饲料" };
+        tags = new String[] { "推荐", "热点新闻", "行情资讯","惠农政策" };
 
     }
 }
