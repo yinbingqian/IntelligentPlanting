@@ -16,8 +16,7 @@
        <ImageView 
            android:id="@+id/photo_img"
          android:layout_width="80dp"
-         android:layout_height="60dp"
-         android:background="@drawable/zuowuimg" />
+         android:layout_height="60dp" />
 
         <RelativeLayout
             android:layout_width="fill_parent"
